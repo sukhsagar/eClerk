@@ -2,9 +2,12 @@
 <html>
   <head>
     <title> Sports Form </title>
-    <link href="./css/bstyle.css" rel="stylesheet">
+    <link href="../css/bstyle.css" rel="stylesheet">
   </head>
 <body>
+      <div class="jumbotron">
+        <h1> Sports Form </h1>
+      </div>
 
 <form action=""> 
   Full name:
@@ -16,19 +19,19 @@
   <br><br>
   
   Gender:<br>
-  <input type="radio"> Male<br>
-  <input type="radio"> Female<br>
-  <input type="radio"> Other
-  <br><br>
+  <input type="radio" name="Gender" value="male" checked> Male<br>
+  <input type="radio" name="Gender" value="female"> Female<br>
+  <input type="radio" name="Gender" value="other"> Other<br><br>
+
   Mobile Number:<br>
-  <input type="text"><br>
-  <br>
+  <input type="text"><br><br>
+  
   E-mail ID:<br>
-  <input type="text"><br>
-  <br>
+  <input type="text"><br><br>
+  
   Class:<br>
-  <input type="text"><br>
-  <br>
+  <input type="text"><br><br>
+
   Roll No:<br>
   <input type="text"><br>
   <br>
@@ -46,15 +49,12 @@
   <input type="checkbox">Tug Of War<br>
   <input type="checkbox">Hockey<br>
   
-  
-  
-  
-  
     <br>
 </form> 
 
 
-<input type="submit" value="Submit">
+<input type="Submit" value="Submit">
+<input type="Reset" value="Reset">
 
 
 </body>
