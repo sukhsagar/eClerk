@@ -1,24 +1,32 @@
-/* table border code */
-
-table {
-    border-collapse: collapse;
-    width: 100%;
+/* img backround code */
+body
+{
+  background-color: aqua;
 }
 
-th, td {
+
+/* table border code */
+table 
+{
+    border-collapse: collapse;
+    width: 60%;
+}
+
+th, td 
+{
     text-align: left;
     padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
-
-th {
-    background-color: #4CAF50;
+th 
+{
+    background-color: deeppink;
     color: white;
 }
 
 /* toggle switch code */
-.switch {
+.switch 
+{
     position: relative;
     display: inline-block;
     width: 60px;
@@ -74,3 +82,18 @@ th {
     border-radius: 50%;
   }
 
+/* jumbotron code */
+.jumbotron 
+{
+  color: black;
+  text-align: center;
+  background-color: #2196F3;
+
+}
+
+/* image circle code */
+.img-circle
+{
+  height: 100px;
+  width: 200px;
+}
