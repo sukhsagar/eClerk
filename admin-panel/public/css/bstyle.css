@@ -1,27 +1,12 @@
-/* img backround code */
-body
+/* table code */
+table
 {
-  background-color: aqua;
+  border-collapse: collapse;
+  width: 80%;
 }
-
-
-/* table border code */
-table 
+td
 {
-    border-collapse: collapse;
-    width: 60%;
-}
-
-th, td 
-{
-    text-align: left;
-    padding: 8px;
-}
-
-th 
-{
-    background-color: deeppink;
-    color: white;
+  text-align: center;
 }
 
 /* toggle switch code */
@@ -87,7 +72,7 @@ th
 {
   color: black;
   text-align: center;
-  background-color: #2196F3;
+  background-color: grey;
 
 }
 
