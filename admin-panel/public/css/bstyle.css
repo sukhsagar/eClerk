@@ -3,11 +3,9 @@ table
 {
   border-collapse: collapse;
   width: 80%;
+  text-align: left;
 }
-td
-{
-  text-align: center;
-}
+
 
 /* toggle switch code */
 .switch 

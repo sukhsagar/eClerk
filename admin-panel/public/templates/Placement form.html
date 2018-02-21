@@ -21,24 +21,21 @@
   <br><br>
   
   Gender:<br>
-  <input type="radio"> Male<br>
-  <input type="radio"> Female<br>
-  <input type="radio"> Other
+  <input type="radio" name="Gender" value="male"> Male<br>
+  <input type="radio" name="Gender" value="Female"> Female<br>
+  <input type="radio" name="Gender" value="Other"> Other
   <br><br>
   
   Category:<br>
-  <input type="radio"> General<br>
-  <input type="radio"> OBC<br>
-  <input type="radio"> SC/ST<br>
-  <input type="radio"> Freedom Fighter<br>
+  <input type="radio" name="Category" value="General"> General<br>
+  <input type="radio" name="Category" value="OBC"> OBC<br>
+  <input type="radio" name="Category" value="SC/ST"> SC/ST<br>
+  <input type="radio" name="Category" value="Freedom Fighter"> Freedom Fighter<br>
   <br>
   Father's Name:<br>
   <input type="text"><br>
   <br>
   Father's Occupation:<br>
-  <input type="text"><br>
-  <br>
-  Residence Number:<br>
   <input type="text"><br>
   <br>
   Mother's Name:<br>
@@ -59,82 +56,62 @@
 
 </form>
 
-<form>  
+
+<form>
   <fieldset>
-    <legend> Qualification Detail </legend>
+      <legend> Qualification Detail </legend>
+      <table>
+          <tr>
+              <th> Class </th>
+              <th> Uni/Board </th>
+              <th> Passing Year </th>
+              <th> Marks </th>
+              <th> Percentage </th>
+              <th> Division </th>
+          </tr>
 
-  Board in 10th Class:<br>
-  <input type="text"><br>
-  
-  Ending date of 10th Class:<br>
-  <input type="text"><br>
-  
-  Percentage of marks:<br>
-  <input type="text"><br>
+          <tr>
+              <th> 10th </th>
+          </tr>
 
-  Board in 12th Class:<br>
-  <input type="text"><br>
-  
-  Ending date of 12th Class:<br>
-  <input type="text"><br>
-  
-  Percentage of marks:<br>
-  <input type="text"><br>
+          <tr>
+              <th> 12th </th>
+          </tr>
 
-  UG Qualification:<br>
-  <input type="text"><br>
-  
-  UG Specialisation:<br>
-  <input type="text"><br>
-  
-  UG Percentage/CGPA:<br>
-  <input type="text"><br>
-  
-  UG Start Date:<br>
-  <input type="text"><br>
-  
-  UG Ending Date:<br>
-  <input type="text"><br>
+          <tr>
+              <th> Graduation </th>
+          </tr>
 
-  PG Qualification:<br>
-  <input type="text"><br>
+          <tr>
+              <th> Post-Graduation </th>
+          </tr>
 
-  PG Specialisation:<br>
-  <input type="text"><br>
-  
-  PG Percentage/CGPA:<br>
-  <input type="text"><br>
-  
-  PG Start Date:<br>
-  <input type="text"><br>
-  
-  PG Ending Date:<br>
-  <input type="text"><br>
+          <tr>
+              <th> Other Qualification </th>
+          </tr>
+      </table>
   </fieldset>
-  </form>
+</form>
 
 <form>
   <fieldset>
     <legend> Campus Detail </legend>
 
   Campus you study:<br>
-  <input type="text"><br>
-
-  
-  Any Pending Backlog:<br>
-  <input type="radio">Yes<br>
-  
-  If Yes, Please specify how many, otherwise leave blank.<br>
   <input type="text"><br><br>
-  <input type="radio">No<br>
+
+  Any Pending Backlog:<br>
+  <input type="radio" name="any pending backlog">Yes<br>
+  If Yes, Please specify how many, otherwise leave blank.<br>
+  <input type="text"><br>
+  <input type="radio" name="any pending backlog">No<br>
   <br>
   
   Any gap in studies:<br>
-  <input type="radio">Yes<br>
-  
-  If Yes, Give reason, otherwise leave blank.<br>
-  <input type="text"><br><br>
-  <input type="radio">No<br>
+  <input type="radio" name="any gap in studies">Yes<br>
+   If Yes, Give reason, otherwise leave blank.<br>
+  <input type="text"><br>
+  <input type="radio" name="any gap in studies">No<br>
   <br>
   
   NCS Id:<br>
@@ -142,13 +119,14 @@
   <br>
   
   Interested in Placements:<br>
-  <input type="radio">Yes<br>
-  <input type="radio">No<br>
+  <input type="radio" name="interested in placements">Yes<br>
+  <input type="radio"  name="interested in placements">No<br>
   </fieldset>
-</form> 
+</form><br> 
 
 
-<input type="submit" value="Submit">
+<input type="Submit" value="Submit">
+<input type="Reset" value="Reset">
 
 
 </body>
