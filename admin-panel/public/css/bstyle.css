@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* table code */
 table
 {
@@ -7,6 +8,34 @@ table
 }
 
 
+=======
+/* img backround code */
+body
+{
+  background-color: aqua;
+}
+
+
+/* table border code */
+table 
+{
+    border-collapse: collapse;
+    width: 60%;
+}
+
+th, td 
+{
+    text-align: left;
+    padding: 8px;
+}
+
+th 
+{
+    background-color: deeppink;
+    color: white;
+}
+
+>>>>>>> 1159c56c356dddbaf27623061aabad2a49b7d466
 /* toggle switch code */
 .switch 
 {
@@ -70,7 +99,11 @@ table
 {
   color: black;
   text-align: center;
+<<<<<<< HEAD
   background-color: grey;
+=======
+  background-color: #2196F3;
+>>>>>>> 1159c56c356dddbaf27623061aabad2a49b7d466
 
 }
 
