@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title> Scholarship Form </title>
+    <title> General Data page </title>
     <link href="../css/bstyle.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/styles.css">
@@ -9,6 +9,7 @@
   <script src="../js/popper.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
 </head>
+
 <body>
         <nav class="navbar navbar-inverse">
                 <div class="container-fluid">
@@ -18,35 +19,35 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../index1.html">GNDU eClerk</a>
+                    <a class="navbar-brand" href="../../home.html">GNDU eClerk</a>
                   </div>
                   <div  class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                      <li class="active">
-                        <a href="../index1.html">Home</a>
+                      <li>
+                        <a href="../../home.html">Home</a>
                       </li>
-                      <li class="dropdown">
+                      <li class="dropdown active">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Forms
                           <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                          <li>
-                            <a href="Gen data form.html">Personal Details</a>
+                          <li class="active">
+                            <a href="gen-data-form.html">Personal Details</a>
                           </li>
                           <li>
-                            <a href="Placement form.html">Placement Form</a>
+                            <a href="placement-form.html">Placement Form</a>
                           </li>
                           <li>
-                            <a href="Examination form.html">Examination Form</a>
+                            <a href="examination-form.html">Examination Form</a>
                           </li>
                           <li>
-                            <a href="Scholarship form.html">Scholarship Form</a>
+                            <a href="scholarship-form.html">Scholarship Form</a>
                           </li>
                           <li>
-                            <a href="Sports form.html">Sports Form</a>
+                            <a href="sports-form.html">Sports Form</a>
                           </li>
                           <li>
-                            <a href="Jashan form.html">Jashan Form</a>
+                            <a href="jashan-form.html">Jashan Form</a>
                           </li>
                         </ul>
                       </li>
@@ -59,7 +60,7 @@
                             <a href="#">Generate Fee Slip</a>
                           </li>
                           <li>
-                            <a href="Fee slip confirm form.html">Verify Payment</a>
+                            <a href="fee-confirm-form.html">Verify Payment</a>
                           </li>
                         </ul>
                       </li>
@@ -85,44 +86,92 @@
 
                       <ul class="nav navbar-nav navbar-right">
                         <li>
-                          <a href="../index.html">
+                          <a href="../sign-in.html">
                             <span class="glyphicon glyphicon-user"></span> Sign Out</a>
                         </li>
                       </ul>
                   </div>
               </nav>
     <div class="jumbotron">
-    <header><h1> Scholarship Form </h1></header>
+        <h1> General Detail </h1>
     </div>
+
     <form>
         <fieldset>
-            <legend> Student Information </legend>
-            <img src="../img/singh2.png" alt="My Image" title="Student" height="150px" width="150px"><br>
-            Name:<br>
-            <input type="text" name="Name"><br><br>
-            Roll No:<br>
-            <input type="text" name="Roll No"><br><br>
-            Class:<br>
-            <input type="text" name="Class"><br><br>
-            Maniority:<br>
-            <input type="radio" name="Maniority" value="Sikh"> Sikh <br>
-            <input type="radio" name="Maniority" value="Hindhu"> Hindhu <br>
-            <input type="radio" name="Maniority" value="Muslim"> Muslim <br><br>
-            Category:<br>
-            <input type="radio" name="Category" value="Gen"> Gen <br>
-            <input type="radio" name="Category" value="Sc"> Sc <br>
-            <input type="radio" name="Category" value="Bc"> Bc <br><br>
-            Income Certificate:<br>
-            <input type="text" name="Income Certificate"><br><br>
-            Residence Certificate:<br>
-            <input type="text" name="Residence Certificate"><br><br>
-            Fee Concession:<br>
-            <input type="radio" name="Fee Concession" value="Full"> Full <br>
-            <input type="radio" name="Fee Concession" value="Half"> Half <br><br>
-            <input type="submit" name="Submit"> 
-            <input type="reset" name="Reset">
+            <legend> University Detail </legend>
+                Registration Number:<br>
+                <input type="text" name="Reg Number"><br>
+                Roll No:<br>
+                <input type="text" name="Roll No"><br>
+                University Rank:<br>
+                <input type="text" name="Uni Rank"><br>
+                Category:<br>
+                <input type="text" name="Category"><br>
+        </fieldset>
+    </form>
 
+    <form>
 
+        <fieldset>
+            <legend> Personel Information </legend>
+        First Name:<br>
+        <input type="text" name="First Name"><br>
+        Last Name:<br>
+        <input type="text" name="Last Name"><br>
+        Gender:<br>
+        <input type="radio" name="Gender" value="Male" checked> Male <br>
+        <input type="radio" name="Gender" value="Female"> Female <br>
+        Date Of Birth:<br>
+        <input type="text" name="D.O.B"><br>
+        Father Name:<br>
+        <input type="text" name="Father Name"><br>
+        Mother Name:<br>
+        <input type="text" name="Mother Name"><br>
+        Address:<br>
+        <input type="text" name="Address"><br>
+        Mobile Number:<br>
+        <input type="text" name="Mobile Number"><br>
+        Father Mobile Number:<br>
+        <input type="text" name="Father Mobile Number"><br>
+        Email:<br>
+        <input type="text" name="Email Id"><br>
+        </fieldset>
+
+    </form>
+
+    <form>
+        <fieldset>
+            <legend> Qualification Detail </legend>
+            <table>
+                <tr>
+                    <th> Class </th>
+                    <th> Uni/Board </th>
+                    <th> Passing Year </th>
+                    <th> Marks </th>
+                    <th> Percentage </th>
+                    <th> Division </th>
+                </tr>
+
+                <tr>
+                    <th> 10th </th>
+                </tr>
+
+                <tr>
+                    <th> 12th </th>
+                </tr>
+
+                <tr>
+                    <th> Graduation </th>
+                </tr>
+
+                <tr>
+                    <th> Post-Graduation </th>
+                </tr>
+
+                <tr>
+                    <th> Other Qualification </th>
+                </tr>
+            </table>
         </fieldset>
     </form>
 </body>
