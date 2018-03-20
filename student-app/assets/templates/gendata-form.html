@@ -1,11 +1,12 @@
-<!DOCTYPE html>
 <html>
-  <head> 
-    <title> Placement Form </title>
-    <link href="../css/style.css" rel="stylesheet">
+
+<head>
+  <title> General Data page </title>
+  <link href="../css/style.css" rel="stylesheet">
   <link href="../css/style2.css" rel="stylesheet">
   <link href="../css/bootstrap.min.css" rel="stylesheet">
-  </head>
+</head>
+
 <body>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -27,10 +28,10 @@
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li>
+                  <li class="active">
                     <a href="gen-data-form.html">Personal Details</a>
                   </li>
-                  <li class="active">
+                  <li>
                     <a href="placement-form.html">Placement Form</a>
                   </li>
                   <li>
@@ -99,10 +100,10 @@
       <div class="container">
         <div class="big-title">
           <h3>
-            <span>PLACEMENT</span> Form</h3>
+            <span>GENERAL</span> Detail</h3>
           <div class="border-title"></div>
         </div>
-        <!-- page enteries code -->
+        <!-- Page data enteries code -->
         <div class="masonry-item col-md-6">
           <div class="bgc-white p-20 bd">
             <div class="mT-30">
@@ -120,23 +121,9 @@
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputtext" class="col-sm-2 col-form-label">Name</label>
+                  <label for="inputtext" class="col-sm-2 col-form-label">University Rank</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputtext" placeholder="">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="inputtext" class="col-sm-2 col-form-label">Date of Birth</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputtext" placeholder="">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="inputtext" class="col-sm-2 col-form-label">Gender</label>
-                  <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" name="Gender"> Male
-                    <br>
-                    <input class="form-check-input" type="radio" name="Gender"> Female
                   </div>
                 </div>
                 <div class="form-group row">
@@ -153,25 +140,33 @@
                   </div>
                   </div>
                   <div class="form-group row">
+                    <label for="inputtext" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputtext" placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputtext" class="col-sm-2 col-form-label">Gender</label>
+                    <div class="col-sm-10">
+                      <input class="form-check-input" type="radio" name="Gender"> Male
+                      <br>
+                      <input class="form-check-input" type="radio" name="Gender"> Female
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputtext" class="col-sm-2 col-form-label">Date of Birth</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputtext" placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group row">
                     <label for="inputtext" class="col-sm-2 col-form-label">Father Name</label>
                     <div class="col-sm-10">
                       <input type="text" class="form-control" id="inputtext" placeholder="">
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="inputtext" class="col-sm-2 col-form-label">Father Occupation</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputtext" placeholder="">
-                    </div>
-                  </div>
-                  <div class="form-group row">
                     <label for="inputtext" class="col-sm-2 col-form-label">Mother Name</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputtext" placeholder="">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="inputtext" class="col-sm-2 col-form-label">Mother Occupation</label>
                     <div class="col-sm-10">
                       <input type="text" class="form-control" id="inputtext" placeholder="">
                     </div>
@@ -194,10 +189,12 @@
                       <input type="text" class="form-control" id="inputtext" placeholder="">
                     </div>
                   </div>
+                
                 </form>
               </div>
             </div>
           </div>
+          <!-- page data tables code used -->
           <main class="main-content bgc-grey-100">
             <div id="mainContent">
               <div class="container-fluid">
@@ -209,54 +206,54 @@
                         width="100%">
                         <thead>
                           <tr>
-                            <th>class</th>
-                            <th>University Board</th>
-                            <th>Passing Year</th>
-                            <th>Marks</th>
-                            <th>Percentage</th>
-                            <th>Division</th>
+                            <th><b>class</b></th>
+                            <th><b>University Board</b></th>
+                            <th><b>Passing Year</b></th>
+                            <th><b>Marks</b></th>
+                            <th><b>Percentage</b></th>
+                            <th><b>Division</b></th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>10th</td>
-                            <td>-----</td>
-                            <td>----</td>
-                            <td>----</td>
-                            <td>-----</td>
-                            <td>------</td>
+                            <td><b>10th</b></td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td>
                           </tr>
                           <tr>
-                            <td>12th</td>
-                            <td>-----</td>
-                            <td>-----</td>
-                            <td>-----</td>
-                            <td>-----</td>
-                            <td>------</td>
+                            <td><b>12th</b></td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                            <td>63</td>
+                            <td>2011/07/25</td>
+                            <td>$170,750</td>
                           </tr>
                           <tr>
-                            <td>Graduation</td>
-                            <td>-----</td>
-                            <td>------</td>
-                            <td>------</td>
-                            <td>------</td>
-                            <td>------</td>
+                            <td><b>Graduation</b></td>
+                            <td>Junior Technical Author</td>
+                            <td>San Francisco</td>
+                            <td>66</td>
+                            <td>2009/01/12</td>
+                            <td>$86,000</td>
                           </tr>
                           <tr>
-                            <td>Post Graduation</td>
-                            <td>-----</td>
-                            <td>-----</td>
-                            <td>-----</td>
-                            <td>-----</td>
-                            <td>-----</td>
+                            <td><b>Post Graduation</b></td>
+                            <td>Senior Javascript Developer</td>
+                            <td>Edinburgh</td>
+                            <td>22</td>
+                            <td>2012/03/29</td>
+                            <td>$433,060</td>
                           </tr>
                           <tr>
-                            <td>Other Course</td>
-                            <td>------</td>
-                            <td>-----</td>
-                            <td>------</td>
-                            <td>------</td>
-                            <td>-----</td>
+                            <td><b>Other Course</b></td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                            <td>33</td>
+                            <td>2008/11/28</td>
+                            <td>$162,700</td>
                           </tr>
                         </tbody>
                       </table>
@@ -267,46 +264,18 @@
             </div>
           </main>
 
-                <div class="masonry-item col-md-6">
-                  <div class="bgc-white p-20 bd">
-                    <div class="mT-30">
-                        <div class="form-group">
-                          <label for="inputtext">Campus You Study</label>
-                          <input type="text" class="form-control" id="inputtext" placeholder="">
-                        </div>
-                        <div class="form-group">
-                          <label for="inputtext">Any Pending Backlog</label><br>
-                          <input class="form-check-input" type="radio" name="Any Pending Backlog"> Yes <br>
-                          <label for="inputtext">If Yes,Please specify how many,otherwise leave blank</label>
-                          <input type="text" class="form-control" id="inputtext" placeholder="">
-                          <input class="form-check-input" type="radio" name="Any Pending Backlog"> No
-                         </div>
-                         <div class="form-group">
-                          <label for="inputtext">Any gap in study</label><br>
-                          <input class="form-check-input" type="radio" name="Any gap in study"> Yes <br>
-                          <label for="inputtext">If Yes,Give reason,otherwise leave blank</label>
-                          <input type="text" class="form-control" id="inputtext" placeholder="">
-                          <input class="form-check-input" type="radio" name="Any gap in study"> No
-                         </div>
-                         <div class="form-group">
-                          <label for="inputtext">NCS ID</label>
-                          <input type="text" class="form-control" id="inputtext" placeholder="">
-                        </div>
-                        <div class="form-group">
-                          <label for="inputtext">Interested in placement</label><br>
-                          <input class="form-check-input" type="radio" name="Interested in placement"> Yes <br>
-                          <input class="form-check-input" type="radio" name="Interested in placement"> No
-                         </div> 
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-sm-10">
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                      <button type="submit" class="btn btn-primary">Reset</button>
-                  </div>
-              </div>
-          
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Reset</button>
+            </div>
+          </div>
+
+
+
+
+
 
 </body>
+
 </html>
