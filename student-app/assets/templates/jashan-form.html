@@ -2,12 +2,9 @@
 
 <head>
     <title> Jashan Data Page </title>
-    <link href="../css/bstyle.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/styles.css">
-  <script src="../js/jquery.min.js"></script>
-  <script src="../js/popper.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/style2.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -92,28 +89,70 @@
                       </ul>
                   </div>
               </nav>
-        <div class="jumbotron">
-        <header><h1> Jashan </h1></header>
+    <!-- Page formatting code -->
+    <section id="team" class="section grey-section">
+        <div class="white-shape">
+            <div class="icon-container fixed border-radius">
+                <i class="fa fa-users"></i>
+            </div>
         </div>
-    <form>
-        <fieldset>
-            <legend> Participent Detail </legend>
-            Name:<br>
-            <input type="text" name="Name"><br>
-            Roll no:<br>
-            <input type="text" name="Roll no"><br>
-            Class:<br>
-            <input type="text" name="Class"><br>
-            Event:<br>
-            <input type="checkbox" name="Event" value="Bhangra"> Bhangra <br>
-            <input type="checkbox" name="Event" value="Rangoli"> Rangoli <br>
-            <input type="checkbox" name="Event" value="Quiz"> Quiz <br>
-            <input type="checkbox" name="Event" value="Painting"> Painting <br>
-            <input type="checkbox" name="Event" value="Gidha"> Gidha <br><br>
-            <input type="submit" name="Submit"> 
-            <input type="reset" name="Reset">
-        </fieldset>
-    </form>
-    
+        <div class="section-container">
+            <div class="container">
+                <div class="big-title">
+                    <h3>
+                        <span>JASHAN</span> Form</h3>
+                    <div class="border-title"></div>
+                </div>
+                <!-- page enteries code -->
+                <div class="masonry-item col-md-6">
+                    <div class="bgc-white p-20 bd">
+                        <div class="mT-30">
+                            <form>
+                                <div class="form-group row">
+                                    <label for="inputtext" class="col-sm-2 col-form-label">Name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="inputtext" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputtext" class="col-sm-2 col-form-label">Roll No</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="inputtext" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputtext" class="col-sm-2 col-form-label">Class</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="inputtext" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputtext" class="col-sm-2 col-form-label">Event</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-check-input" type="checkbox"> Bhangra
+                                        <br>
+                                        <input class="form-check-input" type="checkbox"> Rangoli
+                                        <br>
+                                        <input class="form-check-input" type="checkbox"> Quiz
+                                        <br>
+                                        <input class="form-check-input" type="checkbox"> Painting
+                                        <br>
+                                        <input class="form-check-input" type="checkbox"> Gidha
+                                        <br>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Reset</button>
+                    </div>
+                </div>
+
+
 </body>
+
 </html>
