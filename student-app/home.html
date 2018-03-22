@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style2.css">
-  
+  <link rel="stylesheet" href="assets/css/tableStyle.css">
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
@@ -34,12 +34,6 @@
                           <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                          <li>
-                            <a href="assets/templates/gen-data-form.html">Personal Details</a>
-                          </li>
-                          <li>
-                            <a href="assets/templates/placement-form.html">Placement Form</a>
-                          </li>
                           <li>
                             <a href="assets/templates/examination-form.html">Examination Form</a>
                           </li>
@@ -81,6 +75,7 @@
                             </ul>
                         </li>
                         <ul class="nav navbar-nav">
+                          
                                 <li>
                                   <a href="#">Syllabus</a>
                                 </li>
@@ -88,6 +83,20 @@
 
 
                       <ul class="nav navbar-nav navbar-right">
+                          <li class="dropdown">
+                              <a class="dropdown-toggle" data-toggle="dropdown" href="#">My Account
+                                  <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li>
+                                    <a href="account.html">Edit Details</a>
+                                  </li>
+                                  <li>
+                                    <a href="changePassword.html">Change Password</a>
+                                  </li>
+                                </ul>
+          
+                          </li>
                         <li>
                           <a href="assets/templates/sign-in.html">
                             <span class="glyphicon glyphicon-user"></span> Sign Out</a>
@@ -129,30 +138,35 @@
         </div>
   </div>
 
+  
   <div class="container">
-    <h2>Teachers on leave</h2>
-    <table class="table">
-      <tr>
-        <td>
-          <img src="assets/images/1.jpg" height="400" width="300">
-        </td>
-        <td>
-          <img src="assets/images/2.jpg" height="400" width="300">
-        </td>
-        <td>
-          <img src="assets/images/3.jpg" height="400" width="300">
-        </td>
-      </tr>
-    </table>
-
-  </div>
-  <div class="container">
-    <h2>Card Header and Footer</h2>
+    <h2>Time Table</h2>
     <div class="card">
       <div class="card-header">Header</div>
       <div class="card-body">Content</div> 
       <div class="card-footer">Footer</div>
     </div>
   </div>
+  <div class="container">
+      <h2>Teachers on leave</h2>
+      <table class="table">
+        <tr>
+          <td>
+              <label for="">Dr. ABCD</label>
+              </td>
+        </tr>
+        <tr>
+          <td>
+              <label for="">Dr. MNOP</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <label for="">Dr. WXYZ</label>
+          </td>
+        </tr>
+      </table>
+  
+    </div>
 </body>
 </html>
