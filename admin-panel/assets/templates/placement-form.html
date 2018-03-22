@@ -5,8 +5,86 @@
     <link href="../css/style.css" rel="stylesheet">
   <link href="../css/style2.css" rel="stylesheet">
   <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
   </head>
 <body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="home.html">GNDU eClerk</a>
+          </div>
+          <div  class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="home.html">Home</a>
+              </li>
+              <li class="dropdown active">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Forms
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="gendata-form.html">General Detail</a>
+                      </li>    
+                  <li class="active">
+                    <a href="placement-form.html">Placement Form</a>
+                  </li>
+                  <li>
+                    <a href="examination-form.html">Examination Form</a>
+                  </li>
+                  <li>
+                    <a href="scholarship-form.html">Scholarship Form</a>
+                  </li>
+                  <li>
+                    <a href="sports-form.html">Sports Form</a>
+                  </li>
+                  <li>
+                    <a href="jashan-form.html">Jashan Form</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Fee Collection
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#">Generate Fee Slip</a>
+                  </li>
+                  <li>
+                    <a href="feeconfirm.html">Verify Payment</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculty List
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="faculitydetail.html">Professors</a>
+                      </li>
+                      <li>
+                        <a href="faculitydetail.html">Research Scholars</a>
+                      </li>
+                    </ul>
+                </li>
+                <ul class="nav navbar-nav">
+                        <li>
+                          <a href="#">Syllabus</a>
+                        </li>
+                </ul>
+          </div>
+      </nav>
+
   <!-- Page formatting code -->
   <section id="team" class="section grey-section">
     <div class="white-shape">
@@ -128,17 +206,17 @@
                         width="100%">
                         <thead>
                           <tr>
-                            <th>class</th>
-                            <th>University Board</th>
-                            <th>Passing Year</th>
-                            <th>Marks</th>
-                            <th>Percentage</th>
-                            <th>Division</th>
+                            <th><b>class</b></th>
+                            <th><b>University Board</b></th>
+                            <th><b>Passing Year</b></th>
+                            <th><b>Marks</b></th>
+                            <th><b>Percentage</b></th>
+                            <th><b>Division</b></th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>10th</td>
+                            <td><b>10th</b></td>
                             <td>-----</td>
                             <td>----</td>
                             <td>----</td>
@@ -146,7 +224,7 @@
                             <td>------</td>
                           </tr>
                           <tr>
-                            <td>12th</td>
+                            <td><b>12th</b></td>
                             <td>-----</td>
                             <td>-----</td>
                             <td>-----</td>
@@ -154,7 +232,7 @@
                             <td>------</td>
                           </tr>
                           <tr>
-                            <td>Graduation</td>
+                            <td><b>Graduation</b></td>
                             <td>-----</td>
                             <td>------</td>
                             <td>------</td>
@@ -162,7 +240,7 @@
                             <td>------</td>
                           </tr>
                           <tr>
-                            <td>Post Graduation</td>
+                            <td><b>Post Graduation</b></td>
                             <td>-----</td>
                             <td>-----</td>
                             <td>-----</td>
@@ -170,7 +248,7 @@
                             <td>-----</td>
                           </tr>
                           <tr>
-                            <td>Other Course</td>
+                            <td><b>Other Course</b></td>
                             <td>------</td>
                             <td>-----</td>
                             <td>------</td>
