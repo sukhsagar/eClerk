@@ -40,17 +40,7 @@ only screen and (max-width: 760px),
 			white-space: nowrap;
 		}
 		
-		/*
-		Label the data
-		*/
-		td:nth-of-type(1):before { content: "9:00-10:00"; }
-		td:nth-of-type(2):before { content: "10:00-11:00"; }
-		td:nth-of-type(3):before { content: "11:00-12:00"; }
-		td:nth-of-type(4):before { content: "12:00-1:00"; }
-		td:nth-of-type(5):before { content: "1:00-2:00"; }
-		td:nth-of-type(6):before { content: "2:00-3:00"; }
-		td:nth-of-type(7):before { content: "3:00-4:00"; }
-		td:nth-of-type(8):before { content: "4:00-5:00"; }
+		
 	}
 
 
