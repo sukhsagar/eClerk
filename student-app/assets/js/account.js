@@ -1,10 +1,10 @@
-var  regno = document.getElementById("regno")
+var  regNo = document.getElementById("regno")
 
-var roll = document.getElementById("rollno")
+var rollNo = document.getElementById("rollno")
 
-var student_name = document.getElementById("stuname")
+var stuName = document.getElementById("stuname")
 
-var uni_rank = document.getElementById("rank")
+var uniRank = document.getElementById("rank")
 
 var dob = document.getElementById("dob")
 
@@ -13,15 +13,15 @@ var category = document.getElementById("category")
 var gender = document.getElementById("gender")
 
 
-var father_name = document.getElementById("father_name")
+var fatherName = document.getElementById("father_name")
 
-var mother_name = document.getElementById("mother_name")
+var motherName = document.getElementById("mother_name")
 
 var address = document.getElementById("address")
 
-var mobile_no = document.getElementById("mobile_no")
+var mobNo = document.getElementById("mobile_no")
 
-var email_id = document.getElementById("email_id")
+var emailID = document.getElementById("email_id")
 
 
 
