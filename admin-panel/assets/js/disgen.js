@@ -1,0 +1,6 @@
+var registrationno = document.getElementById("iregistration")
+var rollno = document.getElementById("irollno")
+var name = document.getElementById("iname")
+var dclass = document.getElementById("iclass")
+var editbutton = document.getElementById("iedit")
+var viewallbutton = document.getElementById("iviewall")
