@@ -1,0 +1,6 @@
+var name = document.getElementById("iname")
+var rollno = document.getElementById("irollno")
+var jclass = document.getElementById("iclass")
+var event = document.getElementById("ievent")
+var submitbutton = document.getElementById("isubmit")
+var resetbutton = document.getElementById("ireset")
