@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title> Dmc Distribution Form </title>
+    <title> Personal Notice Form </title>
     <link href="../css/bstyle.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/style2.css" rel="stylesheet">
@@ -25,19 +25,16 @@
                 </div>
                 <!-- dropdown menu code -->
                 <div class="form-group col-md-2">
-                    <label for="inputState">Batch</label>
-                    <select id="ibatch" class="form-control">
+                    <label for="inputState">Class</label>
+                    <select id="iclass" class="form-control">
                         <option selected="selected">Choose...</option>
-                        <option>2015-2018</option>
-                        <option>2016-2019</option>
-                        <option>2017-2020</option>
-                        <option>2018-2021</option>
-                        <option>2019-2022</option>
+                        <option>MCA-(TYC)</option>
+                        <option>MCA-(FYC)</option>
                     </select>
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="inputState">Student</label>
-                    <select id="istudent" class="form-control">
+                    <label for="inputState">Semester</label>
+                    <select id="isemester" class="form-control">
                         <option selected="selected">Choose...</option>
                         <option>Sem-1</option>
                         <option>Sem-2</option>
@@ -46,7 +43,19 @@
                         <option>Sem-5</option>
                         <option>Sem-6</option>
                     </select>
-                </div>
+                </div><br><br><br><br><br> 
+                <div class="form-group col-md-8">
+                                <label for="inputtext" class="col-sm-2 col-form-label">Message</label>
+                                <div class="col-sm-5">
+                                  <input type="text" class="form-control" id="imessage" placeholder="">
+                                </div>
+                              </div>
+                              
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                          <button type="submit" class="btn btn-primary" id="isend">Send</button>
+                        </div>
+                      </div>
             </div>
         </div>
     </section>
