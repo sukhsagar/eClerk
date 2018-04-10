@@ -1,7 +1,7 @@
 /* Mobile-first styles */
 
 /* make each table separate from other ones */
-table {
+.noticeTable {
     border: 0;
     padding-bottom: 0;
     display: block;
