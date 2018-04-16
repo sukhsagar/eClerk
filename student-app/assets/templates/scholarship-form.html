@@ -10,6 +10,7 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scholarship-form.js"></script>
 </head>
 
 <body>
@@ -150,7 +151,7 @@
                                 <div class="form-group row">
                                     <label for="inputtext" class="col-sm-2 col-form-label">Category</label>
                                     <div class="col-sm-10">
-                                        <input class="form-check-input" type="radio" id="category" name="Category"> Gen
+                                        <input class="form-check-input" type="radio" id="category" name="Category" checked> Gen
                                         <br>
                                         <input class="form-check-input" type="radio" id="category" name="Category"> SC/ST
                                         <br>
@@ -163,32 +164,32 @@
                                 <div class="form-group row">
                                     <label for="inputtext" class="col-sm-2 col-form-label">Minority</label>
                                     <div class="col-sm-10">
-                                        <input class="form-check-input" type="radio" id="minority" name="Category"> Sikh
+                                        <input class="form-check-input" type="radio" id="minority" name="Minority" checked> Sikh
                                         <br>
-                                        <input class="form-check-input" type="radio" id="minority" name="Category"> Hindhu
+                                        <input class="form-check-input" type="radio" id="minority" name="Minority"> Hindhu
                                         <br>
-                                        <input class="form-check-input" type="radio" id="minority" name="Category"> Muslim
+                                        <input class="form-check-input" type="radio" id="minority" name="Minority"> Muslim
                                         <br>
-                                        <input class="form-check-input" type="radio" id="minority" name="Category"> Others
+                                        <input class="form-check-input" type="radio" id="minority" name="Minority"> Others
                                         <br>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputtext" class="col-sm-2 col-form-label">Income Certificate</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="incomeCertificate" placeholder="">
+                                        <input type="file" class="form-control" id="incomeCertificate" placeholder="">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputtext" class="col-sm-2 col-form-label">Residence Certificate</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="residenceCertificate" placeholder="">
+                                        <input type="file" class="form-control" id="residenceCertificate" placeholder="">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputtext" class="col-sm-2 col-form-label">Fee Concession</label>
                                     <div class="col-sm-10">
-                                        <input class="form-check-input" type="radio" id="concession" name="Fee Concession"> Full
+                                        <input class="form-check-input" type="radio" id="concession" name="Fee Concession" checked> Full
                                         <br>
                                         <input class="form-check-input" type="radio" id="concession" name="Fee Concession"> Half
                                     </div>
@@ -199,7 +200,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" onclick="validate()">Submit</button>
                         <button type="submit" class="btn btn-primary">Reset</button>
                     </div>
                 </div>

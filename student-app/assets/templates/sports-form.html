@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title> Sports Form </title>
+  <title> Sports Registration Form </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="../css/style2.css" rel="stylesheet">
@@ -11,6 +11,7 @@
   <script src="../js/jquery.min.js"></script>
   <script src="../js/popper.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/sports-form.js"></script>
 </head>
 
 <body>
@@ -158,7 +159,7 @@
                 <div class="form-group row">
                   <label for="inputtext" class="col-sm-2 col-form-label">Gender</label>
                   <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" id="gender" name="Gender"> Male
+                    <input class="form-check-input" type="radio" id="gender" name="Gender" checked> Male
                     <br>
                     <input class="form-check-input" type="radio" id="gender" name="Gender"> Female
                   </div>
@@ -178,23 +179,23 @@
                 <div class="form-group row">
                   <label for="inputtext" class="col-sm-2 col-form-label">Select Games</label>
                   <div class="col-sm-10">
-                    <input class="form-check-input" id="games" type="checkbox"> Cricket
+                    <input class="form-check-input" id="game1" type="checkbox"> Cricket
                     <br>
-                    <input class="form-check-input" id="games" type="checkbox"> Badminton
+                    <input class="form-check-input" id="game2" type="checkbox"> Badminton
                     <br>
-                    <input class="form-check-input" id="games" type="checkbox"> Table Tennis
+                    <input class="form-check-input" id="game3" type="checkbox"> Table Tennis
                     <br>
-                    <input class="form-check-input" id="games" type="checkbox"> Lawn Tennis
+                    <input class="form-check-input" id="game4" type="checkbox"> Lawn Tennis
                     <br>
-                    <input class="form-check-input" id="games" type="checkbox"> Handball
+                    <input class="form-check-input" id="game5" type="checkbox"> Handball
                     <br>
-                    <input class="form-check-input" id="games" type="checkbox"> Basketball
+                    <input class="form-check-input" id="game6" type="checkbox"> Basketball
                     <br>
-                    <input class="form-check-input" id="games" type="checkbox"> Football
+                    <input class="form-check-input" id="game7" type="checkbox"> Football
                     <br>
-                    <input class="form-check-input" id="games" type="checkbox"> Carrom
+                    <input class="form-check-input" id="game8" type="checkbox"> Carrom
                     <br>
-                    <input class="form-check-input" id="games" type="checkbox"> Hockey
+                    <input class="form-check-input" id="game9" type="checkbox"> Hockey
                     <br>
                   </div>
                 </div>
@@ -204,7 +205,7 @@
         </div>
         <div class="form-group row">
           <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" onclick="validate()">Submit</button>
             <button type="submit" class="btn btn-primary">Reset</button>
           </div>
         </div>

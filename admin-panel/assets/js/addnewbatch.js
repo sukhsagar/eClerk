@@ -1,0 +1,6 @@
+var name = document.getElementById("iname")
+var fathername = document.getElementById("ifathername")
+var mothername = document.getElementById("imothername")
+var rollno = document.getElementById("irollno")
+var password = document.getElementById("ipassword")
+var registrationno = document.getElementById("iregistrationno")

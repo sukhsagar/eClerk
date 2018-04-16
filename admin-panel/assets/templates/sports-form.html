@@ -11,7 +11,7 @@
   </head>
 <body>
 
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container-fluid">
                   <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -19,12 +19,12 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="home.html">GNDU eClerk</a>
+                    <a class="navbar-brand" href="../../home.html">GNDU eClerk</a>
                   </div>
                   <div  class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                       <li>
-                        <a href="home.html">Home</a>
+                        <a href="../../home.html">Home</a>
                       </li>
                       <li class="dropdown active">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Forms
@@ -49,6 +49,9 @@
                           <li>
                             <a href="jashan-form.html">Jashan Form</a>
                           </li>
+                          <li>
+                            <a href="http://www.gnduadmissions.org/dhanpreet_idmay2017/idoddsem_index.asp" target="_blank">ID Courses</a>
+                          </li>
                         </ul>
                       </li>
                       <li class="dropdown">
@@ -57,7 +60,7 @@
                         </a>
                         <ul class="dropdown-menu">
                           <li>
-                            <a href="#">Generate Fee Slip</a>
+                            <a href="http://slc.gndu.ac.in/StudentArea/Login.aspx" target="_blank">Generate Fee Slip</a>
                           </li>
                           <li>
                             <a href="feeconfirm.html">Verify Payment</a>
@@ -70,10 +73,10 @@
                             </a>
                             <ul class="dropdown-menu">
                               <li>
-                                <a href="faculitydetail.html">Professors</a>
+                                <a href="facultydetail.html">Professors</a>
                               </li>
                               <li>
-                                <a href="faculitydetail.html">Research Scholars</a>
+                                <a href="facultydetail.html">Research Scholars</a>
                               </li>
                             </ul>
                         </li>
@@ -108,67 +111,67 @@
                           <div class="form-group row">
                               <label for="inputtext" class="col-sm-2 col-form-label">Name</label>
                               <div class="col-sm-10">
-                                  <input type="text" class="form-control" id="inputtext" placeholder="">
+                                  <input type="text" class="form-control" id="iname" placeholder="">
                               </div>
                           </div>
                           <div class="form-group row">
                               <label for="inputtext" class="col-sm-2 col-form-label">Roll No</label>
                               <div class="col-sm-10">
-                                  <input type="text" class="form-control" id="inputtext" placeholder="">
+                                  <input type="text" class="form-control" id="irollno" placeholder="">
                               </div>
                           </div>
                           <div class="form-group row">
                               <label for="inputtext" class="col-sm-2 col-form-label">Class</label>
                               <div class="col-sm-10">
-                                  <input type="text" class="form-control" id="inputtext" placeholder="">
+                                  <input type="text" class="form-control" id="iclass" placeholder="">
                               </div>
                           </div>
                           <div class="form-group row">
                             <label for="inputtext" class="col-sm-2 col-form-label">Date of Birth</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputtext" placeholder="">
+                                <input type="text" class="form-control" id="idob" placeholder="">
                             </div>
                         </div>
                         <div class="form-group row">
                           <label for="inputtext" class="col-sm-2 col-form-label">Gender</label>
                           <div class="col-sm-10">
-                            <input class="form-check-input" type="radio" name="Gender"> Male
+                            <input class="form-check-input" type="radio" name="Gender" id="igender"> Male
                             <br>
-                            <input class="form-check-input" type="radio" name="Gender"> Female
+                            <input class="form-check-input" type="radio" name="Gender" id="igender"> Female
                           </div>
                         </div>
                         <div class="form-group row">
                           <label for="inputtext" class="col-sm-2 col-form-label">Mobile No</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputtext" placeholder="">
+                            <input type="text" class="form-control" id="imobileno" placeholder="">
                           </div>
                         </div>
                         <div class="form-group row">
                           <label for="inputtext" class="col-sm-2 col-form-label">Email Id</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputtext" placeholder="">
+                            <input type="text" class="form-control" id="iemailid" placeholder="">
                           </div>
                         </div>      
                           <div class="form-group row">
                               <label for="inputtext" class="col-sm-2 col-form-label">Select Games</label>
                               <div class="col-sm-10">
-                                  <input class="form-check-input" type="checkbox"> Cricket
+                                  <input class="form-check-input" type="checkbox" id="iselectgames"> Cricket
                                   <br>
-                                  <input class="form-check-input" type="checkbox"> Badminton
+                                  <input class="form-check-input" type="checkbox" id="iselectgames"> Badminton
                                   <br>
-                                  <input class="form-check-input" type="checkbox"> Table Tennis
+                                  <input class="form-check-input" type="checkbox" id="iselectgames"> Table Tennis
                                   <br>
-                                  <input class="form-check-input" type="checkbox"> Lawn Tennis
+                                  <input class="form-check-input" type="checkbox" id="iselectgames"> Lawn Tennis
                                   <br>
-                                  <input class="form-check-input" type="checkbox"> Handball
+                                  <input class="form-check-input" type="checkbox" id="iselectgames"> Handball
                                   <br>
-                                  <input class="form-check-input" type="checkbox"> Basketball
+                                  <input class="form-check-input" type="checkbox" id="iselectgames"> Basketball
                                   <br>
-                                  <input class="form-check-input" type="checkbox"> Football
+                                  <input class="form-check-input" type="checkbox" id="iselectgames"> Football
                                   <br>
-                                  <input class="form-check-input" type="checkbox"> Carrom
+                                  <input class="form-check-input" type="checkbox" id="iselectgames"> Carrom
                                   <br>
-                                  <input class="form-check-input" type="checkbox"> Hockey
+                                  <input class="form-check-input" type="checkbox" id="iselectgames"> Hockey
                                   <br>
                               </div>
                           </div>
@@ -178,8 +181,8 @@
           </div>
           <div class="form-group row">
               <div class="col-sm-10">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                  <button type="submit" class="btn btn-primary">Reset</button>
+                  <button type="submit" class="btn btn-primary" id="isubmit">Submit</button>
+                  <button type="submit" class="btn btn-primary" id="ireset">Reset</button>
               </div>
           </div>
 

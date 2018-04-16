@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title> Jashan Data Page </title>
+  <title> Jashan Registration</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,6 +11,7 @@
   <script src="../js/jquery.min.js"></script>
   <script src="../js/popper.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jashan-form.js"></script>
 </head>
 
 <body>
@@ -49,6 +50,9 @@
               <li class="active">
                 <a href="jashan-form.html">Jashan Form</a>
               </li>
+              <li>
+                  <a href="http://www.gnduadmissions.org/dhanpreet_idmay2017/idoddsem_index.asp" target="_blank">ID Courses</a>
+                </li>
             </ul>
           </li>
           <li class="dropdown">
@@ -62,9 +66,7 @@
               <li>
                 <a href="fee-confirm-form.html">Verify Payment</a>
               </li>
-              <li>
-                  <a href="http://www.gnduadmissions.org/dhanpreet_idmay2017/idoddsem_index.asp" target="_blank">ID Courses</a>
-                </li>
+              
             </ul>
           </li>
           <li class="dropdown">
@@ -151,15 +153,15 @@
                 <div class="form-group row">
                   <label for="inputtext" class="col-sm-2 col-form-label">Event</label>
                   <div class="col-sm-10">
-                    <input class="form-check-input" id="event" type="checkbox"> Bhangra
+                    <input class="form-check-input" id="event1" type="checkbox"> Bhangra
                     <br>
-                    <input class="form-check-input" id="event" type="checkbox"> Rangoli
+                    <input class="form-check-input" id="event2" type="checkbox"> Rangoli
                     <br>
-                    <input class="form-check-input" id="event" type="checkbox"> Quiz
+                    <input class="form-check-input" id="event3" type="checkbox"> Quiz
                     <br>
-                    <input class="form-check-input" id="event" type="checkbox"> Painting
+                    <input class="form-check-input" id="event4" type="checkbox"> Painting
                     <br>
-                    <input class="form-check-input" id="event" type="checkbox"> Gidha
+                    <input class="form-check-input" id="event5" type="checkbox"> Gidha
                     <br>
                   </div>
                 </div>
@@ -169,7 +171,7 @@
         </div>
         <div class="form-group row">
           <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" onclick="validate();">Submit</button>
             <button type="submit" class="btn btn-primary">Reset</button>
           </div>
         </div>

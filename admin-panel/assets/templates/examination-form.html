@@ -12,7 +12,7 @@
 
 <body>
 
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -20,12 +20,12 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="home.html">GNDU eClerk</a>
+            <a class="navbar-brand" href="../../home.html">GNDU eClerk</a>
           </div>
           <div  class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
               <li>
-                <a href="home.html">Home</a>
+                <a href="../../home.html">Home</a>
               </li>
               <li class="dropdown active">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Forms
@@ -50,6 +50,9 @@
                   <li>
                     <a href="jashan-form.html">Jashan Form</a>
                   </li>
+                  <li>
+                    <a href="http://www.gnduadmissions.org/dhanpreet_idmay2017/idoddsem_index.asp" target="_blank">ID Courses</a>
+                  </li>
                 </ul>
               </li>
               <li class="dropdown">
@@ -58,7 +61,7 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a href="#">Generate Fee Slip</a>
+                    <a href="http://slc.gndu.ac.in/StudentArea/Login.aspx" target="_blank">Generate Fee Slip</a>
                   </li>
                   <li>
                     <a href="feeconfirm.html">Verify Payment</a>
@@ -71,10 +74,10 @@
                     </a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a href="faculitydetail.html">Professors</a>
+                        <a href="facultydetail.html">Professors</a>
                       </li>
                       <li>
-                        <a href="faculitydetail.html">Research Scholars</a>
+                        <a href="facultydetail.html">Research Scholars</a>
                       </li>
                     </ul>
                 </li>
@@ -108,96 +111,96 @@
                           <div class="form-group row">
                             <label for="inputtext" class="col-sm-2 col-form-label">Registration No</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputtext" placeholder="">
+                              <input type="text" class="form-control" id="iregistrationno" placeholder="">
                             </div>
                           </div>
                           <div class="form-group row">
                             <label for="inputtext" class="col-sm-2 col-form-label">Roll No</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputtext" placeholder="">
+                              <input type="text" class="form-control" id="irollno" placeholder="">
                             </div>
                           </div>
                           <div class="form-group row">
                             <label for="inputtext" class="col-sm-2 col-form-label">Name</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputtext" placeholder="">
+                              <input type="text" class="form-control" id="iname" placeholder="">
                             </div>
                           </div>
                           <div class="form-group row">
                             <label for="inputtext" class="col-sm-2 col-form-label">Gender</label>
                             <div class="col-sm-10">
-                              <input class="form-check-input" type="radio" name="Gender"> Male
+                              <input class="form-check-input" type="radio" name="Gender" id="igender"> Male
                               <br>
-                              <input class="form-check-input" type="radio" name="Gender"> Female
+                              <input class="form-check-input" type="radio" name="Gender" id="igender"> Female
                             </div>
                           </div>
                           <div class="form-group row">
                             <label for="inputtext" class="col-sm-2 col-form-label">Category</label>
                             <div class="col-sm-10">
-                              <input class="form-check-input" type="radio" name="Category"> Gen
+                              <input class="form-check-input" type="radio" name="Category" id="icategory"> Gen
                               <br>
-                              <input class="form-check-input" type="radio" name="Category"> SC/ST
+                              <input class="form-check-input" type="radio" name="Category" id="icategory"> SC/ST
                               <br>
-                              <input class="form-check-input" type="radio" name="Category"> BC
+                              <input class="form-check-input" type="radio" name="Category" id="category"> BC
                               <br>
-                              <input class="form-check-input" type="radio" name="Category"> Others
+                              <input class="form-check-input" type="radio" name="Category" id="category"> Others
                               <br>
                             </div>
                             </div>
                           <div class="form-group row">
                             <label for="inputtext" class="col-sm-2 col-form-label">Father Name</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputtext" placeholder="">
+                              <input type="text" class="form-control" id="ifathername" placeholder="">
                             </div>
                           </div>
                           <div class="form-group row">
                             <label for="inputtext" class="col-sm-2 col-form-label">Mother Name</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputtext" placeholder="">
+                              <input type="text" class="form-control" id="imothername" placeholder="">
                             </div>
                           </div>
                           <div class="form-group row">
                             <label for="inputtext" class="col-sm-2 col-form-label">Address</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputtext" placeholder="">
+                              <input type="text" class="form-control" id="iaddress" placeholder="">
                             </div>
                           </div>
                           <div class="form-group row">
                             <label for="inputtext" class="col-sm-2 col-form-label">Mobile No</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="inputtext" placeholder="">
+                              <input type="text" class="form-control" id="imobileno" placeholder="">
                             </div>
                           </div>
                           <div class="form-group row">
                             <label for="inputtext" class="col-sm-2 col-form-label">City/Town</label>
                             <div class="col-sm-10">
-                              <input class="form-check-input" type="radio" name="Category"> Rular
+                              <input class="form-check-input" type="radio" name="Category" id="icity"> Rular
                               <br>
-                              <input class="form-check-input" type="radio" name="Category"> Urban
+                              <input class="form-check-input" type="radio" name="Category" id="icity"> Urban
                               <br>
                             </div>
                             </div>
                             <div class="form-group row">
                               <label for="inputtext" class="col-sm-2 col-form-label">Medium</label>
                               <div class="col-sm-10">
-                                <input class="form-check-input" type="radio" name="Medium"> English
+                                <input class="form-check-input" type="radio" name="Medium" id="imedium"> English
                                 <br>
-                                <input class="form-check-input" type="radio" name="Medium"> Punjabi
+                                <input class="form-check-input" type="radio" name="Medium" id="imedium"> Punjabi
                                 <br>
-                                <input class="form-check-input" type="radio" name="Medium"> Hindhi
+                                <input class="form-check-input" type="radio" name="Medium" id="imedium"> Hindhi
                                 <br>
                               </div>
                               </div>  
                             <div class="form-group row">
                               <label for="inputtext" class="col-sm-2 col-form-label">Exam Center</label>
                               <div class="col-sm-5">
-                                <input type="text" class="form-control" id="inputtext" placeholder="">
+                                <input type="text" class="form-control" id="iexamcenter" placeholder="">
                               </div>
                             </div>
                             <div class="form-group row">
                               <label for="inputtext" class="col-sm-2 col-form-label">Exam Code</label>
                               <div class="col-sm-5">
-                                <input type="text" class="form-control" id="inputtext" placeholder="">
+                                <input type="text" class="form-control" id="iexamcode" placeholder="">
                               </div>
                             </div>
                             </form>
@@ -227,43 +230,75 @@
                                             <tbody>
                                               <tr>
                                                 <td><b>10th</b></td>
-                                                <td>-----</td>
-                                                <td>----</td>
-                                                <td>----</td>
-                                                <td>-----</td>
-                                                <td>------</td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="iuniversityboard" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="ipassingyear" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="imarks" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="ipercentage" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="idivision" placeholder="">
+                                                </td>
                                               </tr>
                                               <tr>
                                                 <td><b>12th</b></td>
-                                                <td>-----</td>
-                                                <td>-----</td>
-                                                <td>-----</td>
-                                                <td>-----</td>
-                                                <td>------</td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="iuniversityboard" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="ipassingyear" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="imarks" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="ipercentage" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="idivision" placeholder="">
+                                                </td>
                                               </tr>
                                               <tr>
                                                 <td><b>Graduation</b></td>
-                                                <td>-----</td>
-                                                <td>------</td>
-                                                <td>------</td>
-                                                <td>------</td>
-                                                <td>------</td>
-                                              </tr>
-                                              <tr>
-                                                <td><b>Post Graduation</b></td>
-                                                <td>-----</td>
-                                                <td>-----</td>
-                                                <td>-----</td>
-                                                <td>-----</td>
-                                                <td>-----</td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="iuniversityboard" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="ipassingyear" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="imarks" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="ipercentage" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="idivision" placeholder="">
+                                                </td>
                                               </tr>
                                               <tr>
                                                 <td><b>Other Course</b></td>
-                                                <td>------</td>
-                                                <td>-----</td>
-                                                <td>------</td>
-                                                <td>------</td>
-                                                <td>-----</td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="iuniversityboard" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="ipassingyear" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="imarks" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="ipercentage" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="idivision" placeholder="">
+                                                </td>
                                               </tr>
                                             </tbody>
                                           </table>
@@ -292,28 +327,48 @@
                                             <tbody>
                                               <tr>
                                                 <td><b>1</b></td>
-                                                <td>-----</td>
-                                                <td>----</td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="isubjectname" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="isubjectcode" placeholder="">
+                                                </td>
                                               </tr>
                                               <tr>
                                                 <td><b>2</b></td>
-                                                <td>-----</td>
-                                                <td>-----</td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="isubjectname" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="isubjectcode" placeholder="">
+                                                </td>
                                               </tr>
                                               <tr>
                                                 <td><b>3</b></td>
-                                                <td>-----</td>
-                                                <td>------</td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="isubjectname" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="isubjectcode" placeholder="">
+                                                </td>
                                               </tr>
                                               <tr>
                                                 <td><b>4</b></td>
-                                                <td>-----</td>
-                                                <td>-----</td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="isubjectname" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="isubjectcode" placeholder="">
+                                                </td>
                                               </tr>
                                               <tr>
                                                 <td><b>5</b></td>
-                                                <td>------</td>
-                                                <td>-----</td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="isubjectname" placeholder="">
+                                                </td>
+                                                <td>
+                                                  <input type="text" class="formcontrol" id="isubjectcode" placeholder="">
+                                                </td>
                                               </tr>
                                             </tbody>
                                           </table>
@@ -329,19 +384,19 @@
                                       <div class="form-group row">
                                         <label for="inputtext" class="col-sm-2 col-form-label">Date</label>
                                         <div class="col-sm-10">
-                                          <input type="text" class="form-control" id="inputtext" placeholder="">
+                                          <input type="text" class="form-control" id="idate" placeholder="">
                                         </div>
                                       </div>
                                       <div class="form-group row">
                                         <label for="inputtext" class="col-sm-2 col-form-label">Place</label>
                                         <div class="col-sm-10">
-                                          <input type="text" class="form-control" id="inputtext" placeholder="">
+                                          <input type="text" class="form-control" id="iplace" placeholder="">
                                         </div>
                                       </div>
                                       <div class="form-group row">
                                         <label for="inputtext" class="col-sm-2 col-form-label">Student Sign</label>
                                         <div class="col-sm-10">
-                                          <input type="text" class="form-control" id="inputtext" placeholder="">
+                                          <input type="text" class="form-control" id="istudentsign" placeholder="">
                                         </div>
                                       </div>
                                   </div>

@@ -29,15 +29,14 @@
                               <div class="form-group row">
                                 <label for="inputtext" class="col-sm-2 col-form-label">Notice Heading</label>
                                 <div class="col-sm-10">
-                                  <input type="text" class="form-control" id="inputtext" placeholder="">
+                                  <input type="text" class="form-control" id="inoticeheading" placeholder="">
                                 </div>
                               </div>
                               <!-- dropdown menu code -->
                 <div class="form-group col-md-4">
                     <label for="inputState">Type</label>
-                    <select id="inputState" class="form-control">
+                    <select id="itype" class="form-control">
                       <option selected="selected">Choose...</option>
-                      <option>Text</option>
                       <option>Image</option>
                       <option>Pdf</option>
                     </select>
@@ -45,13 +44,13 @@
                   <div class="form-group row">
                     <label for="inputtext" class="col-sm-2 col-form-label">Validity</label>
                     <div class="col-sm-10">
-                      <input class="form-check-input" type="radio" name="Validity"> 1 Day
+                      <input class="form-check-input" type="radio" name="Validity" id="ivalidity"> 1 Day
                       <br>
-                      <input class="form-check-input" type="radio" name="Validity"> 1 Week
+                      <input class="form-check-input" type="radio" name="Validity" id="ivalidity"> 1 Week
                       <br>
-                      <input class="form-check-input" type="radio" name="Validity"> 1 Month
+                      <input class="form-check-input" type="radio" name="Validity" id="ivalidity"> 1 Month
                       <br>
-                      <input class="form-check-input" type="radio" name="Validity"> 6 Month
+                      <input class="form-check-input" type="radio" name="Validity" id="ivalidity"> 6 Month
                     </div>
                   </div>
                   
@@ -61,8 +60,8 @@
                   </div> 
                   <div class="form-group row">
                     <div class="col-sm-10">
-                      <button type="submit" class="btn btn-primary">Upload</button>
-                      <button type="submit" class="btn btn-primary">Cancle</button>
+                      <button type="submit" class="btn btn-primary" id="iupload">Upload</button>
+                      <button type="submit" class="btn btn-primary" id="icancle">Cancle</button>
                     </div>
                   </div>
                 </div>

@@ -1,0 +1,5 @@
+var noticeheading = document.getElementById("inoticeheading")
+var type = document.getElementById("itype")
+var validity = document.getElementById("ivalidity")
+var uploadbutton = document.getElementById("iupload")
+var canclebutton = document.getElementById("icancle")
