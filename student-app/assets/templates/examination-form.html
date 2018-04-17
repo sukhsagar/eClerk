@@ -11,6 +11,7 @@
   <script src="../js/jquery.min.js"></script>
   <script src="../js/popper.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/examination-form.js"></script>
 </head>
 
 <body>
@@ -152,7 +153,7 @@
                 <div class="form-group row">
                   <label for="inputtext" class="col-sm-2 col-form-label">Gender</label>
                   <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" id="gender" name="Gender"> Male
+                    <input class="form-check-input" type="radio" id="gender" name="Gender" checked> Male
                     <br>
                     <input class="form-check-input" type="radio" id="gender" name="Gender"> Female
                   </div>
@@ -160,7 +161,7 @@
                 <div class="form-group row">
                   <label for="inputtext" class="col-sm-2 col-form-label">Category</label>
                   <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" id="category" name="Category"> Gen
+                    <input class="form-check-input" type="radio" id="category" name="Category" checked> Gen
                     <br>
                     <input class="form-check-input" type="radio" id="category" name="Category"> SC/ST
                     <br>
@@ -197,16 +198,16 @@
                 <div class="form-group row">
                   <label for="inputtext" class="col-sm-2 col-form-label">City/Town</label>
                   <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" id="town" name="Category"> Rural
+                    <input class="form-check-input" type="radio" id="town" name="town" checked> Rural
                     <br>
-                    <input class="form-check-input" type="radio" id="town" name="Category"> Urban
+                    <input class="form-check-input" type="radio" id="town" name="town"> Urban
                     <br>
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="inputtext" class="col-sm-2 col-form-label">Medium</label>
                   <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" id="medium" name="Medium"> English
+                    <input class="form-check-input" type="radio" id="medium" name="Medium" checked> English
                     <br>
                     <input class="form-check-input" type="radio" id="medium" name="Medium"> Punjabi
                     <br>
@@ -389,7 +390,7 @@
         <div class="form-group row">
             <div class="col-sm-10">
               <button class="btn btn-primary">Edit</button>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary" onclick="validate();">Submit</button>
               <button class="btn btn-primary">Reset</button>
             </div>
           </div>
