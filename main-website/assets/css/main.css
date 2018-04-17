@@ -834,7 +834,7 @@ ul.external li a:hover {
 }
 
 .price-table.featured .value {
-    background-color: #009EE3;
+    background-color: #f8f8f8;
     color: #fff;
 }
 
@@ -883,7 +883,7 @@ ul.external li a:hover {
 
 .price-table.featured ul li:last-child,
 .price-table ul li:last-child:hover {
-    background-color: #009EE3;
+    
 }
 
 .price-table.featured ul li:last-child a,
