@@ -23,5 +23,10 @@ function validate(){
     if(depositDate.value===""){
         alert("Enter the fee deposit date"); return;
     }
+    var formData={
+        "Deposit ID":depositID.value,
+        "Journal ID":journalID.value,
+        "Deposit Date":depositDate.value
+    }
 }
     

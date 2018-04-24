@@ -22,6 +22,12 @@ function validate(){
     if(residenceCertificate.value===""){
         alert("Please upload your Residence Certificate"); return;
     }
+    var formData={
+        "Minority":minority,
+        "Income Certificate":incomeCertificate.value,
+        "Residence Certificate":residenceCertificate.value,
+        "Concession":concession
+    }
 }    
 
 
