@@ -41,7 +41,7 @@ function validate(){
         alert("Enter your Address"); return;
     }
     if(mobNo.value===""){
-        alert("Enter yourrr Phone Number"); return;
+        alert("Enter your Phone Number"); return;
     }
     if(examCenter.value===""){
         alert("Enter your Exam Center"); return;
@@ -55,5 +55,8 @@ function validate(){
     if(subjectCode1.value==="" || subjectCode2.value==="" || subjectCode3.value==="" || subjectCode4.value==="" || subjectCode5.value===""){
         alert("Enter the codes of all the subjects."); return;
     }
-    
+    firebase.database().ref('student-detail-table' + examination-detail).push(formData).then(function(){
+        alert("You have succesfully filled the examination form.");
+        document.getElementById("submit").disabled=true;
+    })
 }

@@ -20,6 +20,10 @@ function validate(){
     if(event1.checked==false || event2.checked==false || event3.checked==false || event4.checked==false || event5.checked==false){
         alert("select atleast 1 event"); return;
     }
+    var formData={
+        
+    }
+
 }
 
 
