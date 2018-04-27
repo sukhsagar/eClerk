@@ -1,17 +1,17 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-  <title> Fee Confirmation</title>
+  <title> Sports Registration Form </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link href="../css/style2.css" rel="stylesheet">
   <link href="../css/bootstrap.min.css" rel="stylesheet">
-
+  <script src="../js/app.js"></script>
   <script src="../js/jquery.min.js"></script>
   <script src="../js/popper.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/fee-confirm-form.js"></script>
+  <script src="../js/sports-form.js"></script>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
           <li>
             <a href="notices.html">Notices</a>
           </li>
-          <li class="dropdown">
+          <li class="dropdown active">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Forms
               <span class="caret"></span>
             </a>
@@ -44,7 +44,7 @@
               <li>
                 <a href="scholarship-form.html">Scholarship Form</a>
               </li>
-              <li>
+              <li class="active">
                 <a href="sports-form.html">Sports Form</a>
               </li>
               <li>
@@ -55,7 +55,7 @@
                 </li>
             </ul>
           </li>
-          <li class="dropdown active">
+          <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Fee Collection
               <span class="caret"></span>
             </a>
@@ -63,7 +63,7 @@
               <li>
                 <a href="http://slc.gndu.ac.in/StudentArea/Login.aspx" target="_blank">Generate Fee Slip</a>
               </li>
-              <li class="active">
+              <li>
                 <a href="fee-confirm-form.html">Verify Payment</a>
               </li>
             </ul>
@@ -112,7 +112,8 @@
         </ul>
       </div>
   </nav>
-  <!-- Page formattimg code -->
+
+  <!-- Page formatting code -->
   <section id="team" class="section grey-section">
     <div class="white-shape">
       <div class="icon-container fixed border-radius">
@@ -123,10 +124,10 @@
       <div class="container">
         <div class="big-title">
           <h3>
-            <span>FEE</span> Confirmation</h3>
+            <span>SPORTS</span> Form</h3>
           <div class="border-title"></div>
         </div>
-        <!-- page enteries detail code -->
+        <!-- Page enteries code -->
         <div class="masonry-item col-md-6">
           <div class="bgc-white p-20 bd">
             <div class="mT-30">
@@ -150,21 +151,52 @@
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputtext" class="col-sm-2 col-form-label">Bank Deposit ID</label>
+                  <label for="inputtext" class="col-sm-2 col-form-label">Date of Birth</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="deposit_ID" placeholder="">
+                    <input type="text" class="form-control" id="dob" placeholder="">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputtext" class="col-sm-2 col-form-label">Bank Journal Id</label>
+                  <label for="inputtext" class="col-sm-2 col-form-label">Gender</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="journal_ID" placeholder="">
+                    <input class="form-check-input" type="radio" id="gender" name="Gender" checked> Male
+                    <br>
+                    <input class="form-check-input" type="radio" id="gender" name="Gender"> Female
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputtext" class="col-sm-2 col-form-label">Fee Deposit Date</label>
+                  <label for="inputtext" class="col-sm-2 col-form-label">Mobile No</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="depositDate" placeholder="">
+                    <input type="text" class="form-control" id="mobno" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputtext" class="col-sm-2 col-form-label">Email Id</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="emailID" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputtext" class="col-sm-2 col-form-label">Select Games</label>
+                  <div class="col-sm-10">
+                    <input class="form-check-input" id="game1" type="checkbox"> Cricket
+                    <br>
+                    <input class="form-check-input" id="game2" type="checkbox"> Badminton
+                    <br>
+                    <input class="form-check-input" id="game3" type="checkbox"> Table Tennis
+                    <br>
+                    <input class="form-check-input" id="game4" type="checkbox"> Lawn Tennis
+                    <br>
+                    <input class="form-check-input" id="game5" type="checkbox"> Handball
+                    <br>
+                    <input class="form-check-input" id="game6" type="checkbox"> Basketball
+                    <br>
+                    <input class="form-check-input" id="game7" type="checkbox"> Football
+                    <br>
+                    <input class="form-check-input" id="game8" type="checkbox"> Carrom
+                    <br>
+                    <input class="form-check-input" id="game9" type="checkbox"> Hockey
+                    <br>
                   </div>
                 </div>
               </form>
@@ -173,7 +205,7 @@
         </div>
         <div class="form-group row">
           <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary" onclick="validate();">Submit</button>
+            <button type="submit" class="btn btn-primary" onclick="validate()">Submit</button>
             <button type="submit" class="btn btn-primary">Reset</button>
           </div>
         </div>
