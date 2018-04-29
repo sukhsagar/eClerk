@@ -24,9 +24,15 @@ function validate(){
         alert("Enter the fee deposit date"); return;
     }
     var formData={
+        "Roll No":rollNo.value,
+        "Student Name":studentName.value,
         "Deposit ID":depositID.value,
         "Journal ID":journalID.value,
         "Deposit Date":depositDate.value
     }
+    firebase.databse().ref('fee-confirm' + rollno).push(formData).then(function(){
+        alert("Your Fees has been verified.");
+        document.getElementById("submit").disabled=true;
+    });
 }
     
