@@ -1,10 +1,11 @@
-document.getElementById("submitPersonal").disabled=true;
-document.getElementById("resetPersonal").disabled=true;
-document.getElementById("submitParents").disabled=true;
-document.getElementById("resetParents").disabled=true;
-document.getElementById("submitQualification").disabled=true;
-document.getElementById("resetQualification").disabled=true;
-
+function disableControls(){
+    document.getElementById("submitPersonal").disabled=true;
+    document.getElementById("resetPersonal").disabled=true;
+    document.getElementById("submitParents").disabled=true;
+    document.getElementById("resetParents").disabled=true;
+    document.getElementById("submitQualification").disabled=true;
+    document.getElementById("resetQualification").disabled=true;
+};
 
 function editPersonal(){
     document.getElementById("submitPersonal").disabled=false;
