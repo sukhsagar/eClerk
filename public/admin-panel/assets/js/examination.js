@@ -121,4 +121,28 @@ function validate() {
         alert("please enter signature");
         return;
     }
+    var formData = {
+                     "registrationno" : registrationno.value,
+                     "rollno" : rollno.value,
+                     "name" : name.value,
+                     "fathername" : fathername.value,
+                     "mothername" : mothername.value,
+                     "address" : address.value,
+                     "mobileno" : mobileno.value,
+                     "city" : city.value,
+                     "medium" : medium.value,
+                     "examcenter" : examcenter.value,
+                     "examcode" : examcode.value,
+                     "universityboard" : universityboard.value,
+                     "passingyear" : passingyear.value,
+                     "marks" : marks.value,
+                     "percentage" : percentage.value,
+                     "division" : division.value,
+                     "subjectname" :subjectname.value,
+                     "subjectcode" : subjectcode.value,
+                     "date" : date.value,
+                     "place" : place.value,
+                     "studentsign" : studentsign.value,
+    };
+
 }

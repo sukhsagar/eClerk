@@ -94,4 +94,21 @@ function validate() {
         alert("please enter division");
         return;
     }
+    var formData = {
+                    "registrationno" : registrationno.value,
+                     "rollno" : rollno.value,
+                     "universityrank" : universityrank.value,
+                     "name" : name.value,
+                     "dateofbirth" : dateofbirth.value,
+                     "fathername" : fathername.value,
+                     "mothername" : mothername.value,
+                     "address" : address.value,
+                     "mobileno" : mobileno.value,
+                     "emailid" : emailid.value,
+                     "universityboard" : universityboard.value,
+                     "passingyear" : passingyear.value,
+                     "marks" : marks.value,
+                     "percentage" : percentage.value,
+                     "division" : division.value,
+    };
 }

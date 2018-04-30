@@ -53,4 +53,14 @@ function validate() {
         alert("Please select atleast 1 game");
         return;
     }
+
+    var formData = {
+                    "name" : name.value,
+                    "rollno" : rollno.value,
+                    "sclass" : sclass.value,
+                    "dateofbirth" : dateofbirth.value,
+                    "mobileno" : mobileno.value,
+                    "emailid" : emailid.value,
+                    "games" : selectgames.value,
+    };
 }
