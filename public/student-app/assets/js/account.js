@@ -1,3 +1,24 @@
+document.getElementById("submitPersonal").disabled=true;
+document.getElementById("resetPersonal").disabled=true;
+document.getElementById("submitParents").disabled=true;
+document.getElementById("resetParents").disabled=true;
+document.getElementById("submitQualification").disabled=true;
+document.getElementById("resetQualification").disabled=true;
+
+
+function editPersonal(){
+    document.getElementById("submitPersonal").disabled=false;
+    document.getElementById("resetPersonal").disabled=false;
+}
+function editParents(){
+    document.getElementById("submitParents").disabled=false;
+    document.getElementById("resetParents").disabled=false;
+}
+function editQualification(){
+    document.getElementById("submitQualification").disabled=false;
+    document.getElementById("resetQualification").disabled=false;
+}
+
 function validatePersonal(){
     var  regNo = document.getElementById("regno")
     var rollNo = document.getElementById("rollno")
@@ -120,9 +141,19 @@ function validateQualification(){
         "Graduation Percentage" : percentage_grad.value,
         "Graduation Division" : division_grad.value
     };
-
+    firebase.database().ref('StudentDetail' + personalDetail).push(formDataPersonal).then(function(){
+        alert("Your personal detail has been submitted.");
+        document.getElementById("submitPersonal").disabled=true;
+        document.getElementById("resetPersonal").disabled=true;
+    });
+    firebase.database().ref('StudentDetail' + personalDetail).push(formDataParents).then(function(){
+        alert("Your Fees has been verified.");
+        document.getElementById("submitParents").disabled=true;
+        document.getElementById("resetParents").disabled=true;
+    });
+    firebase.database().ref('StudentDetail' + academicDetail).push(formDataQualifications).then(function(){
+        alert("Your Fees has been verified.");
+        document.getElementById("submitQualification").disabled=true;
+        document.getElementById("resetQualifications").disabled=true;
+    });
 }
-
-
-
-
