@@ -30,7 +30,7 @@ function validate(){
         "Journal ID":journalID.value,
         "Deposit Date":depositDate.value
     }
-    firebase.databse().ref('fee-confirm' + rollno).push(formData).then(function(){
+    firebase.database().ref('fee-confirm/' + rollno).push(formData).then(function(){
         alert("Your Fees has been verified.");
         document.getElementById("submit").disabled=true;
     });
