@@ -119,4 +119,26 @@ function validate() {
         alert("please enter ncsid");
         return;
     }
+
+     var formData = {
+                        "registrationno" : registrationno.value,
+                        "rollno" : rollno.value,
+                        "name" : name.value,
+                        "dateofbirth" : dateofbirth.value,
+                        "fathername" : fathername.value,
+                        "fatheroccupation" : fatheroccupation.value,
+                        "mothername" : mothername.value,
+                        "motheroccupation" : motheroccupation.value,
+                        "address" : address.value,
+                        "mobileno" : mobileno.value,
+                        "emailid" : emailid.value,
+                        "universityboard" : universityboard.value,
+                        "passingyear" : passingyear.value,
+                        "marks" : marks.value,
+                        "percentage" : percentage.value,
+                        "division" : division.value,
+                        "campusyoustudy" : campusyoustudy.value,
+                        "anypendingbacklogorgap" : anypendingbacklogorgap.value,
+                        "ncsid" : ncsid.value,
+     };
 }

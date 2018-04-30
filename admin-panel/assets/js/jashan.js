@@ -31,4 +31,10 @@ var canclebutton = document.getElementById("icancle");
         alert("Please select atleast 1 event.");
         return;
     }
+    var formData = {
+                    "name" : name.value,
+                    "rollno" : rollno.value,
+                    "jclass" : jclass.value,
+                    "events" : events.value,
+    };
 }

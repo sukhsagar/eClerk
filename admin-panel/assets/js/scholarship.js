@@ -35,4 +35,11 @@ function validate() {
         alert("please attach residence certificate");
         return;
     }
+    var formData = {
+                    "name" : name.value,
+                    "rollno" : rollno.value,
+                    "sclass" : sclass.value,
+                    "incomecertificate" : incomecertificate.value,
+                    "residencecertificate" : residencecertificate.value,
+    };
 }

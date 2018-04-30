@@ -38,4 +38,12 @@ function validate() {
         alert("please enter fee deposit date");
         return;
     }
+    var formData = {
+                    "name" : name.value,
+                    "rollno" : rollno.value,
+                    "fclass" : fclass.value,
+                    "bankchallannumber" : bankchallannumber.value,
+                    "bankdepositid" : bankdepositid.value,
+                    "feedepositdate" : feedepositdate.value,
+    };
 }
