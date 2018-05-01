@@ -5,20 +5,77 @@ function disableControls(){
     document.getElementById("resetParents").disabled=true;
     document.getElementById("submitQualification").disabled=true;
     document.getElementById("resetQualification").disabled=true;
+    document.getElementById("regno").disabled=true;
+    document.getElementById("rollno").disabled=true;
+    document.getElementById("stuname").disabled=true;
+    document.getElementById("rank").disabled=true;
+    document.getElementById("dob").disabled=true;
+    document.getElementById("category").disabled=true;
+    document.getElementById("gender").disabled=true;
+    document.getElementById("father_name").disabled=true;
+    document.getElementById("mother_name").disabled=true;
+    document.getElementById("address").disabled=true;
+    document.getElementById("mobile_no").disabled=true;
+    document.getElementById("email_id").disabled=true;
+    document.getElementById("board10").disabled=true;
+    document.getElementById("pass10").disabled=true;
+    document.getElementById("marks10").disabled=true;
+    document.getElementById("percent10").disabled=true;
+    document.getElementById("division10").disabled=true;
+    document.getElementById("board12").disabled=true;
+    document.getElementById("pass12").disabled=true;
+    document.getElementById("marks12").disabled=true;
+    document.getElementById("percent12").disabled=true;
+    document.getElementById("division12").disabled=true;
+    document.getElementById("boardgrad").disabled=true;
+    document.getElementById("passgrad").disabled=true;
+    document.getElementById("marksgrad").disabled=true;
+    document.getElementById("percentgrad").disabled=true;
+    document.getElementById("divisiongrad").disabled=true;
 };
 
 function editPersonal(){
     document.getElementById("submitPersonal").disabled=false;
     document.getElementById("resetPersonal").disabled=false;
-}
+    document.getElementById("editPersonal").disabled=true;
+    document.getElementById("regno").disabled=false;
+    document.getElementById("rollno").disabled=false;
+    document.getElementById("stuname").disabled=false;
+    document.getElementById("rank").disabled=false;
+    document.getElementById("dob").disabled=false;
+    document.getElementById("category").disabled=false;
+    document.getElementById("gender").disabled=false;
+};
 function editParents(){
     document.getElementById("submitParents").disabled=false;
     document.getElementById("resetParents").disabled=false;
-}
+    document.getElementById("editParents").disabled=true;
+    document.getElementById("father_name").disabled=false;
+    document.getElementById("mother_name").disabled=false;
+    document.getElementById("address").disabled=false;
+    document.getElementById("mobile_no").disabled=false;
+    document.getElementById("email_id").disabled=false;
+};
 function editQualification(){
     document.getElementById("submitQualification").disabled=false;
     document.getElementById("resetQualification").disabled=false;
-}
+    document.getElementById("editQualification").disabled=true;
+    document.getElementById("board10").disabled=false;
+    document.getElementById("pass10").disabled=false;
+    document.getElementById("marks10").disabled=false;
+    document.getElementById("percent10").disabled=false;
+    document.getElementById("division10").disabled=false;
+    document.getElementById("board12").disabled=false;
+    document.getElementById("pass12").disabled=false;
+    document.getElementById("marks12").disabled=false;
+    document.getElementById("percent12").disabled=false;
+    document.getElementById("division12").disabled=false;
+    document.getElementById("boardgrad").disabled=false;
+    document.getElementById("passgrad").disabled=false;
+    document.getElementById("marksgrad").disabled=false;
+    document.getElementById("percentgrad").disabled=false;
+    document.getElementById("divisiongrad").disabled=false;
+};
 
 function validatePersonal(){
     var  regNo = document.getElementById("regno")
@@ -148,13 +205,13 @@ function validateQualification(){
         document.getElementById("resetPersonal").disabled=true;
     });
     firebase.database().ref('StudentDetail' + personalDetail).push(formDataParents).then(function(){
-        alert("Your Fees has been verified.");
+        alert("Your Guardina Detail has been submitted.");
         document.getElementById("submitParents").disabled=true;
         document.getElementById("resetParents").disabled=true;
     });
     firebase.database().ref('StudentDetail' + academicDetail).push(formDataQualifications).then(function(){
-        alert("Your Fees has been verified.");
+        alert("Your Qualfications have been updated.");
         document.getElementById("submitQualification").disabled=true;
         document.getElementById("resetQualifications").disabled=true;
     });
-}
+};
