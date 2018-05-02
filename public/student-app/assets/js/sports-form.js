@@ -1,38 +1,3 @@
-function disableControls(){
-    document.getElementById("stuname").disabled=true;
-    document.getElementById("rollno").disabled=true;
-    document.getElementById("class").disabled=true;
-    document.getElementById("dob").disabled=true;
-    document.getElementById("mobno").disabled=true;
-    document.getElementById("emailID").disabled=true;
-    document.getElementById("game1").disabled=true;
-    document.getElementById("game2").disabled=true;
-    document.getElementById("game3").disabled=true;
-    document.getElementById("game4").disabled=true;
-    document.getElementById("game5").disabled=true;
-    document.getElementById("game6").disabled=true;
-    document.getElementById("game7").disabled=true;
-    document.getElementById("game8").disabled=true;
-    document.getElementById("game9").disabled=true;
-    document.getElementById("submit").disabled=true;
-};
-
-function edit(){
-    document.getElementById("mobno").disabled=false;
-    document.getElementById("emailID").disabled=false;
-    document.getElementById("game1").disabled=false;
-    document.getElementById("game2").disabled=false;
-    document.getElementById("game3").disabled=false;
-    document.getElementById("game4").disabled=false;
-    document.getElementById("game5").disabled=false;
-    document.getElementById("game6").disabled=false;
-    document.getElementById("game7").disabled=false;
-    document.getElementById("game8").disabled=false;
-    document.getElementById("game9").disabled=false;
-    document.getElementById("submit").disabled=false;
-    document.getElementById("edit").disabled=true;
-};
-
 function validate(){
     var stuName = document.getElementById("stuname")
     var rollNo = document.getElementById("rollno")
