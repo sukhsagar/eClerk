@@ -36,4 +36,10 @@ function validate(){
     if(game1.checked==false && game2.checked==false && game3.checked==false && game4.checked==false && game5.checked==false && game6.checked==false && game7.checked==false && game8.checked==false && game9.checked==false){
         alert("Please select atleast one game"); return;
     }
+
+    firebase.database().ref('student-detail-table' + game1).push(formData).then(function(){
+        alert("You have succesfully applied for sports.");
+        document.getElementById("submit").disabled=true;
+    })
 }
+

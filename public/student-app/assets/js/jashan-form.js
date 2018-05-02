@@ -23,7 +23,10 @@ function validate(){
     var formData={
         
     }
-
+    firebase.database().ref('student-detail-table' + event).push(formData).then(function(){
+        alert("You have succesfully applied for Jashan.");
+        document.getElementById("submit").disabled=true;
+    })
 }
 
 

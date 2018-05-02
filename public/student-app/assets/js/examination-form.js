@@ -55,6 +55,22 @@ function validate(){
     if(subjectCode1.value==="" || subjectCode2.value==="" || subjectCode3.value==="" || subjectCode4.value==="" || subjectCode5.value===""){
         alert("Enter the codes of all the subjects."); return;
     }
+    var formData={
+        "Town":town.value,
+        "Exam Medium":medium.value,
+        "Exam Center":examCenter.value,
+        "Exam Code":examCode.value,
+        "Subject Name 1":subjectName1.value,
+        "Subject Code 1":subjectCode1.value,
+        "Subject Name 2":subjectName2.value,
+        "Subject Code 2":subjectCode2.value,
+        "Subject Name 3":subjectName3.value,
+        "Subject Code 3":subjectCode3.value,
+        "Subject Name 4":subjectName4.value,
+        "Subject Code 4":subjectCode4.value,
+        "Subject Name 5":subjectName5.value,
+        "Subject Code 5":subjectCode5.value
+    }
     firebase.database().ref('student-detail-table' + examination-detail).push(formData).then(function(){
         alert("You have succesfully filled the examination form.");
         document.getElementById("submit").disabled=true;
