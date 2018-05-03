@@ -71,7 +71,7 @@ function validate(){
         "Subject Name 5":subjectName5.value,
         "Subject Code 5":subjectCode5.value
     }
-    firebase.database().ref('student-detail-table' + examination-detail).push(formData).then(function(){
+    firebase.database().ref('student-detail-table' + examination-detail).set(formData).then(function(){
         alert("You have succesfully filled the examination form.");
         document.getElementById("submit").disabled=true;
     })
