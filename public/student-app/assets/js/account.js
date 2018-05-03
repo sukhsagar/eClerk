@@ -148,12 +148,12 @@ function validateQualification(){
         document.getElementById("resetPersonal").disabled=true;
     });
     firebase.database().ref('StudentDetail' + personalDetail).push(formDataParents).then(function(){
-        alert("Your Fees has been verified.");
+        alert("Your Guardian details have been updated.");
         document.getElementById("submitParents").disabled=true;
         document.getElementById("resetParents").disabled=true;
     });
-    firebase.database().ref('StudentDetail' + academicDetail).push(formDataQualifications).then(function(){
-        alert("Your Fees has been verified.");
+    firebase.database().ref('StudentDetail' + academicDetail).set(formDataQualifications).then(function(){
+        alert("Your Academic details have been updated.");
         document.getElementById("submitQualification").disabled=true;
         document.getElementById("resetQualifications").disabled=true;
     });

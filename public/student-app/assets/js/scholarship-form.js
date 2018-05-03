@@ -28,7 +28,7 @@ function validate(){
         "Residence Certificate":residenceCertificate.value,
         "Concession":concession
     }
-    firebase.database().ref('student-detail-table' + scholarship-form).push(formData).then(function(){
+    firebase.database().ref('student-detail-table' + documents).set(formData).then(function(){
         alert("You have succesfully applied for scholarship.");
         document.getElementById("submit").disabled=true;
     })
