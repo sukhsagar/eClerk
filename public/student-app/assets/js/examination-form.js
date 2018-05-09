@@ -1,9 +1,7 @@
-
-
 function load(){
     var data
 
-    firebase.database().ref('student/2016csb12662').once('value',function(snapshot){
+    firebase.database().ref('student/2015CSB1553').once('value',function(snapshot){
         data=snapshot.val();
 
         //Populating Data.
@@ -13,26 +11,23 @@ function load(){
         var fatherName = document.getElementById("fathername");
         var motherName = document.getElementById("mothername");
     
-        //if(data.Registration!=NULL || data.regno!=undefined){
-            regno.value=data.Registration
+        //if(data.registrationNumber!=NULL || data.registrationNumber!=undefined){
+            regNo.value=data.registrationNumber
         //}
-        //if(data.rollno!=NULL || data.rollno!=undefined){
-            rollNo.value=data.Roll
-       // }
-    //if(data.Name!=NULL || data.Name!=undefined){
-            stuName.value=data.Name
+        //if(data.rollNo!=NULL || data.rollNo!=undefined){
+            rollNo.value=data.rollNo
         //}
-       // if(data.fatherName!=NULL || data.fatherName!=undefined){
-            fatherName.value=data.Father
-       // }
-       // if(data.mothername!=NULL || data.mothername!=undefined){
-            motherName.value=data.MotherName
-       // }
+        //if(data.name!=NULL || data.name!=undefined){
+            stuName.value=data.name
+        //}
+        //if(data.personalDetail.fatherName!=NULL || data.personalDetail.fatherName!=undefined){
+            fatherName.value=data.fatherName
+        //}
+       //if(data.personalDetail.mothername!=NULL || data.personalDetail.mothername!=undefined){
+            motherName.value=data.motherName
+       //}
         
     })
-
-
-    
 }
 
 function validate(){
