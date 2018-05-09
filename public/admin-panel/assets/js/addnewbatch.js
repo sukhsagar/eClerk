@@ -6,16 +6,19 @@ function validate(){
     var password = document.getElementById("ipassword");
     var registrationno = document.getElementById("iregistrationno");
     var submitbutton = document.getElementById("isubmit");
-
+    var stuClass = document.getElementById("inputState");
     var formData={
-        "Name": name.value,
-        "Father Name": fathername.value,
-        "Mother Name": mothername.value,
-        "Roll No": rollno.value,
-        "Password": password.value,
-        "Registration Number": registrationno.value
+        "name": name.value,
+        "rollNo": rollno.value,
+        "password": password.value,
+        "registrationNumber": registrationno.value,
+        "class": stuClass.selectedIndex,
+        "personalDetail":{
+            "fatherName": fathername.value,
+            "motherName": mothername.value
+        }
     };
-    firebase.database().ref('student/' + rollno.value).set(formData).then(function(){
+    firebase.database().ref('gndu-amritsar/student/' + rollno.value).set(formData).then(function(){
         alert("You have succesfully created a new batch.");
     });
 }
