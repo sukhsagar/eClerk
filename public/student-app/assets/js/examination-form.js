@@ -1,31 +1,37 @@
-var data
 
-firebase.database().ref('student/2016csb12662').once('value',function(snapshot){
-    data=snapshot.val();
-})
 
 function load(){
-    var regNo = document.getElementById("regno");
-    var rollNo = document.getElementById("rollno");
-    var stuName = document.getElementById("stuname");
-    var fatherName = document.getElementById("fathername");
-    var motherName = document.getElementById("mothername");
+    var data
 
-    //if(data.Registration!=NULL || data.regno!=undefined){
-        regno.value=data.Registration Number
-   // }
-    //if(data.rollno!=NULL || data.rollno!=undefined){
-        rollNo.value=data.Roll
-   // }
-//if(data.Name!=NULL || data.Name!=undefined){
-        stuName.value=data.Name
-    //}
-   // if(data.fatherName!=NULL || data.fatherName!=undefined){
-        fatherName.value=data.Father
-   // }
-   // if(data.mothername!=NULL || data.mothername!=undefined){
-        MotherName.value=data.MotherName
-   // }
+    firebase.database().ref('student/2016csb12662').once('value',function(snapshot){
+        data=snapshot.val();
+
+        //Populating Data.
+        var regNo = document.getElementById("regno");
+        var rollNo = document.getElementById("rollno");
+        var stuName = document.getElementById("stuname");
+        var fatherName = document.getElementById("fathername");
+        var motherName = document.getElementById("mothername");
+    
+        //if(data.Registration!=NULL || data.regno!=undefined){
+            regno.value=data.Registration
+        //}
+        //if(data.rollno!=NULL || data.rollno!=undefined){
+            rollNo.value=data.Roll
+       // }
+    //if(data.Name!=NULL || data.Name!=undefined){
+            stuName.value=data.Name
+        //}
+       // if(data.fatherName!=NULL || data.fatherName!=undefined){
+            fatherName.value=data.Father
+       // }
+       // if(data.mothername!=NULL || data.mothername!=undefined){
+            motherName.value=data.MotherName
+       // }
+        
+    })
+
+
     
 }
 
@@ -107,3 +113,4 @@ function validate(){
         document.getElementById("submit").disabled=true;
     })
 }
+
