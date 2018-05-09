@@ -10,7 +10,7 @@ function validate(){
         "teachertype" : teachertype.value,
         "uploadpicture" : uploadpicture.value
     };
-    firebase.database().ref('faculity/' + teachername.value).set(formData).then(function(){
+    firebase.database().ref('faculity/' + teachername.value).push(formData).then(function(){
         alert("You have succesfully added teacher detail.");
     });
 }
