@@ -12,11 +12,13 @@ function validate() {
         alert("please select a date");
         return;
     }
-    var today = new Date().toJSON();
-    var formData = {
+     
+           var formData = {
                     "teachername" : selectteacher.value, 
-                    }; 
-    var formData = {
-                        "date" : selectdate.value, 
-                    };                   
+                    "date" : selectdate.value
+                        }; 
+    firebase.database().ref('teacheronleave/' + selectteacher.value).push(formData).then(function(){
+        alert("You have succesfully add teacher on leave detail.");
+    });
+                      
 }
