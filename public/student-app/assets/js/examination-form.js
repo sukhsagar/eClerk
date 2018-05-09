@@ -1,7 +1,7 @@
 function load(){
-    var data
+    var data={};
 
-    firebase.database().ref('student/2015CSB1553').once('value',function(snapshot){
+    firebase.database().ref('gndu-amritsar/student/2015CSB1553').once('value',function(snapshot){
         data=snapshot.val();
 
         //Populating Data.
@@ -12,19 +12,19 @@ function load(){
         var motherName = document.getElementById("mothername");
     
         //if(data.registrationNumber!=NULL || data.registrationNumber!=undefined){
-            regNo.value=data.registrationNumber
+            regNo.value=data.registrationNumber;
         //}
         //if(data.rollNo!=NULL || data.rollNo!=undefined){
-            rollNo.value=data.rollNo
+            rollNo.value=data.rollNo;
         //}
         //if(data.name!=NULL || data.name!=undefined){
-            stuName.value=data.name
+            stuName.value=data.name;
         //}
         //if(data.personalDetail.fatherName!=NULL || data.personalDetail.fatherName!=undefined){
-            fatherName.value=data.fatherName
+            fatherName.value=data.personalDetail.fatherName;
         //}
        //if(data.personalDetail.mothername!=NULL || data.personalDetail.mothername!=undefined){
-            motherName.value=data.motherName
+            motherName.value=data.personalDetail.motherName;
        //}
         
     })
