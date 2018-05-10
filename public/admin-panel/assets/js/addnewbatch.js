@@ -1,5 +1,4 @@
 function validate(){
-<<<<<<< HEAD
     var batch = document.getElementById("ibatch");
     var name = document.getElementById("iname");
     var fathername = document.getElementById("ifathername");
@@ -8,54 +7,9 @@ function validate(){
     var password = document.getElementById("ipassword");
     var registrationno = document.getElementById("iregistrationno");
     var submitbutton = document.getElementById("isubmit");
-    var stuClass = document.getElementById("inputState");
+    var stuClass = document.getElementById("iclass");
     
-    if(name.value==="")
-    {
-        alert("please enter name");
-        return;
-    }
-    if(fathername.value==="")
-    {
-        alert("please enter fathername");
-        return;
-    }
-    if(mothername.value==="")
-    {
-        alert("please enter mothername");
-        return;
-    }
-    if(rollno.value==="")
-    {
-        alert("please enter rollno");
-        return;
-    }
-    if(password.value==="")
-    {
-        alert("please enter password");
-        return;
-    }
-    if(registrationno.value==="")
-    {
-        alert("please enter registration no");
-        return;
-    }
-    var formData={
-        "name": name.value,
-        "rollNo": rollno.value,
-        "password": password.value,
-        "registrationNumber": registrationno.value,
-        "batch": batch.value,
-        "personalDetail":{
-            "fatherName": fathername.value,
-            "motherName": mothername.value
-        }
-    };
-    firebase.database().ref('gndu-amritsar/student/' + rollno.value).set(formData).then(function(){
-        alert("You have succesfully created a new batch.");
-    });
-=======
-    var name1 = document.getElementById("iname1");
+        var name1 = document.getElementById("iname1");
     var fatherName1 = document.getElementById("ifathername1");
     var motherName1 = document.getElementById("imothername1");
     var rollNo1 = document.getElementById("irollno1");
@@ -63,7 +17,7 @@ function validate(){
     var registrationNo1 = document.getElementById("iregistrationno1");
 
     var submitbutton = document.getElementById("isubmit");
-    var stuClass = document.getElementById("inputState");
+    var stuClass = document.getElementById("iclass");
 
     var name2 = document.getElementById("iname2");
     var fatherName2 = document.getElementById("ifathername2");
@@ -105,7 +59,7 @@ function validate(){
                 "motherName": motherName1.value
             }
         };
-        firebase.database().ref('gndu-amritsar/student/' + rollno.value).set(formData).then(function(){
+        firebase.database().ref('gndu-amritsar/student/' + rollNo1.value).set(formData).then(function(){
             alert("You have succesfully created a new batch.");
         });
     } else {
@@ -142,7 +96,7 @@ function validate(){
                 "motherName": motherName2.value
             }
         };
-        firebase.database().ref('gndu-amritsar/student/' + rollno.value).set(formData).then(function(){
+        firebase.database().ref('gndu-amritsar/student/' + rollNo2.value).set(formData).then(function(){
             alert("You have succesfully created a new batch.");
         });
     } else {
@@ -179,7 +133,7 @@ function validate(){
                 "motherName": motherName3.value
             }
         };
-        firebase.database().ref('gndu-amritsar/student/' + rollno.value).set(formData).then(function(){
+        firebase.database().ref('gndu-amritsar/student/' + rollNo3.value).set(formData).then(function(){
             alert("You have succesfully created a new batch.");
         });
     } else {
@@ -216,7 +170,7 @@ function validate(){
                 "motherName": motherName4.value
             }
         };
-        firebase.database().ref('gndu-amritsar/student/' + rollno.value).set(formData).then(function(){
+        firebase.database().ref('gndu-amritsar/student/' + rollNo4.value).set(formData).then(function(){
             alert("You have succesfully created a new batch.");
         });
     } else {
@@ -253,7 +207,7 @@ function validate(){
                 "motherName": motherName5.value
             }
         };
-        firebase.database().ref('gndu-amritsar/student/' + rollno.value).set(formData).then(function(){
+        firebase.database().ref('gndu-amritsar/student/' + rollNo5.value).set(formData).then(function(){
             alert("You have succesfully created a new batch.");
         });
     } else {
@@ -277,7 +231,6 @@ function validate(){
         }
         
     }
->>>>>>> ff2820da453d918fe5dbd16e7e4e0592d43cf1f2
 }
 
 
