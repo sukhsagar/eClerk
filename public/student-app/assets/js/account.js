@@ -142,12 +142,12 @@ function validateQualification(){
         "Graduation Percentage" : percentage_grad.value,
         "Graduation Division" : division_grad.value
     };
-    firebase.database().ref('StudentDetail' + personalDetail).push(formDataPersonal).then(function(){
+    firebase.database().ref('StudentDetail' + personalDetail).set(formDataPersonal).then(function(){
         alert("Your personal detail has been submitted.");
         document.getElementById("submitPersonal").disabled=true;
         document.getElementById("resetPersonal").disabled=true;
     });
-    firebase.database().ref('StudentDetail' + personalDetail).push(formDataParents).then(function(){
+    firebase.database().ref('StudentDetail' + personalDetail).set(formDataParents).then(function(){
         alert("Your Guardian details have been updated.");
         document.getElementById("submitParents").disabled=true;
         document.getElementById("resetParents").disabled=true;

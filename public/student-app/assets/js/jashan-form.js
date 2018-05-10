@@ -2,6 +2,7 @@ function validate(){
     var studentName = document.getElementById("stuname")
     var rollNo = document.getElementById("rollno")
     var stuClass = document.getElementById("class")
+    var event = document.getElementById("event")
     var event1 = document.getElementById("event1")
     var event2 = document.getElementById("event2")
     var event3 = document.getElementById("event3")
@@ -21,9 +22,10 @@ function validate(){
         alert("select atleast 1 event"); return;
     }
     var formData={
-        
+        "rollNo": rollNo.value,
+        "event":event.value
     }
-    firebase.database().ref('student-detail-table' + event).push(formData).then(function(){
+    firebase.database().ref('gndu-amritsar/miscellaneous/event' + rollNo.value).push(formData).then(function(){
         alert("You have succesfully applied for Jashan.");
         document.getElementById("submit").disabled=true;
     })
