@@ -1,4 +1,14 @@
 function validate(){
+    var batch = document.getElementById("ibatch");
+    var name = document.getElementById("iname");
+    var fatherName = document.getElementById("ifathername");
+    var motherName = document.getElementById("imothername");
+    var rollNo = document.getElementById("irollno");
+    var password = document.getElementById("ipassword");
+    var registrationNo = document.getElementById("iregistrationno");
+    var submitButton = document.getElementById("isubmit");
+    var stuClass = document.getElementById("iclass");
+    
     var name1 = document.getElementById("iname1");
     var fatherName1 = document.getElementById("ifathername1");
     var motherName1 = document.getElementById("imothername1");
@@ -6,8 +16,8 @@ function validate(){
     var password1 = document.getElementById("ipassword1");
     var registrationNo1 = document.getElementById("iregistrationno1");
 
-    var submitbutton = document.getElementById("isubmit");
-    var stuClass = document.getElementById("inputState");
+    var submitButton = document.getElementById("isubmit");
+    var stuClass = document.getElementById("iclass");
 
     var name2 = document.getElementById("iname2");
     var fatherName2 = document.getElementById("ifathername2");
@@ -49,7 +59,7 @@ function validate(){
                 "motherName": motherName1.value
             }
         };
-        firebase.database().ref('gndu-amritsar/student/' + rollno.value).set(formData).then(function(){
+        firebase.database().ref('gndu-amritsar/student/' + rollNo1.value).push(formData).then(function(){
             alert("You have succesfully created a new batch.");
         });
     } else {
@@ -74,7 +84,7 @@ function validate(){
         
     }
 
-    if(name2.value!="NULL" || fatherName2.value!="NULL" || motherName2.value!="NULL" || rollNo2.value!="NULL" || password2.value!="NULL" || registrationNo2.value!="NULL"){   
+    /*if(name2.value!="NULL" || fatherName2.value!="NULL" || motherName2.value!="NULL" || rollNo2.value!="NULL" || password2.value!="NULL" || registrationNo2.value!="NULL"){   
         var formData={
             "name": name2.value,
             "rollNo": rollNo2.value,
@@ -86,7 +96,7 @@ function validate(){
                 "motherName": motherName2.value
             }
         };
-        firebase.database().ref('gndu-amritsar/student/' + rollno.value).set(formData).then(function(){
+        firebase.database().ref('gndu-amritsar/student/' + rollNo2.value).set(formData).then(function(){
             alert("You have succesfully created a new batch.");
         });
     } else {
@@ -110,7 +120,6 @@ function validate(){
         }
         
     }
-
     if(name3.value!="NULL" || fatherName3.value!="NULL" || motherName3.value!="NULL" || rollNo3.value!="NULL" || password3.value!="NULL" || registrationNo3.value!="NULL"){   
         var formData={
             "name": name3.value,
@@ -123,7 +132,7 @@ function validate(){
                 "motherName": motherName3.value
             }
         };
-        firebase.database().ref('gndu-amritsar/student/' + rollno.value).set(formData).then(function(){
+        firebase.database().ref('gndu-amritsar/student/' + rollNo3.value).set(formData).then(function(){
             alert("You have succesfully created a new batch.");
         });
     } else {
@@ -147,7 +156,6 @@ function validate(){
         }
         
     }
-
     if(name4.value!="NULL" || fatherName4.value!="NULL" || motherName4.value!="NULL" || rollNo4.value!="NULL" || password4.value!="NULL" || registrationNo4.value!="NULL"){   
         var formData={
             "name": name4.value,
@@ -160,7 +168,7 @@ function validate(){
                 "motherName": motherName4.value
             }
         };
-        firebase.database().ref('gndu-amritsar/student/' + rollno.value).set(formData).then(function(){
+        firebase.database().ref('gndu-amritsar/student/' + rollNo4.value).set(formData).then(function(){
             alert("You have succesfully created a new batch.");
         });
     } else {
@@ -184,7 +192,6 @@ function validate(){
         }
         
     }
-
     if(name5.value!="NULL" || fatherName5.value!="NULL" || motherName5.value!="NULL" || rollNo5.value!="NULL" || password5.value!="NULL" || registrationNo5.value!="NULL"){   
         var formData={
             "name": name5.value,
@@ -197,7 +204,7 @@ function validate(){
                 "motherName": motherName5.value
             }
         };
-        firebase.database().ref('gndu-amritsar/student/' + rollno.value).set(formData).then(function(){
+        firebase.database().ref('gndu-amritsar/student/' + rollNo5.value).set(formData).then(function(){
             alert("You have succesfully created a new batch.");
         });
     } else {
@@ -220,7 +227,58 @@ function validate(){
             alert("Enter the Password of the first student."); return;
         }
         
-    }
+    }*/
 }
 
+function parsingCSV(){
+    var file = document.getElementById("uploadCsv").files[0];
+    config={
+        delimiter: "",  // auto-detect
+        newline: "",    // auto-detect
+        quoteChar: '"',
+        escapeChar: '"',
+        header: false,
+        trimHeader: false,
+        dynamicTyping: false,
+        preview: 0,
+        encoding: "",
+        worker: false,
+        comments: false,
+        step: undefined,
+        complete: function(results, file) {
+                //console.log("Parsing complete:", results, file);
+                display(results);
+            },
+        error: function(errors) {
+            alert("Error while parsing. Please check your file again and try.");
+            console.log(errors);
+        },
+        download: false,
+        skipEmptyLines: false,
+        chunk: undefined,
+        fastMode: undefined,
+        beforeFirstChunk: undefined,
+        withCredentials: undefined
+    };
+    
+    Papa.parse(file, config);
+    //console.log(results);
+    function display(results){
+        var r = results;
+        console.log(r.data);  
+    } 
+}
 
+function newBatch(){
+    var batch = document.getElementById("iclass");
+    var startingYear = document.getElementById("iyear");
+    if(batch==1){
+        endingYear = startingYear.value + 3;
+    }
+    else if(batch==2){
+        endingYear = startingYear.value + 5; 
+    }
+    else if(batch==0){
+        alert("Please select Class"); return;
+    }
+}
