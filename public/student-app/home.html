@@ -8,13 +8,14 @@
   <link rel="stylesheet" href="assets/css/style2.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/tableStyle.css">
-  <script src="../js/app.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/home.js"></script>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body onload="load();">
 
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -137,13 +138,13 @@
           <table class="table">
             <tr>
               <td>
-                <img src="assets/images/1.jpg" height="400" width="300">
+                <img id="notice1" src="assets/images/1.jpg" height="400" width="300">
               </td>
               <td>
-                <img src="assets/images/2.jpg" height="400" width="300">
+                <img id="notice2" src="assets/images/2.jpg" height="400" width="300">
               </td>
               <td>
-                <img src="assets/images/1.jpg" height="400" width="300">
+                <img id="notice3" src="assets/images/1.jpg" height="400" width="300">
               </td>
             </tr>
           </table>
@@ -164,7 +165,7 @@
                   9 AM - 10 AM
                 </td>
                 <td>
-                  <label for="">abcd</label>
+                  <label id="mon9-10" for="">abcd</label>
                 </td>
               </tr>
               <tr>
@@ -172,7 +173,7 @@
                   10 AM - 11 AM
                 </td>
                 <td>
-                  <label for="">abcd</label>
+                  <label id="mon10-11" for="">abcd</label>
                 </td>
               </tr>
               <tr>
@@ -180,7 +181,7 @@
                   11 AM - 12 Noon
                 </td>
                 <td>
-                  <label for="">abcd</label>
+                  <label id="mon11-12" for="">abcd</label>
                 </td>
               </tr>
               <tr>
@@ -188,7 +189,7 @@
                   12 Noon - 1 PM
                 </td>
                 <td>
-                  <label for="">abcd</label>
+                  <label id="mon12-1" for="">abcd</label>
                 </td>
               </tr>
               <tr>
@@ -196,7 +197,7 @@
                   1 PM - 2 PM
                 </td>
                 <td>
-                  <label for="">abcd</label>
+                  <label id="mon1-2" for="">abcd</label>
                 </td>
               </tr>
               <tr>
@@ -204,7 +205,7 @@
                   2 PM - 3 PM
                 </td>
                 <td>
-                  <label for="">abcd</label>
+                  <label id="mon2-3" for="">abcd</label>
                 </td>
               </tr>
               <tr>
@@ -212,7 +213,7 @@
                   3 PM - 4 PM
                 </td>
                 <td>
-                  <label for="">abcd</label>
+                  <label id="mon3-4" for="">abcd</label>
                 </td>
               </tr>
               <tr>
@@ -220,7 +221,7 @@
                   4 PM - 5 PM
                 </td>
                 <td>
-                  <label for="">abcd</label>
+                  <label id="mon4-5" for="">abcd</label>
                 </td>
               </tr>
 
@@ -235,17 +236,17 @@
       <table class="table">
         <tr>
           <td>
-            <label for="">Dr. ABCD</label>
+            <label id="teacherLeave1" for="">Dr. ABCD</label>
           </td>
         </tr>
         <tr>
           <td>
-            <label for="">Dr. MNOP</label>
+            <label id="teacherLeave2" for="">Dr. MNOP</label>
           </td>
         </tr>
         <tr>
           <td>
-            <label for="">Dr. WXYZ</label>
+            <label id="teacherLeave3" for="">Dr. WXYZ</label>
           </td>
         </tr>
       </table>
