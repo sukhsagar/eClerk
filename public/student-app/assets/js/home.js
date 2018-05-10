@@ -6,7 +6,7 @@ var notice3 = document.getElementById("notice3")
 
 
 function load(){
-    firebase.database().ref('gndu-amritsar/timeTable/class').once('value',function(snapshot1){
+    firebase.database().ref('gndu-amritsar/timeTable/').once('value',function(snapshot1){
         data=snapshot1.val();
 
         var mon9_10 = document.getElementById("mon9-10")
@@ -28,7 +28,7 @@ function load(){
         mon4_5.innerHTML = data.monday.eighth;
     })
 
-    firebase.database().ref('gndu-amritsar/teacherOnLeave').once('value',function(snapshot2){
+    firebase.database().ref('gndu-amritsar/teacherOnLeave/').once('value',function(snapshot2){
         data.snapshot2.val();
 
         var teacherLeave1 = document.getElementById("teacherLeave1")
