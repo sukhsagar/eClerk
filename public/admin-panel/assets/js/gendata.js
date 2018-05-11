@@ -1,35 +1,35 @@
 function validate() {
-    var registrationno = document.getElementById("iregistrationno");
-    var rollno = document.getElementById("irollno");
-    var universityrank = document.getElementById("iuniversityrank");
+    var registrationNo = document.getElementById("iregistrationno");
+    var rollNo = document.getElementById("irollno");
+    var universityRank = document.getElementById("iuniversityrank");
     var category = document.getElementById("icategory");
     var name = document.getElementById("iname");
     var gender = document.getElementById("igender");
-    var dateofbirth = document.getElementById("idob");
-    var fathername = document.getElementById("ifathername");
-    var mothername = document.getElementById("imothername");
+    var dateofBirth = document.getElementById("idob");
+    var fatherName = document.getElementById("ifathername");
+    var motherName = document.getElementById("imothername");
     var address = document.getElementById("iaddress");
-    var mobileno = document.getElementById("imobileno");
-    var emailid = document.getElementById("iemailid");
-    var universityboard = document.getElementById("iuniversityboard");
-    var passingyear = document.getElementById("ipassingyear");
+    var mobileNo = document.getElementById("imobileno");
+    var emailId = document.getElementById("iemailid");
+    var universityBoard = document.getElementById("iuniversityboard");
+    var passingYear = document.getElementById("ipassingyear");
     var marks = document.getElementById("imarks");
     var percentage = document.getElementById("ipercentage");
     var division = document.getElementById("idivision");
-    var submitbutton = document.getElementById("isubmit");
-    var canclebutton = document.getElementById("icancle");
+    var submitButton = document.getElementById("isubmit");
+    var cancleButton = document.getElementById("icancle");
 
-    if(registrationno.value==="")
+    if(registrationNo.value==="")
     {
         alert("please enter registration no");
         return;
     }
-    if(rollno.value==="")
+    if(rollNo.value==="")
     {
         alert("please enter rollno");
         return;
     }
-    if(universityrank.value==="")
+    if(universityRank.value==="")
     {
         alert("please enter universityrank");
         return;
@@ -39,17 +39,17 @@ function validate() {
         alert("please enter name");
         return;
     }
-    if(dateofbirth.value==="")
+    if(dateofBirth.value==="")
     {
         alert("please enter date of birth");
         return;
     }
-    if(fathername.value==="")
+    if(fatherName.value==="")
     {
         alert("please enter fathername");
         return;
     }
-    if(mothername.value==="")
+    if(motherName.value==="")
     {
         alert("please enter mothername");
         return;
@@ -59,22 +59,22 @@ function validate() {
         alert("please enter address");
         return;
     }
-    if(mobileno.value==="")
+    if(mobileNo.value==="")
     {
         alert("please enter mobile no");
         return;
     }
-    if(emailid.value==="")
+    if(emailId.value==="")
     {
         alert("please enter email id");
         return;
     }
-    if(universityboard.value==="")
+    if(universityBoard.value==="")
     {
         alert("please enter university board");
         return;
     }
-    if(passingyear.value==="")
+    if(passingYear.value==="")
     {
         alert("please enter passingyear");
         return;
@@ -95,20 +95,23 @@ function validate() {
         return;
     }
     var formData = {
-                    "registrationno" : registrationno.value,
-                     "rollno" : rollno.value,
-                     "universityrank" : universityrank.value,
+                    "registrationNo" : registrationNo.value,
+                     "rollNo" : rollNo.value,
+                     "universityRank" : universityRank.value,
                      "name" : name.value,
-                     "dateofbirth" : dateofbirth.value,
-                     "fathername" : fathername.value,
-                     "mothername" : mothername.value,
+                     "dateofBirth" : dateofBirth.value,
+                     "fatherName" : fatherName.value,
+                     "motherName" : motherName.value,
                      "address" : address.value,
-                     "mobileno" : mobileno.value,
-                     "emailid" : emailid.value,
-                     "universityboard" : universityboard.value,
-                     "passingyear" : passingyear.value,
+                     "mobileNo" : mobileNo.value,
+                     "emailId" : emailId.value,
+                     "universityBoard" : universityBoard.value,
+                     "passingYear" : passingYear.value,
                      "marks" : marks.value,
                      "percentage" : percentage.value,
-                     "division" : division.value,
+                     "division" : division.value
     };
+    firebase.database().ref('gendata/' + rollNo.value).push(formData).then(function(){
+        alert("You have succesfully added general data.");
+    });
 }

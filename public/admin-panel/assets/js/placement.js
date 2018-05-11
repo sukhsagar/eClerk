@@ -1,35 +1,35 @@
 function validate() {
-    var registrationno = document.getElementById("iregistrationno");
-    var rollno = document.getElementById("irollno");
+    var registrationNo = document.getElementById("iregistrationno");
+    var rollNo = document.getElementById("irollno");
     var name = document.getElementById("iname");
-    var dateofbirth = document.getElementById("idob");
+    var dateofBirth = document.getElementById("idob");
     var gender = document.getElementById("igender");
     var category = document.getElementById("icategory");
-    var fathername = document.getElementById("ifathername");
-    var fatheroccupation = document.getElementById("ifatheroccupation");
-    var mothername = document.getElementById("imothername");
-    var motheroccupation = document.getElementById("imotheroccupation");
+    var fatherName = document.getElementById("ifathername");
+    var fatherOccupation = document.getElementById("ifatheroccupation");
+    var motherName = document.getElementById("imothername");
+    var motheroOccupation = document.getElementById("imotheroccupation");
     var address = document.getElementById("iaddress");
-    var mobileno = document.getElementById("imobileno");
-    var emailid = document.getElementById("iemailid");
-    var universityboard = document.getElementById("iuniversityboard");
-    var passingyear = document.getElementById("ipassingyear");
+    var mobileNo = document.getElementById("imobileno");
+    var emailId = document.getElementById("iemailid");
+    var universityBoard = document.getElementById("iuniversityboard");
+    var passingYear = document.getElementById("ipassingyear");
     var marks = document.getElementById("imarks");
     var percentage = document.getElementById("ipercentage");
     var division = document.getElementById("idivision");
-    var campusyoustudy = document.getElementById("icys");
-    var anypendingbacklogorgap = document.getElementById("iresion");
-    var radiobutton = document.getElementById("iradio");
-    var ncsid = document.getElementById("incsid");
-    var submitbutton = document.getElementById("isubmit");
-    var canclebutton = document.getElementById("icancle");
+    var campusyouStudy = document.getElementById("icys");
+    var anypendingBacklogorgap = document.getElementById("iresion");
+    var radioButton = document.getElementById("iradio");
+    var ncsId = document.getElementById("incsid");
+    var submitButton = document.getElementById("isubmit");
+    var cancleButton = document.getElementById("icancle");
 
-    if(registrationno.value==="")
+    if(registrationNo.value==="")
     {
         alert("please enter registration no");
         return;
     }
-    if(rollno.value==="")
+    if(rollNo.value==="")
     {
         alert("please enter rollno");
         return;
@@ -39,27 +39,27 @@ function validate() {
         alert("please enter name");
         return;
     }
-    if(dateofbirth.value==="")
+    if(dateofBirth.value==="")
     {
         alert("please enter date of birth");
         return;
     }
-    if(fathername.value==="")
+    if(fatherName.value==="")
     {
         alert("please enter fathername");
         return;
     }
-    if(fatheroccupation.value==="")
+    if(fatherOccupation.value==="")
     {
         alert("please enter fatheroccupation");
         return;
     }
-    if(mothername.value==="")
+    if(motherName.value==="")
     {
         alert("please enter mothername");
         return;
     }
-    if(motheroccupation.value==="")
+    if(motherOccupation.value==="")
     {
         alert("please enter motheroccupation");
         return;
@@ -69,22 +69,22 @@ function validate() {
         alert("please enter address");
         return;
     }
-    if(mobileno.value==="")
+    if(mobileNo.value==="")
     {
         alert("please enter mobile no");
         return;
     }
-    if(emailid.value==="")
+    if(emailId.value==="")
     {
         alert("please enter email id");
         return;
     }
-    if(universityboard.value==="")
+    if(universityBoard.value==="")
     {
         alert("please enter university board");
         return;
     }
-    if(passingyear.value==="")
+    if(passingYear.value==="")
     {
         alert("please enter passingyear");
         return;
@@ -104,41 +104,41 @@ function validate() {
         alert("please enter division");
         return;
     }
-    if(campusyoustudy.value==="")
+    if(campusyouStudy.value==="")
     {
         alert("please enter campus you study");
         return;
     }
-    if(anypendingbacklogorgap.value==="")
+    if(anypendingBacklogorgap.value==="")
     {
         alert("please enter any pending backlog or gap");
         return;
     }
-    if(ncsid.value==="")
+    if(ncsId.value==="")
     {
         alert("please enter ncsid");
         return;
     }
 
      var formData = {
-                        "registrationno" : registrationno.value,
-                        "rollno" : rollno.value,
+                        "registrationNo" : registrationNo.value,
+                        "rollNo" : rollNo.value,
                         "name" : name.value,
-                        "dateofbirth" : dateofbirth.value,
-                        "fathername" : fathername.value,
-                        "fatheroccupation" : fatheroccupation.value,
-                        "mothername" : mothername.value,
-                        "motheroccupation" : motheroccupation.value,
+                        "dateofBirth" : dateofBirth.value,
+                        "fatherName" : fatherName.value,
+                        "fatherOccupation" : fatherOccupation.value,
+                        "motherName" : motherName.value,
+                        "motherOccupation" : motherOccupation.value,
                         "address" : address.value,
-                        "mobileno" : mobileno.value,
-                        "emailid" : emailid.value,
-                        "universityboard" : universityboard.value,
-                        "passingyear" : passingyear.value,
+                        "mobileNo" : mobileNo.value,
+                        "emailId" : emailId.value,
+                        "universityBoard" : universityBoard.value,
+                        "passingYear" : passingYear.value,
                         "marks" : marks.value,
                         "percentage" : percentage.value,
                         "division" : division.value,
-                        "campusyoustudy" : campusyoustudy.value,
-                        "anypendingbacklogorgap" : anypendingbacklogorgap.value,
-                        "ncsid" : ncsid.value,
+                        "campusyouStudy" : campusyouStudy.value,
+                        "anypendingBacklogorgap" : anypendingBacklogorgap.value,
+                        "ncsId" : ncsId.value,
      };
 }

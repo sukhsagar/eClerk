@@ -2,7 +2,7 @@ function validate(){
 var pclass = document.getElementById("iclass");
 var semester = document.getElementById("isemester");
 var message = document.getElementById("imessage");
-var sendbutton = document.getElementById("isend");
+var sendButton = document.getElementById("isend");
 
 var formData={
     "pclass" : pclass.value,
