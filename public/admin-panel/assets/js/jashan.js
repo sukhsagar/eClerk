@@ -1,22 +1,22 @@
 function validate()
 {
 var name = document.getElementById("iname");
-var rollno = document.getElementById("irollno");
+var rollNo = document.getElementById("irollno");
 var jclass = document.getElementById("iclass");
 var event1 = document.getElementById("i1event");
 var event2 = document.getElementById("i2event");
 var event3 = document.getElementById("i3event");
 var event4 = document.getElementById("i4event");
 var event5 = document.getElementById("i5event");
-var submitbutton = document.getElementById("isubmit");
-var canclebutton = document.getElementById("icancle");
+var submitButton = document.getElementById("isubmit");
+var cancleButton = document.getElementById("icancle");
 
     if(name.value==="")
     {
         alert("please enter name");
         return;
     }
-    if(rollno.value==="")
+    if(rollNo.value==="")
     {
         alert("please enter rollno");
         return;
@@ -33,7 +33,7 @@ var canclebutton = document.getElementById("icancle");
     }
     var formData = {
                     "name" : name.value,
-                    "rollno" : rollno.value,
+                    "rollNo" : rollNo.value,
                     "jclass" : jclass.value,
                     "events" : events.value,
     };

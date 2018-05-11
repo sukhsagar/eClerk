@@ -1,19 +1,19 @@
 function validate() {
     var name = document.getElementById("iname");
-    var rollno = document.getElementById("irollno");
+    var rollNo = document.getElementById("irollno");
     var fclass = document.getElementById("iclass");
-    var bankchallannumber = document.getElementById("ibcn");
-    var bankdepositid = document.getElementById("ibdi");
-    var feedepositdate = document.getElementById("ifdd");
-    var submitbutton = document.getElementById("isubmit");
-    var canclebutton = document.getElementById("icancle");
+    var bankChallanNumber = document.getElementById("ibcn");
+    var bankDepositId = document.getElementById("ibdi");
+    var feeDepositDate = document.getElementById("ifdd");
+    var submitButton = document.getElementById("isubmit");
+    var cancleButton = document.getElementById("icancle");
 
     if(name.value==="")
     {
         alert("please enter name");
         return;
     }
-    if(rollno.value==="")
+    if(rollNo.value==="")
     {
         alert("please enter rollno");
         return;
@@ -23,27 +23,27 @@ function validate() {
         alert("please enter class");
         return;
     }
-    if(bankchallannumber.value==="")
+    if(bankChallanNumber.value==="")
     {
         alert("please enter bank challan no");
         return;
     }
-    if(bankdepositid.value==="")
+    if(bankDepositId.value==="")
     {
         alert("please enter bank deposit id");
         return;
     }
-    if(feedepositdate.value==="")
+    if(feeDepositDate.value==="")
     {
         alert("please enter fee deposit date");
         return;
     }
     var formData = {
                     "name" : name.value,
-                    "rollno" : rollno.value,
+                    "rollNo" : rollNo.value,
                     "fclass" : fclass.value,
-                    "bankchallannumber" : bankchallannumber.value,
-                    "bankdepositid" : bankdepositid.value,
-                    "feedepositdate" : feedepositdate.value,
+                    "bankChallanNumber" : bankChallanNumber.value,
+                    "bankDepositId" : bankDepositId.value,
+                    "feeDepositDate" : feeDepositDate.value,
     };
 }

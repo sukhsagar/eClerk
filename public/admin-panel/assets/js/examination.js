@@ -1,37 +1,37 @@
 function validate() {
-    var registrationno = document.getElementById("iregistrationno");
-    var rollno = document.getElementById("irollno");
+    var registrationNo = document.getElementById("iregistrationno");
+    var rollNo = document.getElementById("irollno");
     var name = document.getElementById("iname");
     var gender = document.getElementById("igender");
     var category = document.getElementById("icategory");
-    var fathername = document.getElementById("ifathername");
-    var mothername = document.getElementById("imothername");
+    var fatherName = document.getElementById("ifathername");
+    var motherName = document.getElementById("imothername");
     var address = document.getElementById("iaddress");
-    var mobileno = document.getElementById("imobileno");
+    var mobileNo = document.getElementById("imobileno");
     var city = document.getElementById("icity");
     var medium = document.getElementById("imedium");
-    var examcenter = document.getElementById("iexamcenter");
-    var examcode = document.getElementById("iexamcode");
-    var universityboard = document.getElementById("iuniversityboard");
-    var passingyear = document.getElementById("ipassingyear");
+    var examCenter = document.getElementById("iexamcenter");
+    var examCode = document.getElementById("iexamcode");
+    var universityBoard = document.getElementById("iuniversityboard");
+    var passingYear = document.getElementById("ipassingyear");
     var marks = document.getElementById("imarks");
     var percentage = document.getElementById("ipercentage");
     var division = document.getElementById("idivision");
-    var subjectname = document.getElementById("isubjectname");
-    var subjectcode = document.getElementById("isubjectcode");
+    var subjectName = document.getElementById("isubjectname");
+    var subjectCode = document.getElementById("isubjectcode");
     var date = document.getElementById("idate");
     var place = document.getElementById("iplace");
-    var studentsign = document.getElementById("istudentsign");
-    var submitbutton = document.getElementById("isubmit");
-    var canclebutton = document.getElementById("icancle");
+    var studentSign = document.getElementById("istudentsign");
+    var submitButton = document.getElementById("isubmit");
+    var cancleButton = document.getElementById("icancle");
 
 
-    if(registrationno.value==="")
+    if(registrationNo.value==="")
     {
         alert("please enter registration no");
         return;
     }
-    if(rollno.value==="")
+    if(rollNo.value==="")
     {
         alert("please enter rollno");
         return;
@@ -41,12 +41,12 @@ function validate() {
         alert("please enter name");
         return;
     }
-    if(fathername.value==="")
+    if(fatherName.value==="")
     {
         alert("please enter fathername");
         return;
     }
-    if(mothername.value==="")
+    if(motherName.value==="")
     {
         alert("please enter mothername");
         return;
@@ -56,27 +56,27 @@ function validate() {
         alert("please enter address");
         return;
     }
-    if(mobileno.value==="")
+    if(mobileNo.value==="")
     {
         alert("please enter mobile no");
         return;
     }
-    if(examcenter.value==="")
+    if(examCenter.value==="")
     {
         alert("please enter examcenter");
         return;
     }
-    if(examcode.value==="")
+    if(examCode.value==="")
     {
         alert("please enter examcode");
         return;
     }
-    if(universityboard.value==="")
+    if(universityBoard.value==="")
     {
         alert("please enter university board");
         return;
     }
-    if(passingyear.value==="")
+    if(passingYear.value==="")
     {
         alert("please enter passingyear");
         return;
@@ -96,12 +96,12 @@ function validate() {
         alert("please enter division");
         return;
     }
-    if(subjectcode.value==="")
+    if(subjectCode.value==="")
     {
         alert("please enter subjectcode");
         return;
     }
-    if(subjectname.value==="")
+    if(subjectName.value==="")
     {
         alert("please enter subjectname");
         return;
@@ -116,33 +116,33 @@ function validate() {
         alert("please enter place");
         return;
     }
-    if(studentsign.value==="")
+    if(studentSign.value==="")
     {
         alert("please enter signature");
         return;
     }
     var formData = {
-                     "registrationno" : registrationno.value,
-                     "rollno" : rollno.value,
+                     "registrationNo" : registrationNo.value,
+                     "rollNo" : rollNo.value,
                      "name" : name.value,
-                     "fathername" : fathername.value,
-                     "mothername" : mothername.value,
+                     "fatherName" : fatherName.value,
+                     "motherName" : motherName.value,
                      "address" : address.value,
-                     "mobileno" : mobileno.value,
+                     "mobileNo" : mobileNo.value,
                      "city" : city.value,
                      "medium" : medium.value,
-                     "examcenter" : examcenter.value,
-                     "examcode" : examcode.value,
-                     "universityboard" : universityboard.value,
-                     "passingyear" : passingyear.value,
+                     "examCenter" : examCenter.value,
+                     "examCode" : examCode.value,
+                     "universityBoard" : universityBoard.value,
+                     "passingYear" : passingYear.value,
                      "marks" : marks.value,
                      "percentage" : percentage.value,
                      "division" : division.value,
-                     "subjectname" :subjectname.value,
-                     "subjectcode" : subjectcode.value,
+                     "subjectName" :subjectName.value,
+                     "subjectCode" : subjectCode.value,
                      "date" : date.value,
                      "place" : place.value,
-                     "studentsign" : studentsign.value,
+                     "studentSign" : studentSign.value,
     };
 
 }

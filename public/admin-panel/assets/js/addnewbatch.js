@@ -1,12 +1,12 @@
 function validate(){
     var batch = document.getElementById("ibatch");
     var name = document.getElementById("iname");
-    var fathername = document.getElementById("ifathername");
-    var mothername = document.getElementById("imothername");
-    var rollno = document.getElementById("irollno");
+    var fatherName = document.getElementById("ifathername");
+    var motherName = document.getElementById("imothername");
+    var rollNo = document.getElementById("irollno");
     var password = document.getElementById("ipassword");
-    var registrationno = document.getElementById("iregistrationno");
-    var submitbutton = document.getElementById("isubmit");
+    var registrationNo = document.getElementById("iregistrationno");
+    var submitButton = document.getElementById("isubmit");
     var stuClass = document.getElementById("iclass");
     
         var name1 = document.getElementById("iname1");
@@ -16,7 +16,7 @@ function validate(){
     var password1 = document.getElementById("ipassword1");
     var registrationNo1 = document.getElementById("iregistrationno1");
 
-    var submitbutton = document.getElementById("isubmit");
+    var submitButton = document.getElementById("isubmit");
     var stuClass = document.getElementById("iclass");
 
     var name2 = document.getElementById("iname2");

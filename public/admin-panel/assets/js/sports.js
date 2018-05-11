@@ -1,29 +1,29 @@
 function validate() {
     var name = document.getElementById("iname");
-    var rollno = document.getElementById("irollno");
+    var rollNo = document.getElementById("irollno");
     var spclass = document.getElementById("iclass");
-    var dateofbirth = document.getElementById("idob");
+    var dateofBirth = document.getElementById("idob");
     var gender = document.getElementById("igender");
-    var mobileno = document.getElementById("imobileno");
-    var emailid = document.getElementById("iemailid");
-    var selectgames1 = document.getElementById("i1selectgames");
-    var selectgames2 = document.getElementById("i2selectgames");
-    var selectgames3 = document.getElementById("i3selectgames");
-    var selectgames4 = document.getElementById("i4selectgames");
-    var selectgames5 = document.getElementById("i5selectgames");
-    var selectgames6 = document.getElementById("i6selectgames");
-    var selectgames7 = document.getElementById("i7selectgames");
-    var selectgames8 = document.getElementById("i8selectgames");
-    var selectgames9 = document.getElementById("i9selectgames");
-    var submitbutton = document.getElementById("isubmit");
-    var canclebutton = document.getElementById("icancle");
+    var mobileNo = document.getElementById("imobileno");
+    var emailId = document.getElementById("iemailid");
+    var selectGames1 = document.getElementById("i1selectgames");
+    var selectGames2 = document.getElementById("i2selectgames");
+    var selectGames3 = document.getElementById("i3selectgames");
+    var selectGames4 = document.getElementById("i4selectgames");
+    var selectGames5 = document.getElementById("i5selectgames");
+    var selectGames6 = document.getElementById("i6selectgames");
+    var selectGames7 = document.getElementById("i7selectgames");
+    var selectGames8 = document.getElementById("i8selectgames");
+    var selectGames9 = document.getElementById("i9selectgames");
+    var submitButton = document.getElementById("isubmit");
+    var cancleButton = document.getElementById("icancle");
 
     if(name.value==="")
     {
         alert("please enter name");
         return;
     }
-    if(rollno.value==="")
+    if(rollNo.value==="")
     {
         alert("please enter rollno");
         return;
@@ -33,22 +33,22 @@ function validate() {
         alert("please enter class");
         return;
     }
-    if(dateofbirth.value==="")
+    if(dateofBirth.value==="")
     {
         alert("please enter date of birth");
         return;
     }
-    if(mobileno.value==="")
+    if(mobileNo.value==="")
     {
         alert("please enter mobile no");
         return;
     }
-    if(emailid.value==="")
+    if(emailId.value==="")
     {
         alert("please enter email id");
         return;
     }
-    if(selectgames1.checked==false && selectgames2.checked==false && selectgames3.checked==false && selectgames4.checked==false && selectgames5.checked==false && selectgames6.checked==false && selectgames7.checked==false && selectgames8.checked==false && selectgames9.checked==false)
+    if(selectGames1.checked==false && selectGames2.checked==false && selectGames3.checked==false && selectGames4.checked==false && selectGames5.checked==false && selectGames6.checked==false && selectGames7.checked==false && selectGames8.checked==false && selectGames9.checked==false)
     {
         alert("Please select atleast 1 game");
         return;
@@ -56,11 +56,11 @@ function validate() {
 
     var formData = {
                     "name" : name.value,
-                    "rollno" : rollno.value,
+                    "rollNo" : rollNo.value,
                     "sclass" : sclass.value,
-                    "dateofbirth" : dateofbirth.value,
-                    "mobileno" : mobileno.value,
-                    "emailid" : emailid.value,
-                    "games" : selectgames.value,
+                    "dateofBirth" : dateofBirth.value,
+                    "mobileNo" : mobileNo.value,
+                    "emailId" : emailId.value,
+                    "games" : selectGames.value,
     };
 }

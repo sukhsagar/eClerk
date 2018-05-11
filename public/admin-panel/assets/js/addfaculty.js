@@ -1,16 +1,16 @@
 function validate(){
-    var teachername = document.getElementById("iteachername");
-    var teachertype = document.getElementById("iteachertype");
-    var uploadpicture = document.getElementById("iuploadpicture");
-    var submitbutton = document.getElementById("isubmit");
-    var canclebutton = document.getElementById("icancle");
+    var teacherName = document.getElementById("iteachername");
+    var teacherType = document.getElementById("iteachertype");
+    var uploadPicture = document.getElementById("iuploadpicture");
+    var submitButton = document.getElementById("isubmit");
+    var cancleButton = document.getElementById("icancle");
 
     var formData={
-        "teachername" : teachername.value,
-        "teachertype" : teachertype.value,
-        "uploadpicture" : uploadpicture.value
+        "teacherName" : teacherName.value,
+        "teacherType" : teacherType.value,
+        "uploadPicture" : uploadPicture.value
     };
-    firebase.database().ref('faculity/' + teachername.value).push(formData).then(function(){
+    firebase.database().ref('faculity/' + teacherName.value).push(formData).then(function(){
         alert("You have succesfully added teacher detail.");
     });
 }

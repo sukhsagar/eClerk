@@ -1,23 +1,23 @@
 function validate() {
-    var selectteacher = document.getElementById("iselectteacher");
-    var selectdate = document.getElementById("iselectdate");
-    var submitbutton = document.getElementById("isubmit");
-    if(selectteacher.selectedIndex=="0")
+    var selectTeacher = document.getElementById("iselectteacher");
+    var selectDate = document.getElementById("iselectdate");
+    var submitButton = document.getElementById("isubmit");
+    if(selectTeacher.selectedIndex=="0")
     {
         alert("please select a teacher");
         return;
     }
-    if(selectdate.selectedIndex=="0")
+    if(selectDate.selectedIndex=="0")
     {
         alert("please select a date");
         return;
     }
      
            var formData = {
-                    "teachername" : selectteacher.value, 
+                    "teacherName" : selectTeacher.value, 
                     "date" : selectdate.value
                         }; 
-    firebase.database().ref('teacheronleave/' + selectteacher.value).push(formData).then(function(){
+    firebase.database().ref('teacheronleave/' + selectTeacher.value).push(formData).then(function(){
         alert("You have succesfully add teacher on leave detail.");
     });
                       
