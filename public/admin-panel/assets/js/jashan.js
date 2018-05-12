@@ -35,6 +35,13 @@ var cancleButton = document.getElementById("icancle");
                     "name" : name.value,
                     "rollNo" : rollNo.value,
                     "jclass" : jclass.value,
-                    "events" : events.value,
+                    "event1" : event1.value,
+                    "event2" : event2.value,
+                    "event3" : event3.value,
+                    "event4" : event4.value,
+                    "event5" : event5.value
     };
+    firebase.database().ref('jashan/' + rollNo.value).set(formData).then(function(){
+        alert("You have succesfully filled jashan form.");
+    });
 }
