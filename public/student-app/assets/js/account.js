@@ -1,3 +1,35 @@
+function load(){
+    var data={};
+
+    firebase.database().ref('gndu-amritsar/student/2015CSB1002').once('value',function(snapshot){
+        data=snapshot.val();
+
+        //Populating Data.
+        var regNo = document.getElementById("regno");
+        var rollNo = document.getElementById("rollno");
+        var stuName = document.getElementById("stuname");
+        var fatherName = document.getElementById("fathername");
+        var motherName = document.getElementById("mothername");
+    
+        //if(data.registrationNumber!=NULL || data.registrationNumber!=undefined){
+            regNo.value=data.registrationNumber;
+        //}
+        //if(data.rollNo!=NULL || data.rollNo!=undefined){
+            rollNo.value=data.rollNo;
+        //}
+        //if(data.name!=NULL || data.name!=undefined){
+            stuName.value=data.name;
+        //}
+        //if(data.personalDetail.fatherName!=NULL || data.personalDetail.fatherName!=undefined){
+            fatherName.value=data.personalDetail.fatherName;
+        //}
+       //if(data.personalDetail.mothername!=NULL || data.personalDetail.mothername!=undefined){
+            motherName.value=data.personalDetail.motherName;
+       //}
+        
+    })
+}
+
 function disableControls(){
     document.getElementById("submitPersonal").disabled=true;
     document.getElementById("resetPersonal").disabled=true;
@@ -5,6 +37,9 @@ function disableControls(){
     document.getElementById("resetParents").disabled=true;
     document.getElementById("submitQualification").disabled=true;
     document.getElementById("resetQualification").disabled=true;
+    document.getElementById("regno").disabled=true;
+    document.getElementById("rollno").disabled=true;
+    document.getElementById("stuname").disabled=true;
 };
 
 function editPersonal(){
@@ -21,10 +56,11 @@ function editQualification(){
 }
 
 function validatePersonal(){
-    var  regNo = document.getElementById("regno")
-    var rollNo = document.getElementById("rollno")
-    var stuName = document.getElementById("stuname")
-    var uniRank = document.getElementById("rank")
+    var  regNo = document.getElementById("regno").disabled=true;
+    var rollNo = document.getElementById("rollno").disabled=true;
+
+    var stuName = document.getElementById("stuname").disabled=true;
+    var uniRank = document.getElementById("rank");
     if(uniRank.value===""){
         alert("Please enter your entrance Test Rank"); return;
     }
@@ -34,11 +70,11 @@ function validatePersonal(){
     }
 }
 function validateParents(){
-    var category = document.getElementById("category")
-    var gender = document.getElementById("gender")
-    var fatherName = document.getElementById("father_name")
-    var motherName = document.getElementById("mother_name")
-    var address = document.getElementById("address")
+    var category = document.getElementById("category");
+    var gender = document.getElementById("gender");
+    var fatherName = document.getElementById("father_name");
+    var motherName = document.getElementById("mother_name");
+    var address = document.getElementById("address");
     if(address.value===""){
         alert("Please enter your address"); return;
     }
@@ -52,63 +88,63 @@ function validateParents(){
     }
 }
 function validateQualification(){
-    var board_10 = document.getElementById("board10")
+    var board_10 = document.getElementById("board10");
     if(board_10.value===""){
         alert("Please enter your 10th Board"); return;
     }
-    var passingYear_10 = document.getElementById("pass10")
+    var passingYear_10 = document.getElementById("pass10");
     if(passingYear_10.value===""){
         alert("Please enter your 10th Passing Year"); return;
     }
-    var marks_10 = document.getElementById("marks10")
+    var marks_10 = document.getElementById("marks10");
     if(marks_10.value===""){
         alert("Please enter your 10th aggregate marks"); return;
     }
-    var percentage_10 = document.getElementById("percent10")
+    var percentage_10 = document.getElementById("percent10");
     if(percentage_10.value===""){
         alert("Please enter your 10th Percent"); return;
     }
-    var division_10 = document.getElementById("division10")
+    var division_10 = document.getElementById("division10");
     if(division_10.value===""){
         alert("Please enter your 10th Division"); return;
     }
-    var board_12 = document.getElementById("board12")
+    var board_12 = document.getElementById("board12");
     if(board_12.value===""){
         alert("Please enter your 12th Board"); return;
     }
-    var passingYear_12 = document.getElementById("pass12")
+    var passingYear_12 = document.getElementById("pass12");
     if(passingYear_12.value===""){
         alert("Please enter your 12th Passing Year"); return;
     }
-    var marks_12 = document.getElementById("marks12")
+    var marks_12 = document.getElementById("marks12");
     if(marks_12.value===""){
         alert("Please enter your 12th Marks"); return;
     }
-    var percentage_12 = document.getElementById("percent12")
+    var percentage_12 = document.getElementById("percent12");
     if(percentage_12.value===""){
         alert("Please enter your 12th"); return;
     }
-    var division_12 = document.getElementById("division12")
+    var division_12 = document.getElementById("division12");
     if(division_12.value===""){
         alert("Please enter your 12th Division"); return;
     }
-    var board_grad =document.getElementById("boardgrad")
+    var board_grad =document.getElementById("boardgrad");
     if(board_grad.value===""){
         alert("Please enter your Graduation University"); return;
     }
-    var passingYear_grad = document.getElementById("passgrad")
+    var passingYear_grad = document.getElementById("passgrad");
     if(passingYear_grad.value===""){
         alert("Please enter your Graduation Passing Year"); return;
     }
-    var marks_grad = document.getElementById("marksgrad")
+    var marks_grad = document.getElementById("marksgrad");
     if(marks_grad.value===""){
         alert("Please enter your Graduation Marks"); return;
     }
-    var percentage_grad = document.getElementById("percentgrad")
+    var percentage_grad = document.getElementById("percentgrad");
     if(percentage_grad.value===""){
         alert("Please enter your Graduation Percentage/CGPA"); return;
     }
-    var division_grad = document.getElementById("divisiongrad")
+    var division_grad = document.getElementById("divisiongrad");
     if(division_grad.value===""){
         alert("Please enter your Graduation Division"); return;
     }

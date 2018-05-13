@@ -83,18 +83,18 @@
       <h4 class="fw-300 mB-40" style="font-weight: bolder;">Login</h4>
       <form>
         <div class="form-group">
-          <label class="text-normal text-dark">Email ID</label>
-          <input type="email" class="form-control" placeholder="Enter Your Email ID">
+          <label class="text-normal text-dark">Roll No</label>
+          <input type="text" class="form-control" id="rollno" placeholder="Enter Your Roll Number">
         </div>
         <div class="form-group">
           <label class="text-normal text-dark">Password</label>
-          <input type="password" class="form-control" placeholder="Enter Your Password">
+          <input type="password" class="form-control" id="password" placeholder="Enter Your Password">
         </div>
         <div class="form-group">
           <div class="peers ai-c jc-sb fxw-nw">
             <div class="peer"></div>
             <div class="peer">
-              <button class="btn" style="background-color:#3F47CC;color:white;">Login</button>
+              <button class="btn" onclick=" return validate();"  style="background-color:#3F47CC;color:white;">Login</button>
             </div>
           </div>
         </div>
