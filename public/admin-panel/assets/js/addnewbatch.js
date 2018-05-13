@@ -59,7 +59,7 @@ function validate(){
                 "motherName": motherName1.value
             }
         };
-        firebase.database().ref('gndu-amritsar/student/' + rollNo1.value).set(formData).then(function(){
+        firebase.database().ref('gndu-amritsar/student/' + rollNo1.value).push(formData).then(function(){
             alert("You have succesfully created a new batch.");
         });
     } else {
@@ -84,7 +84,7 @@ function validate(){
         
     }
 
-    if(name2.value!="NULL" || fatherName2.value!="NULL" || motherName2.value!="NULL" || rollNo2.value!="NULL" || password2.value!="NULL" || registrationNo2.value!="NULL"){   
+    /*if(name2.value!="NULL" || fatherName2.value!="NULL" || motherName2.value!="NULL" || rollNo2.value!="NULL" || password2.value!="NULL" || registrationNo2.value!="NULL"){   
         var formData={
             "name": name2.value,
             "rollNo": rollNo2.value,
@@ -230,7 +230,7 @@ function validate(){
             alert("Enter the Password of the first student."); return;
         }
         
-    }
+    }*/
 }
 
 

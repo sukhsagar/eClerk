@@ -1,3 +1,33 @@
+function load(){
+    var data={};
+
+    firebase.database().ref('gndu-amritsar/student/2015CSB1002').once('value',function(snapshot){
+        data=snapshot.val();
+
+        //Populating Data.
+        
+        var rollNo = document.getElementById("rollno");
+        var stuName = document.getElementById("stuname");
+       
+    
+        
+        //if(data.rollNo!=NULL || data.rollNo!=undefined){
+            rollNo.value=data.rollNo;
+        //}
+        //if(data.name!=NULL || data.name!=undefined){
+            stuName.value=data.name;
+        //}
+        
+    })
+}
+function disableControls(){
+    document.getElementById("rollno").disabled=true;
+    document.getElementById("stuname").disabled=true;
+};
+
+
+
+
 function validate(){
     var studentName = document.getElementById("stuname")
     var rollNo = document.getElementById("rollno")
