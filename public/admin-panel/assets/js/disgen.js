@@ -1,12 +1,13 @@
 function load(){
     var data={};
 
-    firebase.database().ref('gendata/2015csb1551').once('value',function(snapshot){
+    firebase.database().ref('gndu-amritsar/student/2015csb1002').once('value',function(snapshot){
         data=snapshot.val();
         //Populating Data.
         var registrationNo = document.getElementById("iregistration");
         var rollNo = document.getElementById("irollno");
         var name = document.getElementById("iname");
+        var dclass = document.getElementById("iclass");
         //if(data.registrationNo!=NULL || data.registrationNo!=undefined){
             registrationNo.value=data.registrationNo;
         //}

@@ -142,7 +142,7 @@ function validate() {
                      "subjectCode" : subjectCode.value,
                      "date" : date.value,
                      "place" : place.value,
-                     "studentSign" : studentSign.value,
+                     "studentSign" : studentSign.value
     };
 
 }
