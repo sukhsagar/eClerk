@@ -29,7 +29,7 @@ function load(){
     })
 
     firebase.database().ref('gndu-amritsar/teacherOnLeave/').once('value',function(snapshot2){
-        data.snapshot2.val();
+        data=snapshot2.val();
 
         var teacherLeave1 = document.getElementById("teacherLeave1");
         var teacherLeave2 = document.getElementById("teacherLeave2");
