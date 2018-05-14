@@ -1,7 +1,7 @@
 function load(){
     var data={};
 
-    firebase.database().ref('gndu-amritsar/student/2015CSB1553').once('value',function(snapshot){
+    firebase.database().ref('gndu-amritsar/student/2015CSB1002').once('value',function(snapshot){
         data=snapshot.val();
 
         //Populating Data.
@@ -29,6 +29,14 @@ function load(){
         
     })
 }
+function disableControls(){
+    document.getElementById("rollno").disabled=true;
+    document.getElementById("stuname").disabled=true;
+    document.getElementById("regno").disabled=true;
+    document.getElementById("mothername").disabled=true;
+    document.getElementById("fathername").disabled=true;
+
+};
 
 function validate(){
     var regNo = document.getElementById("regno");

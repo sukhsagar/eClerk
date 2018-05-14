@@ -45,14 +45,17 @@ function disableControls(){
 function editPersonal(){
     document.getElementById("submitPersonal").disabled=false;
     document.getElementById("resetPersonal").disabled=false;
+    document.getElementById("editPersonal").disabled=true;
 }
 function editParents(){
     document.getElementById("submitParents").disabled=false;
     document.getElementById("resetParents").disabled=false;
+    document.getElementById("editParents").disabled=true;
 }
 function editQualification(){
     document.getElementById("submitQualification").disabled=false;
     document.getElementById("resetQualification").disabled=false;
+    document.getElementById("editQualification").disabled=true;
 }
 
 function validatePersonal(){
