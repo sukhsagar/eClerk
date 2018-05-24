@@ -13,9 +13,10 @@
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/local.js"></script>
 </head>
 
-<body onload="load();">
+<body onload="localHome(); load();">
 
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -71,19 +72,7 @@
               </li>
             </ul>
           </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculty List
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="assets/templates/faculty.html">Professors</a>
-              </li>
-              <li>
-                <a href="assets/templates/faculty.html">Research Scholars</a>
-              </li>
-            </ul>
-          </li>
+          
 
 
           <li>
@@ -113,7 +102,7 @@
 
           </li>
           <li>
-            <a href="assets/templates/sign-in.html">
+            <a href="assets/templates/sign-in.html" onclick="deLocal();">
               <span class="glyphicon glyphicon-user"></span> Sign Out</a>
           </li>
         </ul>
