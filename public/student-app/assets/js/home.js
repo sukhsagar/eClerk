@@ -2,7 +2,12 @@ var notice1 = document.getElementById("notice1");
 var notice2 = document.getElementById("notice2");
 var notice3 = document.getElementById("notice3");
 
-
+function chkLogin(){
+    var rollNo = localStorage.getItem('rollNo');
+      if(rollNo===null || rollNo===undefined){
+          window.location = "./assets/templates/sign-in.html"
+      }
+}
 
 
 function load(){
