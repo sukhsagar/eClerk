@@ -12,6 +12,6 @@ function delLocal(){
 function localHome(){
     var roll = localStorage.getItem('rollNo');
       if(roll===null || roll===undefined){
-          window.location = "assets/templates/sign-in.html"
+          window.location = "./assets/templates/sign-in.html"
       }
 }
