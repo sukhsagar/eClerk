@@ -21,8 +21,8 @@ function signin(){
             })
             document.location.href = "../../home.html";
             return false;
-        }else if(data1=="NULL"){
-            alert("Student Details not found. Please enter correct Roll No.");
+        }else if(data1==null){
+            alert("This roll number is not registered with us. Please enter the correct roll number and try again. ");
             return false;
         }else if(password.value!=data1){
             alert("Please enter correct Password.");
