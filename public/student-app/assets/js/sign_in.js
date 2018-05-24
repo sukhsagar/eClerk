@@ -10,15 +10,24 @@ function signin(){
         alert("Please Enter your Password.");
         return false;
     }
-    if(rollNo.value==="2015CSB1002" && password.value==="123456"){
-        document.location.href = "../../home.html";
-        return false;
-    }else if(rollno.value!="2015CSB1002"){
-        alert("Please enter correct Roll No.");
-        return false;
-    }else if(password.value!="123456"){
-        alert("Please enter correct Password.");
-        return false;
-    }
+    firebase.database().ref('gndu-amritsar/student/'+rollNo.value+'/password').once('value',function(snapshot){
+        data1=snapshot.val();
+        if( password.value===data1){
+            firebase.database().ref('gndu-amritsar/student/'+rollNo.value).once('value',function(snapshot){
+                data2=snapshot.val();
+                localStorage.setItem('class', data2.class);
+                localStorage.setItem('rollNo', data2.rollNo);
+                localStorage.setItem('name', data2.name);
+            })
+            document.location.href = "../../home.html";
+            return false;
+        }else if(data1=="NULL"){
+            alert("Student Details not found. Please enter correct Roll No.");
+            return false;
+        }else if(password.value!=data1){
+            alert("Please enter correct Password.");
+            return false;
+        }
+    })
     return false;
 }
