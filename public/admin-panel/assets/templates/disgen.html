@@ -9,6 +9,7 @@
     <script src="../js/disgen.js"></script>
 </head>
 
+
 <body>
     <!-- Page formatting code -->
     <section id="team" class="section grey-section">
@@ -77,7 +78,8 @@
                                                         </button>
                                                     </td>
                                                     <td>
-                                                        <button type="submit" id="iviewall">View All</button>
+                                                        <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a"
+                                                            aria-haspopup="true" aria-owns="popupMenu" aria-expanded="false">Actions...</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -99,7 +101,8 @@
                                                         </button>
                                                     </td>
                                                     <td>
-                                                        <button type="submit" id="iviewall">View All</button>
+                                                        <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a"
+                                                            aria-haspopup="true" aria-owns="popupMenu" aria-expanded="false">Actions...</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -121,7 +124,8 @@
                                                         </button>
                                                     </td>
                                                     <td>
-                                                        <button type="submit" id="iviewall">View All</button>
+                                                        <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a"
+                                                            aria-haspopup="true" aria-owns="popupMenu" aria-expanded="false">Actions...</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -143,7 +147,8 @@
                                                         </button>
                                                     </td>
                                                     <td>
-                                                        <button type="submit" id="iviewall">View All</button>
+                                                        <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a"
+                                                            aria-haspopup="true" aria-owns="popupMenu" aria-expanded="false">Actions...</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -165,22 +170,32 @@
                                                         </button>
                                                     </td>
                                                     <td>
-                                                        <button type="submit" id="iviewall">View All</button>
+                                                        <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a"
+                                                            aria-haspopup="true" aria-owns="popupMenu" aria-expanded="false">Actions...</a>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <div class="form-group row">
                                             <div class="col-sm-10">
-                                              <button class="btn btn-primary" id="isubmit" onclick="validate();">Submit</button>
-                                               </div>
-                                          </div>
+                                                <button class="btn btn-primary" id="isubmit" onclick="validate();">Submit</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </main>
+                <div data-role="popup" id="popupMenu" data-theme="b" class="ui-popup ui-body-b ui-overlay-shadow ui-corner-all">
+					<ul data-role="listview" data-inset="true" style="min-width:210px;" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+						<li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-first-child">Choose an action</li>
+						<li><a href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r">View details</a></li>
+						<li><a href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Edit</a></li>
+						<li><a href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Disable</a></li>
+						<li class="ui-last-child"><a href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Delete</a></li>
+					</ul>
+			</div>
             </div>
         </div>
     </section>

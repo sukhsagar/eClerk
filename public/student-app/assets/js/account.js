@@ -1,24 +1,20 @@
 function load(){
     var data={};
-
+    var rollNo = document.getElementById("rollno");
+    var stuName = document.getElementById("stuname");
+    stuName.value = localStorage.getItem('name');
+    rollNo.value = localStorage.getItem('rollNo');
     firebase.database().ref('gndu-amritsar/student/2015CSB1002').once('value',function(snapshot){
         data=snapshot.val();
 
         //Populating Data.
         var regNo = document.getElementById("regno");
-        var rollNo = document.getElementById("rollno");
-        var stuName = document.getElementById("stuname");
+        
         var fatherName = document.getElementById("fathername");
         var motherName = document.getElementById("mothername");
     
         //if(data.registrationNumber!=NULL || data.registrationNumber!=undefined){
             regNo.value=data.registrationNumber;
-        //}
-        //if(data.rollNo!=NULL || data.rollNo!=undefined){
-            rollNo.value=data.rollNo;
-        //}
-        //if(data.name!=NULL || data.name!=undefined){
-            stuName.value=data.name;
         //}
         //if(data.personalDetail.fatherName!=NULL || data.personalDetail.fatherName!=undefined){
             fatherName.value=data.personalDetail.fatherName;
