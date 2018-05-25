@@ -8,6 +8,7 @@ function delLocal(){
     localStorage.removeItem('rollNo');
     localStorage.removeItem('name');
     localStorage.removeItem('class');
+    window.location = "assets/templates/sign-in.html"
 }
 function localHome(){
     var roll = localStorage.getItem('rollNo');
