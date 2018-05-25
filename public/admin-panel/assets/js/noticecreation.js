@@ -1,6 +1,6 @@
 function validate(){
-var noticeHeading = document.getElementById("inoticeheading");
-var uploadImage = document.getElementById("iuploadimage");
+var noticeHeading = document.getElementById("inoticeHeading");
+var uploadImage = document.getElementById("iuploadImage");
 var validity = document.getElementById("ivalidity");
 var uploadButton = document.getElementById("iupload");
 var cancleButton = document.getElementById("icancle");

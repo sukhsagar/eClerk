@@ -1,6 +1,6 @@
 function validate() {
-    var selectTeacher = document.getElementById("iselectteacher");
-    var selectDate = document.getElementById("iselectdate");
+    var selectTeacher = document.getElementById("iselectTeacher");
+    var selectDate = document.getElementById("iselectDate");
     var submitButton = document.getElementById("isubmit");
     if(selectTeacher.selectedIndex=="0")
     {
@@ -15,7 +15,7 @@ function validate() {
      
            var formData = {
                     "teacherName" : selectTeacher.value, 
-                    "date" : selectdate.value
+                    "date" : selectDate.value
                         }; 
     firebase.database().ref('teacheronleave/' + selectTeacher.value).push(formData).then(function(){
         alert("You have succesfully add teacher on leave detail.");
