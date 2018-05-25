@@ -1,4 +1,5 @@
 function validate(){
+    var teacherId = document.getElementById("iteacherId");
     var teacherName = document.getElementById("iteacherName");
     var teacherType = document.getElementById("iteacherType");
     var uploadPicture = document.getElementById("iuploadPicture");
@@ -7,6 +8,11 @@ function validate(){
     var submitButton = document.getElementById("isubmit");
     var cancleButton = document.getElementById("icancle");
 
+    if(teacherId.value==="")
+    {
+        alert("please enter teacher Id");
+        return;
+    }
     if(teacherName.value==="")
     {
         alert("please enter teacher name");
@@ -34,6 +40,7 @@ function validate(){
     }
 
     var formData={
+        "teacherId" : teacherId.value,
         "teacherName" : teacherName.value,
         "teacherType" : teacherType.value,
         "uploadPicture" : uploadPicture.value,
