@@ -2,6 +2,9 @@ var notice1 = document.getElementById("notice1");
 var notice2 = document.getElementById("notice2");
 var notice3 = document.getElementById("notice3");
 
+var nameLabel = document.getElementById("nameLabel");
+nameLabel.innerHTML = localStorage.getItem('name');
+
 function chkLogin(){
     var rollNo = localStorage.getItem('rollNo');
       if(rollNo===null || rollNo===undefined){
@@ -9,9 +12,9 @@ function chkLogin(){
       }
 }
 
-
+var stuClass = localStorage.getItem('class');
 function load(){
-    firebase.database().ref('gndu-amritsar/timeTable/').once('value',function(snapshot1){
+    firebase.database().ref('gndu-amritsar/' + stuClass.value + '/timeTable/').once('value',function(snapshot1){
         data=snapshot1.val();
 
         var mon9_10 = document.getElementById("mon9-10");
