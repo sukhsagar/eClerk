@@ -1,28 +1,18 @@
 function load(){
-    var data={};
-
-    firebase.database().ref('gndu-amritsar/student/2015CSB1002').once('value',function(snapshot){
-        data=snapshot.val();
-
-        //Populating Data.
         
         var rollNo = document.getElementById("rollno");
         var stuName = document.getElementById("stuname");
-       
-    
-        
-        //if(data.rollNo!=NULL || data.rollNo!=undefined){
-            rollNo.value=data.rollNo;
-        //}
-        //if(data.name!=NULL || data.name!=undefined){
-            stuName.value=data.name;
-        //}
-        
-    })
+        var stuClass = document.getElementById("class");
+
+        stuName.value = localStorage.getItem('name');
+        rollNo.value = localStorage.getItem('rollNo');  
+        stuClass.value = localStorage.getItem('class');
+           
 }
 function disableControls(){
     document.getElementById("rollno").disabled=true;
     document.getElementById("stuname").disabled=true;
+    document.getElementById("class").disabled=true;
 };
 
 
@@ -31,7 +21,6 @@ function disableControls(){
 function validate(){
     var stuName = document.getElementById("stuname")
     var rollNo = document.getElementById("rollno")
-    var stuClass = document.getElementById("class")
     var dob = document.getElementById("dob")
     var gender = document.getElementById("gender")
     var mobNo = document.getElementById("mobno")
@@ -50,9 +39,6 @@ function validate(){
     }
     if(rollNo.value===""){
         alert("Enter your Roll No"); return;
-    }
-    if(stuClass.value===""){
-        alert("Enter your Class"); return;
     }
     if(dob.value===""){
         alert("Enter your Date Of Birth"); return;
