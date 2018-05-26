@@ -117,3 +117,16 @@ function load() {
 
     })
 }
+
+function DmcStatus(){
+    firebase.database().ref('gndu-amritsar/DmcDistribution/'+localStorage.getItem('class')+'/'+localStorage.getItem('rollNo')).on('value', function (snapshot2) {
+        data = snapshot2.val();
+
+        if(data==="Pending"){
+            document.getElementById("dmcStatus").style.visibility="visible";
+        }
+        else{
+            document.getElementById("dmcStatus").style.visibility="hidden";
+        }
+    });
+}
