@@ -53,7 +53,7 @@ function validate(){
         alert("Please select atleast one game"); return;
     }
 
-    firebase.database().ref('student-detail-table' + game1).push(formData).then(function(){
+    firebase.database().ref('gndu-amritsar/miscellaneous/' + game.value + '/' + rollNo.value).push(formData).then(function(){
         alert("You have succesfully applied for sports.");
         document.getElementById("submit").disabled=true;
     })

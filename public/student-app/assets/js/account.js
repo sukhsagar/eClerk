@@ -208,36 +208,44 @@ function validateQualification() {
 
     var formDataQualifications = {
         "10th Details": {
-            "10th Board": board_10.value,
-            "10th Passing Year": passingYear_10.value,
-            "10th Marks": marks_10.value,
-            "10th Percentage": percentage_10.value,
-            "10th Division": division_10.value
+            "Board": board_10.value,
+            "Passing Year": passingYear_10.value,
+            "Marks": marks_10.value,
+            "Percentage": percentage_10.value,
+            "Division": division_10.value
         },
-        "12th Board": board_12.value,
-        "12th Passing Year": passingYear_12.value,
-        "12th Marks": marks_12.value,
-        "12th Percentage": percentage_12.value,
-        "12th Division": division_12.value,
-        "Graduation Board": board_grad.value,
-        "Graduation Passing Year": passingYear_grad.value,
-        "Graduation Marks": marks_grad.value,
-        "Graduation Percentage": percentage_grad.value,
-        "Graduation Division": division_grad.value
+        "12th Details":{
+            "Board": board_12.value,
+            "Passing Year": passingYear_12.value,
+            "Marks": marks_12.value,
+            "Percentage": percentage_12.value,
+            "Division": division_12.value
+        },
+        "Graduation Details":{
+            "Board": board_grad.value,
+            "Passing Year": passingYear_grad.value,
+            "Marks": marks_grad.value,
+            "Percentage": percentage_grad.value,
+            "Division": division_grad.value
+        } 
+        
     };
-    firebase.database().ref('StudentDetail' + personalDetail).set(formDataPersonal).then(function () {
+    firebase.database().ref('gndu-amritsar/student/' + rollNo.value + '/personalDetail').set(formDataPersonal).then(function () {
         alert("Your personal detail has been submitted.");
         document.getElementById("submitPersonal").disabled = true;
         document.getElementById("resetPersonal").disabled = true;
+        document.getElementById("editPersonal").disabled = false;
     });
-    firebase.database().ref('StudentDetail' + personalDetail).set(formDataParents).then(function () {
+    firebase.database().ref('gndu-amritsar/student/' + rollNo.value + '/personalDetail').set(formDataParents).then(function () {
         alert("Your Guardian details have been updated.");
         document.getElementById("submitParents").disabled = true;
         document.getElementById("resetParents").disabled = true;
+        document.getElementById("editParents").disabled = false;
     });
-    firebase.database().ref('StudentDetail' + academicDetail).set(formDataQualifications).then(function () {
+    firebase.database().ref('gndu-amritsar/student/' + rollNo.value + '/personalDetail').set(formDataQualifications).then(function () {
         alert("Your Academic details have been updated.");
         document.getElementById("submitQualification").disabled = true;
         document.getElementById("resetQualifications").disabled = true;
+        document.getElementById("editQualifications").disabled = false;
     });
 }
