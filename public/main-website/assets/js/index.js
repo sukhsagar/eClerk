@@ -56,3 +56,38 @@ function load(){
 
 
 }
+
+var name = document.getElementById("name");
+var email = document.getElementById("email");
+var subject = document.getElementById("subject");
+var message = document.getElementById("message");
+
+var formData={
+    "name":name.value,
+    "email":email.value,
+    "subject":subject.value,
+    "message":message.value
+}
+firebase.database().ref('gndu-amritsar/index/contact/').push(formData).then(function(){
+    alert("You have succesfully filled the examination form.");
+    document.getElementById("submit").disabled=true;
+});
+var data1={};
+firebase.database().ref('gndu-amritsar/index/testimonials').once('value',function(snapshot){
+    data1=snapshot.val();
+    var name1 = document.getElementById("name1");
+    var message1 = document.getElementById("message1");
+    var name2 = document.getElementById("name2");
+    var message2 = document.getElementById("message2");
+    var name3 = document.getElementById("name3");
+    var message3 = document.getElementById("message3");
+
+    name1.innerHTML = data1.name1;
+    message1.innerHTML = data1.message1;
+    name2.innerHTML = data1.name2;
+    message2.innerHTML = data1.message2;
+    name3.innerHTML = data1.name3;
+    message3.innerHTML = data1.message3;
+
+    
+})

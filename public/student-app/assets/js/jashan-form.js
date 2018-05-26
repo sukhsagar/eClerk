@@ -42,7 +42,7 @@ function validate(){
         "rollNo": rollNo.value,
         "event":event.value
     }
-    firebase.database().ref('gndu-amritsar/miscellaneous/event' + rollNo.value).push(formData).then(function(){
+    firebase.database().ref('gndu-amritsar/miscellaneous/' + event.value + '/' + rollNo.value).push(formData).then(function(){
         alert("You have succesfully applied for Jashan.");
         document.getElementById("submit").disabled=true;
     })

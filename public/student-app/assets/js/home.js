@@ -14,8 +14,9 @@ function chkLogin(){
 
 var stuClass = localStorage.getItem('class');
 function load(){
-    firebase.database().ref('gndu-amritsar/' + stuClass.value + '/timeTable/').once('value',function(snapshot1){
-        data=snapshot1.val();
+    var data1={};
+    firebase.database().ref('gndu-amritsar/timeTable' + stuClass).once('value',function(snapshot1){
+        data1=snapshot1.val();
 
         var mon9_10 = document.getElementById("mon9-10");
         var mon10_11 = document.getElementById("mon10-11");
@@ -23,17 +24,17 @@ function load(){
         var mon12_1 = document.getElementById("mon12-1");
         var mon1_2 = document.getElementById("mon1-2");
         var mon2_3 = document.getElementById("mon2-3");
-        var mon3_4 = document.getElementById("mon3-4");
+        var mon3_4 = document.getElementById("mon3-4");   
         var mon4_5 = document.getElementById("mon4-5");
 
-        mon9_10.innerHTML = data.monday.first;
-        mon10_11.innerHTML = data.monday.second;
-        mon11_12.innerHTML = data.monday.third;
-        mon12_1.innerHTML = data.monday.fourth;
-        mon1_2.innerHTML = data.monday.fifth;
-        mon2_3.innerHTML = data.monday.sixth;
-        mon3_4.innerHTML = data.monday.seventh;
-        mon4_5.innerHTML = data.monday.eighth;
+        mon9_10.innerHTML = data1.monday.first;
+        mon10_11.innerHTML = data1.monday.second;
+        mon11_12.innerHTML = data1.monday.third;
+        mon12_1.innerHTML = data1.monday.fourth;
+        mon1_2.innerHTML = data1.monday.fifth;
+        mon2_3.innerHTML = data1.monday.sixth;
+        mon3_4.innerHTML = data1.monday.seventh;
+        mon4_5.innerHTML = data1.monday.eighth;
     })
 
     firebase.database().ref('gndu-amritsar/teacherOnLeave/').once('value',function(snapshot2){
