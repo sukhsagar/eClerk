@@ -2,8 +2,7 @@ var notice1 = document.getElementById("notice1");
 var notice2 = document.getElementById("notice2");
 var notice3 = document.getElementById("notice3");
 
-var nameLabel = document.getElementById("nameLabel");
-nameLabel.innerHTML = localStorage.getItem('name');
+
 
 function chkLogin(){
     var rollNo = localStorage.getItem('rollNo');
@@ -14,6 +13,9 @@ function chkLogin(){
 
 var stuClass = localStorage.getItem('class');
 function load(){
+	var nameLabel = document.getElementById("nameLabel");
+	var firstName = localStorage.getItem('name').split(" ");
+	nameLabel.innerHTML = firstName[0];
     var data1={};
     firebase.database().ref('gndu-amritsar/timeTable' + stuClass).once('value',function(snapshot1){
         data1=snapshot1.val();
