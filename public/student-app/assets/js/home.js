@@ -17,7 +17,7 @@ function load(){
 	var firstName = localStorage.getItem('name').split(" ");
 	nameLabel.innerHTML = firstName[0];
     var data1={};
-    firebase.database().ref('gndu-amritsar/timeTable' + stuClass).once('value',function(snapshot1){
+    firebase.database().ref('gndu-amritsar/timeTable/' + stuClass).once('value',function(snapshot1){
         data1=snapshot1.val();
 
         var mon9_10 = document.getElementById("mon9-10");
