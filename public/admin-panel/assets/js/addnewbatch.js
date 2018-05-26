@@ -9,7 +9,7 @@ function validate(){
     var submitButton = document.getElementById("isubmit");
     var stuClass = document.getElementById("iclass");
     
-        var name1 = document.getElementById("iname1");
+    var name1 = document.getElementById("iname1");
     var fatherName1 = document.getElementById("ifathername1");
     var motherName1 = document.getElementById("imothername1");
     var rollNo1 = document.getElementById("irollno1");
@@ -233,4 +233,39 @@ function validate(){
     }*/
 }
 
-
+function parsingCSV(){
+    var file = document.getElementById("uploadCsv").files[0];
+    config={
+        delimiter: "",  // auto-detect
+        newline: "",    // auto-detect
+        quoteChar: '"',
+        escapeChar: '"',
+        header: false,
+        trimHeader: false,
+        dynamicTyping: false,
+        preview: 0,
+        encoding: "",
+        worker: false,
+        comments: false,
+        step: undefined,
+        complete: function(results, file) {
+                //console.log("Parsing complete:", results, file);
+                display(results);
+            },
+        error: undefined,
+        download: false,
+        skipEmptyLines: false,
+        chunk: undefined,
+        fastMode: undefined,
+        beforeFirstChunk: undefined,
+        withCredentials: undefined
+    };
+    
+    Papa.parse(file, config);
+    resolve("Completed");
+    //console.log(results);
+    function display(results){
+        var r = results;
+        console.log(r.data);  
+    } 
+}
