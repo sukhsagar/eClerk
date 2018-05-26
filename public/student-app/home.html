@@ -19,7 +19,7 @@
   </script>
 </head>
 
-<body onload="load();">
+<body onload="load(); loadTT(); DmcStatus();">
 
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -126,6 +126,9 @@
         <div class="container" style="align-content: center;text-align: center;">
           <h2>Welcome <span id="nameLabel"></span></h2>
         </div>
+        <div class="container" align="right">
+          <label id="dmcStatus" style="visibility: hidden; background-color: red"> Your DMC(s) is/are pending. Please collect from the Office.</label>
+        </div>
         <div class="container">
           <h2>Notices</h2>
           <table class="table">
@@ -150,12 +153,12 @@
         <div class="col-md-6">
           <h2>Time Table</h2>
           <div>
-            <h3>Monday</h3>
+            <h3> <span id="dayTitle"></span></h3>
             <table class="table">
 
               <tr>
                 <td>
-                  9 AM - 10 AM
+                  0900 - 1000 hours
                 </td>
                 <td>
                   <label id="mon9-10" for="">Loading...</label>
@@ -163,7 +166,7 @@
               </tr>
               <tr>
                 <td>
-                  10 AM - 11 AM
+                  1000 - 1100 hours
                 </td>
                 <td>
                   <label id="mon10-11" for="">Loading...</label>
@@ -171,7 +174,7 @@
               </tr>
               <tr>
                 <td>
-                  11 AM - 12 Noon
+                  1100 - 1200 hours
                 </td>
                 <td>
                   <label id="mon11-12" for="">Loading...</label>
@@ -179,7 +182,7 @@
               </tr>
               <tr>
                 <td>
-                  12 Noon - 1 PM
+                  1200 - 1300 hours
                 </td>
                 <td>
                   <label id="mon12-1" for="">Loading...</label>
@@ -187,7 +190,7 @@
               </tr>
               <tr>
                 <td>
-                  1 PM - 2 PM
+                  1300 - 1400 hours
                 </td>
                 <td>
                   <label id="mon1-2" for="">Loading...</label>
@@ -195,7 +198,7 @@
               </tr>
               <tr>
                 <td>
-                  2 PM - 3 PM
+                  1400 - 1500 hours
                 </td>
                 <td>
                   <label id="mon2-3" for="">Loading...</label>
@@ -203,7 +206,7 @@
               </tr>
               <tr>
                 <td>
-                  3 PM - 4 PM
+                  1500 - 1600 hours
                 </td>
                 <td>
                   <label id="mon3-4" for="">Loading...</label>
@@ -211,10 +214,18 @@
               </tr>
               <tr>
                 <td>
-                  4 PM - 5 PM
+                  1600 - 1700 hours
                 </td>
                 <td>
                   <label id="mon4-5" for="">Loading...</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a onclick="prevDay();">Previous</a>
+                </td>
+                <td>
+                  <a onclick="nextDay();" align="right">Next</a>
                 </td>
               </tr>
 
