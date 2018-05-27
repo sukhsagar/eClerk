@@ -19,7 +19,7 @@
   </script>
 </head>
 
-<body onload="load(); loadTT(); DmcStatus();">
+<body onload="load(); loadTT(); DmcStatus(); chkLink();">
 
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -58,7 +58,7 @@
                 <a href="assets/templates/jashan-form.html">Jashan Form</a>
               </li>
               <li>
-                <a href="http://www.gnduadmissions.org/dhanpreet_idmay2017/idoddsem_index.asp" target="_blank">ID Courses</a>
+                <a id="linkID" href="http://www.gnduadmissions.org/dhanpreet_idmay2017/idoddsem_index.asp" target="_blank">ID Courses</a>
               </li>
             </ul>
           </li>
@@ -68,7 +68,7 @@
             </a>
             <ul class="dropdown-menu">
               <li>
-                <a href="http://slc.gndu.ac.in/StudentArea/Login.aspx" target="_blank">Generate Fee Slip</a>
+                <a id="linkFee" href="http://slc.gndu.ac.in/StudentArea/Login.aspx" target="_blank">Generate Fee Slip</a>
               </li>
               
             </ul>
@@ -126,11 +126,12 @@
         <div class="container" style="align-content: center;text-align: center;">
           <h2>Welcome <span id="nameLabel"></span></h2>
         </div>
-        <div class="container" align="right">
-          <label id="dmcStatus" style="visibility: hidden; background-color: red"> Your DMC(s) is/are pending. Please collect from the Office.</label>
-        </div>
+        
         <div class="container">
           <h2>Notices</h2>
+          <div class="container" >
+            <label id="dmcStatus" style="visibility: hidden; color: red"> Your DMC(s) is/are pending. Please collect them from the Office.</label>
+          </div>
           <table class="table">
             <tr>
               <td>

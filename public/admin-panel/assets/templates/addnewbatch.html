@@ -35,9 +35,18 @@
                         <option>MCA-(FYC)</option>
                     </select>
                 </div>
+                <div class="form-group col-md-2">
+                  <label for="inputState">Starting Year</label>
+                  <select id="iyear" class="form-control">
+                      <option selected>2018</option>
+                  </select>
+              </div>
                 <div class="masonry-item col-md-6">
-                  <label for="inputState">Upload CSV</label>
+                  <label for="inputState">Add Students in Bulk</label>
                   <input type="file" class="form-control" id="uploadCsv" placeholder="">
+                </div>
+                <div class="form-group col-md-2">
+                  <button  type="submit" id="addBatch" onclick="newBatch();">Add Class</button>
                 </div>
                 <!-- Using data tables code -->
                 <main class="main-content bgc-grey-100">
@@ -46,7 +55,7 @@
                         <div class="row">
                           <div class="col-md-12">
                             <div class="bgc-white bd bdrs-3 p-20 mB-20">
-                              <label for="inputtext" class="col-sm-2 col-form-label">Add Detail</label>
+                              <label for="inputtext" class="col-sm-2 col-form-label">Add Individual Students Detail</label>
                               <table id="dataTable" class="table table-striped table-bordered" cellspacing="0"
                                 width="100%">
                                 <thead>

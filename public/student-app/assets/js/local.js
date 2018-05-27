@@ -16,3 +16,14 @@ function localHome(){
           window.location = "./assets/templates/sign-in.html"
       }
 }
+function chkLink(){
+    var linkID = document.getElementById("linkID");
+    var linkFee = document.getElementById("linkFee");
+
+    firebase.database().ref('gndu-amritsar/index/links/').once('value',function(snapshot){
+        data=snapshot.val();
+        
+        linkID.href="";
+        linkFee.href="";
+    })
+}

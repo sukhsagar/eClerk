@@ -28,24 +28,14 @@ function validate(){
         alert("please upload teacher image");
         return;
     }
-    if(recentWork.value==="")
-    {
-        alert("please enter teacher recent work");
-        return;
-    }
-    if(message.value==="")
-    {
-        alert("please enter teacher message");
-        return;
-    }
+   
 
     var formData={
         "teacherId" : teacherId.value,
         "teacherName" : teacherName.value,
         "teacherType" : teacherType.value,
         "uploadPicture" : uploadPicture.value,
-        "recentWork" : recentWork.value,
-        "message" : message.value
+        
     };
     firebase.database().ref('faculity/' + teacherName.value).push(formData).then(function(){
         alert("You have succesfully added teacher detail.");
