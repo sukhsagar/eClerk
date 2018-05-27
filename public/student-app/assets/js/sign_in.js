@@ -18,8 +18,20 @@ function signin(){
                 localStorage.setItem('class', data2.class);
                 localStorage.setItem('rollNo', data2.rollNo);
                 localStorage.setItem('name', data2.name);
-                document.location.href = "../../home.html";
-                return false;
+            }).then(function(){
+            	$.getJSON('https://ipapi.co/json/', function(data) {
+				  var ip = data.ip;
+				  var region = data.region;
+				  var deviceData = {
+				  	"ip": ip,
+				  	"region": region
+				  }
+				  firebase.database().ref('gndu-amritsar/student/' + rollNo.value+'/registeredDevices/').push(deviceData).then(function(){
+			      }).then(function(){
+			      	document.location.href = "../../home.html";
+                	return false;
+			      });
+				});
             })
         }
         else if(data1==null){
