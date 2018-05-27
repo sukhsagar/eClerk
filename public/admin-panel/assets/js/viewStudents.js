@@ -1,6 +1,6 @@
 function loadData(){
     var students = {};
-    firebase.database().ref('gndu-amritsar/classStudents/MCA-TYC/').once('value',function(snapshot){
+    firebase.database().ref('gndu-amritsar/classStudents/MCA-(TYC)/').once('value',function(snapshot){
         students=snapshot.val();
     }).then(function(){
     	//Code check krli.
@@ -9,6 +9,6 @@ function loadData(){
 	        studentDetail=snapshot.val();
 	    }).then(function(){
 	    	//Ethe student d row gennerate krdo.
-	    	
+
 	    });
     });
