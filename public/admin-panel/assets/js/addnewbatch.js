@@ -252,7 +252,10 @@ function parsingCSV(){
                 //console.log("Parsing complete:", results, file);
                 display(results);
             },
-        error: undefined,
+        error: function(errors) {
+            alert("Error while parsing. Please check your file again and try.");
+            console.log(errors);
+        },
         download: false,
         skipEmptyLines: false,
         chunk: undefined,
@@ -262,10 +265,23 @@ function parsingCSV(){
     };
     
     Papa.parse(file, config);
-    resolve("Completed");
     //console.log(results);
     function display(results){
         var r = results;
         console.log(r.data);  
     } 
+}
+
+function newBatch(){
+    var batch = document.getElementById("iclass");
+    var startingYear = document.getElementById("iyear");
+    if(batch==1){
+        endingYear = startingYear.value + 3;
+    }
+    else if(batch==2){
+        endingYear = startingYear.value + 5; 
+    }
+    else if(batch==0){
+        alert("Please select Class"); return;
+    }
 }
