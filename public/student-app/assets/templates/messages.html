@@ -4,6 +4,7 @@
   <title>Messages</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/messages.css">
   <link rel="stylesheet" href="../css/style2.css">
   <link rel="stylesheet" href="../css/tableStyle.css">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -12,10 +13,10 @@
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/popper.min.js"></script>
-<script src="../js/local.js"></script>
+  <script src="../js/local.js"></script>
 </head>
 
-<body onload="local(); body();">
+<body onload="local(); body(); chkLink();">
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
@@ -53,7 +54,7 @@
                 <a href="jashan-form.html">Jashan Form</a>
               </li>
               <li>
-                <a href="http://www.gnduadmissions.org/dhanpreet_idmay2017/idoddsem_index.asp" target="_blank">ID Courses</a>
+                <a id="linkID" href="http://www.gnduadmissions.org/dhanpreet_idmay2017/idoddsem_index.asp" target="_blank">ID Courses</a>
               </li>
             </ul>
           </li>
@@ -63,12 +64,12 @@
             </a>
             <ul class="dropdown-menu">
               <li>
-                <a href="http://slc.gndu.ac.in/StudentArea/Login.aspx" target="_blank">Generate Fee Slip</a>
+                <a id="linkFee" href="http://slc.gndu.ac.in/StudentArea/Login.aspx" target="_blank">Generate Fee Slip</a>
               </li>
-             
+
             </ul>
           </li>
-          
+
 
 
           <li>
@@ -119,21 +120,30 @@
           </h3>
           <div class="border-title"></div>
         </div>
-        <div class="container">
-          <table class="table" id="message">
-            <tr>
-              <td>
-                <label for="">You are requested to please submit your documents for verification.</label>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="">Your general detail section is not completeed. Please complete it as soon as possible.</label>
-              </td>
-            </tr>
-            
-          </table>
+        <h2>Messages</h2>
 
+        <div class="container">
+         <p>Hello. How are you today?</p>
+          <span class="time-right">11:00</span>
+        </div>
+
+        <div class="container darker">
+          <p>Hey! I'm fine. Thanks for asking!</p>
+          <span class="time-left">11:01</span>
+        </div>
+
+        <div class="container">
+          <p>Sweet! So, what do you wanna do today?</p>
+          <span class="time-right">11:02</span>
+        </div>
+
+        <div class="container darker">
+          <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+          <span class="time-left">11:05</span>
+        </div>
+        <div>
+          <input type="text" style="width: 90%" >
+          <button type="submit" class="btn btn-primary" style="width:9%">Send</button>
         </div>
       </div>
     </div>
