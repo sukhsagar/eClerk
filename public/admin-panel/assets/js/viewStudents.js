@@ -9,7 +9,8 @@ function loadData(){
 			}).then(function () {
 				let row = "<tr><td><label>" + studentDetail.name + "</label></td><td><label>" + studentDetail.personalDetail.fatherName 
 					+ "</label></td><td><label>" + studentDetail.personalDetail.motherName + "</label></td><td><label>" + studentDetail.rollNo 
-					+ "</label></td><td><label>" + studentDetail.registrationNumber + "</label></td></tr>";
+					+ "</label></td><td><label>" + studentDetail.registrationNumber + 
+					"</label></td><td> <button onclick=\"deleteStudent('" + studentDetail.rollNo + "')\"> Delete</button></td></tr>";
 				document.getElementById('studentDetailContainer').innerHTML += row;
 			});
 		}); 
@@ -17,3 +18,7 @@ function loadData(){
 }
 
 loadData();
+
+function deleteStudent(rollNo) {
+	console.log(rollNo);
+}
