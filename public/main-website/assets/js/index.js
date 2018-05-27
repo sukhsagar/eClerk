@@ -22,6 +22,15 @@ function load(){
         var teacherName7 = document.getElementById("teachername7");
         var teacherName8 = document.getElementById("teachername8");
         var teacherName9 = document.getElementById("teachername9");
+        var teacherImage1 = document.getElementById("teacherImage1");
+        var teacherImage2 = document.getElementById("teacherImage2");
+        var teacherImage3 = document.getElementById("teacherImage3");
+        var teacherImage4 = document.getElementById("teacherImage4");
+        var teacherImage5 = document.getElementById("teacherImage5");
+        var teacherImage6 = document.getElementById("teacherImage6");
+        var teacherImage7 = document.getElementById("teacherImage7");
+        var teacherImage8 = document.getElementById("teacherImage8");
+        var teacherImage9 = document.getElementById("teacherImage9");
         var teacherDetail1 = document.getElementById("teacherdetail1");
         var teacherDetail2 = document.getElementById("teacherdetail2");
         var teacherDetail3 = document.getElementById("teacherdetail3");
@@ -50,44 +59,73 @@ function load(){
         teacherDetail7.innerHTML = data.teacherDetail7;
         teacherDetail8.innerHTML = data.teacherDetail8;
         teacherDetail9.innerHTML = data.teacherDetail9;
+        teacherImage1.inneHTML.src="";
+        teacherImage2.inneHTML.src="";
+        teacherImage3.inneHTML.src="";
+        teacherImage4.inneHTML.src="";
+        teacherImage5.inneHTML.src="";
+        teacherImage6.inneHTML.src="";
+        teacherImage7.inneHTML.src="";
+        teacherImage8.inneHTML.src="";
+        teacherImage8.inneHTML.src="";
+        
 
         
     })
 
-
-}
-
-var name = document.getElementById("name");
-var email = document.getElementById("email");
-var subject = document.getElementById("subject");
-var message = document.getElementById("message");
-
-var formData={
-    "name":name.value,
-    "email":email.value,
-    "subject":subject.value,
-    "message":message.value
-}
-firebase.database().ref('gndu-amritsar/index/contact/').push(formData).then(function(){
-    alert("You have succesfully filled the examination form.");
-    document.getElementById("submit").disabled=true;
-});
-var data1={};
-firebase.database().ref('gndu-amritsar/index/testimonials').once('value',function(snapshot){
-    data1=snapshot.val();
-    var name1 = document.getElementById("name1");
-    var message1 = document.getElementById("message1");
-    var name2 = document.getElementById("name2");
-    var message2 = document.getElementById("message2");
-    var name3 = document.getElementById("name3");
-    var message3 = document.getElementById("message3");
-
-    name1.innerHTML = data1.name1;
-    message1.innerHTML = data1.message1;
-    name2.innerHTML = data1.name2;
-    message2.innerHTML = data1.message2;
-    name3.innerHTML = data1.name3;
-    message3.innerHTML = data1.message3;
-
+    var data1={};
+    firebase.database().ref('gndu-amritsar/index/testimonials').once('value',function(snapshot){
+        data1=snapshot.val();
+        var name1 = document.getElementById("name1");
+        var image1 = document.getElementById("image1");
+        var message1 = document.getElementById("message1");
+        var name2 = document.getElementById("name2");
+        var image2 = document.getElementById("image2");
+        var message2 = document.getElementById("message2");
+        var name3 = document.getElementById("name3");
+        var image3 = document.getElementById("image3");
+        var message3 = document.getElementById("message3");
     
-})
+        name1.innerHTML = data1.name1;
+        image1.inneHTML.src="";
+        message1.innerHTML = data1.message1;
+        name2.innerHTML = data1.name2;
+        image2.inneHTML.src="";
+        message2.innerHTML = data1.message2;
+        name3.innerHTML = data1.name3;
+        image3.inneHTML.src="";
+        message3.innerHTML = data1.message3;
+    
+        
+    })
+}
+function submitQuery(){
+    var name = document.getElementById("name");
+    var email = document.getElementById("email");
+    var subject = document.getElementById("subject");
+    var query = document.getElementById("query");
+    if(name.value===null || name.value===undefined){
+        alert("Please Enter your Name."); return;
+    }
+    if(email.value===null || email.value===undefined){
+        alert("Please Enter your Email-ID."); return;
+    }
+    if(subject.value===null || submit.value===undefined){
+        alert("Please Enter the subject of your Query."); return;
+    }
+    if(query.value===null || query.value===undefined){
+        alert("Please Enter your Query."); return;
+    }
+    var formData={
+        "name":name.value,
+        "email":email.value,
+        "subject":subject.value,
+        "message":query.value
+    }
+    firebase.database().ref('gndu-amritsar/index/contact/').push(formData).then(function(){
+        alert("You have succesfully passed the Query. Your Query will be rectified soon.");
+        document.getElementById("submit").disabled=true;
+    });
+    
+}
+
