@@ -25,5 +25,19 @@ function chkLink(){
         
         linkID.href="";
         linkFee.href="";
-    })
+    });
+}
+
+function messageCount(){
+  var msgCount = document.getElementById('messageCount');
+  firebase.database().ref('gndu-amritsar/student/'+localStorage.getItem('rollNo')+'/newMessageCount').on('value',function(snapshot){
+    data=snapshot.val();
+    if (parseInt(data)>0) {
+      msgCount.style.visibility="visible";  
+      msgCount.innerHTML=data;
+    }
+    else{
+      msgCount.style.visibility="hidden";  
+    }
+  });
 }
