@@ -18,7 +18,7 @@ function validate() {
                     "teacherName" : selectTeacher.value, 
                     "date" : selectDate.value
                         }; 
-    firebase.database().ref('gndu-amritsar/teacherOnLeave/' + selectDate.value + (d+1) + '2018/').push(formData).then(function(){
+    firebase.database().ref('gndu-amritsar/teacherOnLeave/' + selectDate.value + (d+1) + '2018/').set(formData).then(function(){
         alert("You have succesfully add teacher on leave detail.");
     });
                       
