@@ -87,15 +87,15 @@ function load(){
         var message3 = document.getElementById("message3");
     
         name1.innerHTML = data1.name1;
-        image1.inneHTML.src="";
         message1.innerHTML = data1.message1;
         name2.innerHTML = data1.name2;
-        image2.inneHTML.src="";
         message2.innerHTML = data1.message2;
         name3.innerHTML = data1.name3;
-        image3.inneHTML.src="";
         message3.innerHTML = data1.message3;
-    
+       
+        image1.inneHTML.src="";
+        image2.inneHTML.src="";
+        image3.inneHTML.src="";
         
     })
 }
@@ -104,16 +104,16 @@ function submitQuery(){
     var email = document.getElementById("email");
     var subject = document.getElementById("subject");
     var query = document.getElementById("query");
-    if(name.value===null || name.value===undefined){
+    if(name.value===""){
         alert("Please Enter your Name."); return;
     }
-    if(email.value===null || email.value===undefined){
+    if(email.value===""){
         alert("Please Enter your Email-ID."); return;
     }
-    if(subject.value===null || submit.value===undefined){
+    if(subject.value===""){
         alert("Please Enter the subject of your Query."); return;
     }
-    if(query.value===null || query.value===undefined){
+    if(query.value===""){
         alert("Please Enter your Query."); return;
     }
     var formData={
