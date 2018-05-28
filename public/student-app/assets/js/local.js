@@ -23,8 +23,8 @@ function chkLink(){
     firebase.database().ref('gndu-amritsar/index/links/').once('value',function(snapshot){
         data=snapshot.val();
         
-        linkID.href="";
-        linkFee.href="";
+        linkID.href=data.linkID;
+        linkFee.href=linkFee;
     });
 }
 

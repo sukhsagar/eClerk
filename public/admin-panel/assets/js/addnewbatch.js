@@ -265,7 +265,31 @@ function parsingCSV(){
     //console.log(results);
     function display(results){
         var r = results;
+        //var students=[];
         console.log(r.data);  
+        r=r.data;
+        for (var i = 1; i<r.length-1;i++){
+            //var rollNo = r[i][0];
+            var fName = r[i][1].split(" ");
+            var pwd = ""+r[i][0]+fName[0].toLowerCase();
+            var temp = {
+                "name": r[i][1],
+                "class":r[i][2],
+                "personalDetail":{
+                    "fatherName": r[i][3],
+                    "motherName":r[i][4],
+                    "uniRank":r[i][5],
+                    "gender":r[i][6],
+                    "emailID":r[i][7],
+                    "mobNo":r[i][8] 
+                },
+                "password":pwd,
+                "newMessageCount": "0",
+            }
+            firebase.database().ref('gndu-amritsar/student/'+r[i][0]).set(temp).then(function(){
+                console.log("Roll No " + r[i][0]+" added to the database.");
+            });
+        }
     } 
 }
 
@@ -280,5 +304,11 @@ function newBatch(){
     }
     else if(batch==0){
         alert("Please select Class"); return;
+    }
+    if(document.getElementById('uploadCsv').value==""){
+        alert("Please select a CSV File.");
+    }
+    else{
+        parsingCSV();
     }
 }
