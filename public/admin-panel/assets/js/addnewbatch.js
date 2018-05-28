@@ -120,7 +120,6 @@ function validate(){
         }
         
     }
-
     if(name3.value!="NULL" || fatherName3.value!="NULL" || motherName3.value!="NULL" || rollNo3.value!="NULL" || password3.value!="NULL" || registrationNo3.value!="NULL"){   
         var formData={
             "name": name3.value,
@@ -157,7 +156,6 @@ function validate(){
         }
         
     }
-
     if(name4.value!="NULL" || fatherName4.value!="NULL" || motherName4.value!="NULL" || rollNo4.value!="NULL" || password4.value!="NULL" || registrationNo4.value!="NULL"){   
         var formData={
             "name": name4.value,
@@ -194,7 +192,6 @@ function validate(){
         }
         
     }
-
     if(name5.value!="NULL" || fatherName5.value!="NULL" || motherName5.value!="NULL" || rollNo5.value!="NULL" || password5.value!="NULL" || registrationNo5.value!="NULL"){   
         var formData={
             "name": name5.value,
