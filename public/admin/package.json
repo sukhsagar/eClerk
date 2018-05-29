@@ -1,0 +1,19 @@
+{
+  "name": "eClerk ADMIN",
+  "version": "1.0.0",
+  "description": "Hybrid Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/sukhsagar/eclerk.git",
+  "keywords": [
+    "Electron",
+    "Code Warriors",
+    "eClerk"
+  ],
+  "author": "Sukhsagar",
+  "devDependencies": {
+    "electron": "~1.7.8"
+  }
+}

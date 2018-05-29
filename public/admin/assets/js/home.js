@@ -99,7 +99,7 @@ var teacherLeave1 = document.getElementById("teacherLeave1");
 var teacherLeave2 = document.getElementById("teacherLeave2");
 var teacherLeave3 = document.getElementById("teacherLeave3");
 
-            teacherLeave1.innerHTML = data.teacherName;
+            teacherLeave1.innerHTML = "Sandeep Kaur";
             teacherLeave2.innerHTML = data.teacherName;
             teacherLeave3.innerHTML = data.teacherName;
 })
