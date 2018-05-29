@@ -13,7 +13,7 @@ var formData={
     "uploadedon" : today
 
 };
-firebase.database().ref('noticecreation/' + noticeHeading.value).push(formData).then(function(){
-    alert("You have succesfully notice creation.");
+firebase.database().ref('gndu-amritsar/notices/1').push(formData).then(function(){
+    alert("You have succesfully created a new notice.");
 });
 }
