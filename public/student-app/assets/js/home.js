@@ -139,10 +139,10 @@ function DmcStatus(){
         data = snapshot2.val();
 
         if(data.status==="Pending"){
-            document.getElementById("dmcStatus").style.visibility="visible";
+            document.getElementById("dmcStatus").style.display="block";
         }
         else{
-            document.getElementById("dmcStatus").style.visibility="hidden";
+            document.getElementById("dmcStatus").style.display="none";
         }
     });
 }
