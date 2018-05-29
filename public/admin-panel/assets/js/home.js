@@ -84,14 +84,14 @@ function loadTimeTable() {
         tues7.innerHTML = data1.tuesday.seventh;
         tues8.innerHTML = data1.tuesday.eighth;
 
-        wed1.innerHTML = data1.wedday.first;
-        wed2.innerHTML = data1.wedday.second;
-        wed3.innerHTML = data1.wedday.third;
-        wed4.innerHTML = data1.wedday.fourth;
-        wed5.innerHTML = data1.wedday.fifth;
-        wed6.innerHTML = data1.wedday.sixth;
-        wed7.innerHTML = data1.wedday.seventh;
-        wed8.innerHTML = data1.wedday.eighth;
+        wed1.innerHTML = data1.wednesday.first;
+        wed2.innerHTML = data1.wednesday.second;
+        wed3.innerHTML = data1.wednesday.third;
+        wed4.innerHTML = data1.wednesday.fourth;
+        wed5.innerHTML = data1.wednesday.fifth;
+        wed6.innerHTML = data1.wednesday.sixth;
+        wed7.innerHTML = data1.wednesday.seventh;
+        wed8.innerHTML = data1.wednesday.eighth;
 
         thu1.innerHTML = data1.thursday.first;
         thu2.innerHTML = data1.thursday.second;
