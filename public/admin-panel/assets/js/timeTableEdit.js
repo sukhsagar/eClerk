@@ -10,6 +10,7 @@ function load(){
     var mon6 = document.getElementById("mon6");
     var mon7 = document.getElementById("mon7");
     var mon8 = document.getElementById("mon8");
+    
     var tues1 = document.getElementById("tues1");
     var tues2 = document.getElementById("tues2");
     var tues3 = document.getElementById("tues3");
@@ -18,6 +19,7 @@ function load(){
     var tues6 = document.getElementById("tues6");
     var tues7 = document.getElementById("tues7");
     var tues8 = document.getElementById("tues8");
+
     var wed1 = document.getElementById("wed1");
     var wed2 = document.getElementById("wed2");
     var wed3 = document.getElementById("wed3");
@@ -26,6 +28,7 @@ function load(){
     var wed6 = document.getElementById("wed6");
     var wed7 = document.getElementById("wed7");
     var wed8 = document.getElementById("wed8");
+
     var thu1 = document.getElementById("thu1");
     var thu2 = document.getElementById("thu2");
     var thu3 = document.getElementById("thu3");
@@ -34,6 +37,7 @@ function load(){
     var thu6 = document.getElementById("thu6");
     var thu7 = document.getElementById("thu7");
     var thu8 = document.getElementById("thu8");
+
     var fri1 = document.getElementById("fri1");
     var fri2 = document.getElementById("fri2");
     var fri3 = document.getElementById("fri3");
