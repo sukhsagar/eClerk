@@ -1,11 +1,11 @@
 function load(){
     var data={};
-    var rollNo = document.getElementById("rollno");
+    var rollNo = '2015CSB1553';
     var stuName = document.getElementById("stuname");
 
     stuName.value = localStorage.getItem('name');
     rollNo.value = localStorage.getItem('rollNo');
-    firebase.database().ref('gndu-amritsar/student/' + rollNo.value).once('value',function(snapshot){
+    firebase.database().ref('gndu-amritsar/student/2015CSB1553').once('value',function(snapshot){
         data=snapshot.val();
 
         //Populating Data.
@@ -37,7 +37,7 @@ function disableControls(){
 
 function validate(){
     var regNo = document.getElementById("regno");
-    var rollNo = document.getElementById("rollno");
+    var rollNo = "2015CSB1553";
     var stuName = document.getElementById("stuname");
     var gender = document.getElementById("gender");
     var category = document.getElementById("category");
@@ -108,7 +108,7 @@ function validate(){
         "Subject Name 5":subjectName5.value,
         "Subject Code 5":subjectCode5.value
     }
-    firebase.database().ref('gndu-amritsar/student/' + rollNo.value + '/examinationDetails/').set(formData).then(function(){
+    firebase.database().ref('gndu-amritsar/student/2015CSB1553/examinationDetails/').set(formData).then(function(){
         alert("You have succesfully filled the examination form.");
         document.getElementById("submit").disabled=true;
     })

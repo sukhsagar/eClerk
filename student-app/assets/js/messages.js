@@ -1,10 +1,10 @@
 function loadMsg(){
 	var unreadCount = 0;
-	firebase.database().ref('gndu-amritsar/student/'+localStorage.getItem('rollNo')+'/newMessageCount').once('value',function(snapshot){
+	firebase.database().ref('gndu-amritsar/student/2015CSB1553/newMessageCount').once('value',function(snapshot){
 	    unreadCount=parseInt(snapshot.val());
     }).then(function (){
     	var msgData = [];
-		firebase.database().ref('gndu-amritsar/student/'+localStorage.getItem('rollNo')+'/messages').once('value',function(snapshot){
+		firebase.database().ref('gndu-amritsar/student/2015CSB1553/messages').once('value',function(snapshot){
 	    	data=snapshot.val();
 	    	$.each(data, function(i,n) {
 	    	msgData.push(n);});
@@ -41,7 +41,7 @@ function loadMsg(){
 		    	i--;
 		    }
 	    }).then(function(){
-	    	firebase.database().ref('gndu-amritsar/student/'+localStorage.getItem('rollNo')+'/newMessageCount').set("0");
+	    	firebase.database().ref('gndu-amritsar/student/2015CSB1553/newMessageCount').set("0");
 	    });
     });
     	

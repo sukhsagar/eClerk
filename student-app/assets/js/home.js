@@ -30,7 +30,7 @@ function loadTT() {
     }
     var data1 = {};
     
-    firebase.database().ref('gndu-amritsar/timeTable/' + stuClass + '/' + weekDay[d] + '/').once('value', function (snapshot1) {
+    firebase.database().ref('gndu-amritsar/timeTable/MCA-(TYC)/' + weekDay[d] + '/').once('value', function (snapshot1) {
         data1 = snapshot1.val();
 
         var mon9_10 = document.getElementById("mon9-10");
@@ -107,17 +107,17 @@ function loadTimeTable(d) {
 }
 
 function chkLogin() {
-    var rollNo = localStorage.getItem('rollNo');
-    if (rollNo === null || rollNo === undefined) {
-        window.location = "./assets/templates/sign-in.html"
-    }
+    // var rollNo = localStorage.getItem('rollNo');
+    // if (rollNo === null || rollNo === undefined) {
+    //     window.location = "./assets/templates/sign-in.html"
+    // }
 }
 
 var stuClass = localStorage.getItem('class');
 function load() {
     var nameLabel = document.getElementById("nameLabel");
-    var firstName = localStorage.getItem('name').split(" ");
-    nameLabel.innerHTML = firstName[0];
+    var firstName = "Gagandeep";
+    nameLabel.innerHTML = firstName;
 
 
     firebase.database().ref('gndu-amritsar/teacherOnLeave/30052018').on('value', function (snapshot2) {
@@ -133,7 +133,7 @@ function load() {
 }
 
 function DmcStatus(){
-    firebase.database().ref('gndu-amritsar/DmcDistribution/'+localStorage.getItem('class')+'/'+localStorage.getItem('rollNo')).on('value', function (snapshot2) {
+    firebase.database().ref('gndu-amritsar/DmcDistribution/MCA-(TYC)/2015CSB1553').on('value', function (snapshot2) {
         data = snapshot2.val();
 
         if(data.status==="Pending"){

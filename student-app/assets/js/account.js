@@ -1,10 +1,10 @@
 function load() {
     var data = {};
-    var rollNo = document.getElementById("rollno");
-    var stuName = document.getElementById("stuname");
-    stuName.value = localStorage.getItem('name');
-    rollNo.value = localStorage.getItem('rollNo');
-    firebase.database().ref('gndu-amritsar/student/' + localStorage.getItem('rollNo')).once('value', function (snapshot) {
+    document.getElementById("rollno").value = "2015CSB1553";
+    document.getElementById("stuname").value="Gagandeep Singh";
+    var stuName = "Gagandeep";
+    rollNo = "2015CSB1553";
+    firebase.database().ref('gndu-amritsar/student/2015CSB1553').once('value', function (snapshot) {
         data = snapshot.val();
 
         //Populating Data.
@@ -151,7 +151,7 @@ function validateParents() {
         "uniRank": document.getElementById("rank").value
     };
 
-    firebase.database().ref('gndu-amritsar/student/' + localStorage.getItem('rollNo') + '/personalDetail').set(formDataParents).then(function () {
+    firebase.database().ref('gndu-amritsar/student/2015CSB1553/personalDetail').set(formDataParents).then(function () {
         alert("Your Guardian details have been updated.");
         document.getElementById("submitParents").disabled = true;
         document.getElementById("resetParents").disabled = true;
@@ -260,22 +260,22 @@ function validateQualification() {
         } 
         
     };
-    firebase.database().ref('gndu-amritsar/student/' + rollNo.value + '/personalDetail').set(formDataPersonal).then(function () {
-        alert("Your personal detail has been submitted.");
-        document.getElementById("submitPersonal").disabled = true;
-        document.getElementById("resetPersonal").disabled = true;
-        document.getElementById("editPersonal").disabled = false;
-    });
-    firebase.database().ref('gndu-amritsar/student/' + rollNo.value + '/personalDetail').set(formDataParents).then(function () {
-        alert("Your Guardian details have been updated.");
-        document.getElementById("submitParents").disabled = true;
-        document.getElementById("resetParents").disabled = true;
-        document.getElementById("editParents").disabled = false;
-    });
-    firebase.database().ref('gndu-amritsar/student/' + rollNo.value + '/personalDetail').set(formDataQualifications).then(function () {
-        alert("Your Academic details have been updated.");
-        document.getElementById("submitQualification").disabled = true;
-        document.getElementById("resetQualifications").disabled = true;
-        document.getElementById("editQualifications").disabled = false;
-    });
+    // firebase.database().ref('gndu-amritsar/student/' + rollNo.value + '/personalDetail').set(formDataPersonal).then(function () {
+    //     alert("Your personal detail has been submitted.");
+    //     document.getElementById("submitPersonal").disabled = true;
+    //     document.getElementById("resetPersonal").disabled = true;
+    //     document.getElementById("editPersonal").disabled = false;
+    // });
+    // firebase.database().ref('gndu-amritsar/student/' + rollNo.value + '/personalDetail').set(formDataParents).then(function () {
+    //     alert("Your Guardian details have been updated.");
+    //     document.getElementById("submitParents").disabled = true;
+    //     document.getElementById("resetParents").disabled = true;
+    //     document.getElementById("editParents").disabled = false;
+    // });
+    // firebase.database().ref('gndu-amritsar/student/' + rollNo.value + '/personalDetail').set(formDataQualifications).then(function () {
+    //     alert("Your Academic details have been updated.");
+    //     document.getElementById("submitQualification").disabled = true;
+    //     document.getElementById("resetQualifications").disabled = true;
+    //     document.getElementById("editQualifications").disabled = false;
+    // });
 }
