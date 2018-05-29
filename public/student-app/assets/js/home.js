@@ -120,17 +120,15 @@ function load() {
     nameLabel.innerHTML = firstName[0];
 
 
-    firebase.database().ref('gndu-amritsar/teacherOnLeave/').once('value', function (snapshot2) {
+    firebase.database().ref('gndu-amritsar/teacherOnLeave/30052018').on('value', function (snapshot2) {
         data = snapshot2.val();
-
         var teacherLeave1 = document.getElementById("teacherLeave1");
-        var teacherLeave2 = document.getElementById("teacherLeave2");
-        var teacherLeave3 = document.getElementById("teacherLeave3");
-
-        teacherLeave1.innerHTML = data.teacherName;
-        teacherLeave2.innerHTML = data.teacherName;
-        teacherLeave3.innerHTML = data.teacherName;
-
+        if(data==null||data==undefined){
+        	teacherLeave1.innerHTML = "No teacher is on leave Today.";
+        }
+        else{
+        	teacherLeave1.innerHTML = data.teacherName;
+        }
     })
 }
 
