@@ -37,7 +37,7 @@ function validate(){
         "uploadPicture" : uploadPicture.value,
         
     };
-    firebase.database().ref('faculity/' + teacherName.value).push(formData).then(function(){
+    firebase.database().ref('gndu-amritsar/faculty/' + teacherName.value).push(formData).then(function(){
         alert("You have succesfully added teacher detail.");
     });
 }

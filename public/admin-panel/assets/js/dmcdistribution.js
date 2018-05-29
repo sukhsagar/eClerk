@@ -9,7 +9,7 @@ function dmcChk() {
     var toggle5 = document.getElementById("toggle5");
     var toggle6 = document.getElementById("toggle6");
 
-    firebase.database().ref('gndu-amritsar/DmcDistribution/MCA-(TYC)').on('value', function (snapshot2) {
+    firebase.database().ref('gndu-amritsar/DmcDistribution/MCA-(TYC)/').on('value', function (snapshot2) {
         data = snapshot2.val();
         roll = ['2015CSB1551', '2015CSB1552', '2015CSB1553', '2015CSB1554', '2015CSB1555', '2015CSB1556']
         for (i = 1; i <= 6; i++) {
