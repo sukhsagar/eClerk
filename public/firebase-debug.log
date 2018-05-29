@@ -1,0 +1,122 @@
+[debug] [2018-05-29T04:44:43.689Z] ----------------------------------------------------------------------
+[debug] [2018-05-29T04:44:43.693Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Tajinder\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-05-29T04:44:43.693Z] CLI Version:   3.18.5
+[debug] [2018-05-29T04:44:43.693Z] Platform:      win32
+[debug] [2018-05-29T04:44:43.693Z] Node Version:  v9.5.0
+[debug] [2018-05-29T04:44:43.694Z] Time:          Tue May 29 2018 10:14:43 GMT+0530 (India Standard Time)
+[debug] [2018-05-29T04:44:43.694Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-29T04:44:43.708Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-29T04:44:43.708Z] > authorizing via signed-in user
+[debug] [2018-05-29T04:44:43.711Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-05-29T04:44:43.711Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/K7B9xy1qmRcBn0qFZOGZEzAsfkvcjygX1X9Pk5H2mvVumekEh4HdGETiVQpWrUUO',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue May 29 2018 10:14:43 GMT+0530 (India Standard Time)
+[debug] [2018-05-29T04:44:44.577Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-29T04:44:44.582Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/e-dcse  
+  
+ Tue May 29 2018 10:14:44 GMT+0530 (India Standard Time)
+[debug] [2018-05-29T04:44:46.473Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-29T04:44:46.476Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/e-dcse/tokens  
+  
+ Tue May 29 2018 10:14:46 GMT+0530 (India Standard Time)
+[debug] [2018-05-29T04:44:48.324Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'e-dcse'...
+[info] 
+[info] i  deploying database, storage, hosting
+[info] i  database: checking rules syntax...
+[debug] [2018-05-29T04:44:51.167Z] >>> HTTP REQUEST PUT https://e-dcse.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "auth == null",
+    ".write": "auth == null"
+  }
+}
+ 
+ Tue May 29 2018 10:14:51 GMT+0530 (India Standard Time)
+[debug] [2018-05-29T04:45:09.208Z] <<< HTTP RESPONSE 200
+[info] +  database: rules syntax for database e-dcse is valid
+[debug] [2018-05-29T04:45:09.216Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/e-dcse  
+  
+ Tue May 29 2018 10:15:09 GMT+0530 (India Standard Time)
+[debug] [2018-05-29T04:45:12.568Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-05-29T04:45:12.577Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/e-dcse:test  
+ { source: { files: [ [Object] ] } } 
+ Tue May 29 2018 10:15:12 GMT+0530 (India Standard Time)
+[debug] [2018-05-29T04:45:17.753Z] <<< HTTP RESPONSE 200
+[info] +  storage: rules file storage.rules compiled successfully
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-05-29T04:45:17.763Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/e-dcse/rulesets  
+ { source: { files: [ [Object] ] } } 
+ Tue May 29 2018 10:15:17 GMT+0530 (India Standard Time)
+[debug] [2018-05-29T04:45:20.158Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-29T04:45:20.159Z] [rules] created ruleset projects/e-dcse/rulesets/9fd45265-ac9f-47f1-9c75-d7a9b9b43122
+[info] i  hosting: preparing public directory for upload...
+[debug] [2018-05-29T04:45:21.592Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/e-dcse/uploads/-LDeCizPpH7r5w7iz0Ju?fileCount=240&message=  
+  
+ Tue May 29 2018 10:15:21 GMT+0530 (India Standard Time)
+[debug] [2018-05-29T04:51:30.399Z] Error: write ECONNRESET
+    at _errnoException (util.js:1003:13)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:866:14)
+[error] 
+[error] Error: Server Error. write ECONNRESET
+[debug] [2018-05-29T04:51:51.367Z] ----------------------------------------------------------------------
+[debug] [2018-05-29T04:51:51.370Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Tajinder\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-05-29T04:51:51.371Z] CLI Version:   3.18.5
+[debug] [2018-05-29T04:51:51.371Z] Platform:      win32
+[debug] [2018-05-29T04:51:51.371Z] Node Version:  v9.5.0
+[debug] [2018-05-29T04:51:51.371Z] Time:          Tue May 29 2018 10:21:51 GMT+0530 (India Standard Time)
+[debug] [2018-05-29T04:51:51.371Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-29T04:51:51.386Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-29T04:51:51.386Z] > authorizing via signed-in user
+[debug] [2018-05-29T04:51:51.389Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/e-dcse  
+  
+ Tue May 29 2018 10:21:51 GMT+0530 (India Standard Time)
+[debug] [2018-05-29T04:51:53.089Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-29T04:51:53.091Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/e-dcse/tokens  
+  
+ Tue May 29 2018 10:21:53 GMT+0530 (India Standard Time)
+[debug] [2018-05-29T04:51:54.201Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'e-dcse'...
+[info] 
+[info] i  deploying database, storage, hosting
+[info] i  database: checking rules syntax...
+[debug] [2018-05-29T04:51:55.926Z] >>> HTTP REQUEST PUT https://e-dcse.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "auth == null",
+    ".write": "auth == null"
+  }
+}
+ 
+ Tue May 29 2018 10:21:55 GMT+0530 (India Standard Time)
+[debug] [2018-05-29T04:51:57.259Z] <<< HTTP RESPONSE 200
+[info] +  database: rules syntax for database e-dcse is valid
+[debug] [2018-05-29T04:51:57.261Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/e-dcse  
+  
+ Tue May 29 2018 10:21:57 GMT+0530 (India Standard Time)
+[debug] [2018-05-29T04:51:59.513Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-05-29T04:51:59.521Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/e-dcse:test  
+ { source: { files: [ [Object] ] } } 
+ Tue May 29 2018 10:21:59 GMT+0530 (India Standard Time)
+[debug] [2018-05-29T04:52:01.169Z] <<< HTTP RESPONSE 200
+[info] +  storage: rules file storage.rules compiled successfully
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-05-29T04:52:01.185Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/e-dcse/rulesets  
+ { source: { files: [ [Object] ] } } 
+ Tue May 29 2018 10:22:01 GMT+0530 (India Standard Time)
+[debug] [2018-05-29T04:52:02.768Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-29T04:52:02.768Z] [rules] created ruleset projects/e-dcse/rulesets/7eb3261c-8b53-47e5-8360-fcf43e643ffa
+[info] i  hosting: preparing public directory for upload...
+[debug] [2018-05-29T04:52:04.185Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/e-dcse/uploads/-LDeEGXo3c76si3Sdg0B?fileCount=240&message=  
+  
+ Tue May 29 2018 10:22:04 GMT+0530 (India Standard Time)

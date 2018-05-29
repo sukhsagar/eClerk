@@ -1,7 +1,23 @@
 var notice1 = document.getElementById("notice1");
 var notice2 = document.getElementById("notice2");
 var notice3 = document.getElementById("notice3");
+function notice(){
+    var notice1 = document.getElementById("notice1");
+    var notice2 = document.getElementById("notice2");
+    var notice3 = document.getElementById("notice3");
+    var notice4 = document.getElementById("notice4");
+    firebase.database().ref('gndu-amritsar/notices/1').on('value', function (snapshot1) {
+        data = snapshot1.val();
+        if(!(data===null || data===undefined)){
+            notice1.style="display:block";
+            notice4.style="display:none";
+        }else{
+            console.log("notice not found in database");
+        }
+       
+    })
 
+}
 
 
 function loadTT() {

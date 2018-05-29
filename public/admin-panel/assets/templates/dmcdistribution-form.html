@@ -5,9 +5,11 @@
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/style2.css" rel="stylesheet">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/app.js"></script>
+    <script src="../js/dmcdistribution.js"></script>
 </head>
 
-<body>
+<body onload="dmcChk();">
     <!-- Page formatting code -->
     <section id="team" class="section grey-section">
         <div class="white-shape">
@@ -76,7 +78,7 @@
                                                         <label id="iname">Gagan</label>
                                                     </td>
                                                     <td>
-                                                        <label class="switch" id="istatus">
+                                                        <label class="switch" id="toggle1">
                                                             <input type="checkbox">
                                                             <span class="slider round"></span>
                                                         </label>
@@ -90,7 +92,7 @@
                                                                 <label id="iname">Sukhsagar</label>
                                                             </td>
                                                             <td>
-                                                                <label class="switch" id="istatus">
+                                                                <label class="switch" id="toggle2">
                                                                     <input type="checkbox">
                                                                     <span class="slider round"></span>
                                                                 </label>
@@ -104,7 +106,7 @@
                                                                 <label id="iname">Adeesh</label>
                                                             </td>
                                                             <td>
-                                                                <label class="switch" id="istatus">
+                                                                <label class="switch" id="toggle3">
                                                                     <input type="checkbox">
                                                                     <span class="slider round"></span>
                                                                 </label>
@@ -118,7 +120,7 @@
                                                                 <label id="iname">Harinder</label>
                                                             </td>
                                                             <td>
-                                                                <label class="switch" id="istatus">
+                                                                <label class="switch" id="toggle4">
                                                                     <input type="checkbox">
                                                                     <span class="slider round"></span>
                                                                 </label>
@@ -132,7 +134,7 @@
                                                                 <label id="iname">Gurpreet</label>
                                                             </td>
                                                             <td>
-                                                                <label class="switch" id="istatus">
+                                                                <label class="switch" id="toggle5">
                                                                     <input type="checkbox">
                                                                     <span class="slider round"></span>
                                                                 </label>
@@ -146,7 +148,7 @@
                                                                 <label id="iname">Jasjeet</label>
                                                             </td>
                                                             <td>
-                                                                <label class="switch" id="istatus">
+                                                                <label class="switch" id="toggle6">
                                                                     <input type="checkbox">
                                                                     <span class="slider round"></span>
                                                                 </label>
@@ -156,6 +158,9 @@
 
                                             </tbody>
                                         </table>
+                                    </div>
+                                    <div class="container" style="align-content: center">
+                                        <button type="submit" class="btn btn-primary" id="save" onclick="updateDmc();">Save</button>
                                     </div>
                 </main>
                 </div>
