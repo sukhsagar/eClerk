@@ -21,7 +21,6 @@ function disableControls(){
 function validate(){
     var stuName = document.getElementById("stuname")
     var rollNo = document.getElementById("rollno")
-    var dob = document.getElementById("dob")
     var gender = document.getElementById("gender")
     var mobNo = document.getElementById("mobno")
     var emailID = document.getElementById("emailID")
@@ -40,9 +39,7 @@ function validate(){
     if(rollNo.value===""){
         alert("Enter your Roll No"); return;
     }
-    if(dob.value===""){
-        alert("Enter your Date Of Birth"); return;
-    }
+    
     if(mobNo.value===""){
         alert("Enter your Mobile No"); return;
     }

@@ -1,7 +1,6 @@
-var rollNo = document.getElementById('rollno');
-var password = document.getElementById('password');
-
 function signin(){
+	var rollNo = document.getElementById('rollno');
+	var password = document.getElementById('password');
     if(rollNo.value==="" || rollNo===undefined){
         alert("Please Enter your Roll Number.");
         return false;
@@ -13,10 +12,10 @@ function signin(){
     firebase.database().ref('gndu-amritsar/student/'+rollNo.value+'/password').once('value',function(snapshot){
         data1=snapshot.val();
         if( password.value===data1){
+        	localStorage.setItem('rollNo', rollNo.value);
             firebase.database().ref('gndu-amritsar/student/'+rollNo.value).once('value',function(snapshot){
                 data2=snapshot.val();
                 localStorage.setItem('class', data2.class);
-                localStorage.setItem('rollNo', data2.rollNo);
                 localStorage.setItem('name', data2.name);
             }).then(function(){
             	$.getJSON('https://ipapi.co/json/', function(data) {

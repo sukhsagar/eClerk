@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title> Index Page </title>
+  <title> Home Page </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,95 +12,11 @@
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/home.js"></script>
 </head>
 
 <body>
-
-
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="home.html">GNDU eClerk</a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li class="active">
-            <a href="home.html">Home</a>
-          </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Forms
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="assets/templates/gendata-form.html">General Detail</a>
-              </li>
-              <li>
-                <a href="assets/templates/placement-form.html">Placement Form</a>
-              </li>
-              <li>
-                <a href="assets/templates/examination-form.html">Examination Form</a>
-              </li>
-              <li>
-                <a href="assets/templates/scholarship-form.html">Scholarship Form</a>
-              </li>
-              <li>
-                <a href="assets/templates/sports-form.html">Sports Form</a>
-              </li>
-              <li>
-                <a href="assets/templates/jashan-form.html">Jashan Form</a>
-              </li>
-              <li>
-                <a href="http://www.gnduadmissions.org/dhanpreet_idmay2017/idoddsem_index.asp" target="_blank">ID Courses</a>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Fee Collection
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="http://slc.gndu.ac.in/StudentArea/Login.aspx" target="_blank">Generate Fee Slip</a>
-              </li>
-              <li>
-                <a href="assets/templates/feeconfirm.html">Verify Payment</a>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculty List
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="assets/templates/facultydetail.html">Professors</a>
-              </li>
-              <li>
-                <a href="assets/templates/facultydetail.html">Research Scholars</a>
-              </li>
-            </ul>
-          </li>
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="#">Syllabus</a>
-            </li>
-          </ul>
-
-
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="assets/templates/signin-form.html">
-                <span class="glyphicon glyphicon-user"></span> Sign In</a>
-            </li>
-          </ul>
-      </div>
-  </nav>
 
   <section id="team" class="section grey-section">
     <div class="white-shape">
@@ -117,7 +33,7 @@
         <div class="container">
           <div class="container" style="align-content: center;text-align: center;">
             <h2>Welcome
-              <span id="nameLabel">Swaran Singh</span>
+              <span id="nameLabel">Gurjit singh</span>
             </h2>
           </div>
 
@@ -127,13 +43,13 @@
             <table class="table">
               <tr>
                 <td>
-                  <img id="notice1" src="assets/img/1.jpg" height="250px" width="200px">
+                  <img id="notice1" src="assets/img/1.jpg" height="300px" width="200px">
                 </td>
                 <td>
-                  <img id="notice2" src="assets/img/2.jpg" height="250px" width="200px">
+                  <img id="notice2" src="assets/img/2.jpg" height="300px" width="200px">
                 </td>
                 <td>
-                  <img id="notice3" src="assets/img/3.jpg" height="250px" width="200px">
+                  <img id="notice3" src="assets/img/3.jpg" height="300px" width="200px">
                 </td>
               </tr>
             </table>
@@ -148,17 +64,17 @@
             <table class="table">
               <tr>
                 <td>
-                  <label id="teacherLeave1" for="">Dr. ABCD</label>
+                  <label id="teacherLeave1" for="">Loading...</label>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <label id="teacherLeave2" for="">Dr. MNOP</label>
+                  <label id="teacherLeave2" for="">Loading...</label>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <label id="teacherLeave3" for="">Dr. WXYZ</label>
+                  <label id="teacherLeave3" for="">Loading...</label>
                 </td>
               </tr>
               <tr>
@@ -171,8 +87,12 @@
             </table>
           </div>
           <h2>Time Table </h2>
-
-          <table class="table table-hover" id="time">
+          <select id="iclass" class="form-control">
+              
+              <option selected>MCA-(TYC)</option>
+              <option>MCA-(FYC)</option>
+          </select>
+          <table class="table table-hover" id="time" style="width: 100%">
             <thead>
               <tr>
                 <th>Timings/Day</th>
@@ -191,166 +111,150 @@
               <tr>
                 <th>Monday</th>
                 <td>
-                  <label id="mon1">sub 1</label>
+                  <input type="text" id="mon1">sub 1</input>
                 </td>
                 <td>
-                  <label id="mon2">sub 2</label>
+                  <input type="text" id="mon2">sub 2</input>
+                  
                 </td>
                 <td>
-                  <label id="mon3">sub 3</label>
+                  <input type="text" id="mon3">sub 3</input>
                 </td>
                 <td>
-                  <label id="mon4">sub 4</label>
+                  <input type="text" id="mon4">sub 4</input>
                 </td>
                 <td>
-                  <label id="mon5">break</label>
+                  <input type="text" id="mon5">break</input>
                 </td>
                 <td>
-                  <label id="mon6">sub 5</label>
+                  <input type="text" id="mon6">sub 5</input>
                 </td>
                 <td>
-                  <label id="mon7">sub 6</label>
+                  <input type="text" id="mon7">sub 6</input>
                 </td>
                 <td>
-                  <label id="mon8">sub 7</label>
+                  <input type="text" id="mon8">sub 7</input>
                 </td>
-                <td>
-                  <button type="submit" id="iedit">
-                    <a href="#">Edit</a>
-                  </button>
-                </td>
+                
               </tr>
               <tr>
                 <th>Tuesday</th>
                 <td>
-                  <label id="tues1">sub 1</label>
+                  <input type="text" id="tues1">sub 1</input>
                 </td>
                 <td>
-                  <label id="tues2">sub 2</label>
+                  <input type="text" id="tues2">sub 2</input>
                 </td>
                 <td>
-                  <label id="tues3">sub 3</label>
+                  <input type="text" id="tues3">sub 3</input>
                 </td>
                 <td>
-                  <label id="tues4">sub 4</label>
+                  <input type="text" id="tues4">sub 4</input>
                 </td>
                 <td>
-                  <label id="tues5">break</label>
+                  <input type="text" id="tues5">break</input>
                 </td>
                 <td>
-                  <label id="tues6">sub 5</label>
+                  <input type="text" id="tues6">sub 5</input>
                 </td>
                 <td>
-                  <label id="tues7">sub 6</label>
+                  <input type="text" id="tues7">sub 6</input>
                 </td>
                 <td>
-                  <label id="tues8">sub 7</label>
+                  <input type="text" id="tues8">sub 7</input>
                 </td>
-                <td>
-                  <button type="submit" id="iedit">
-                    <a href="#">Edit</a>
-                  </button>
-                </td>
+                
               </tr>
               <tr>
                 <th>Wednesday</th>
                 <td>
-                  <label id="wed1">sub 1</label>
+                  <input type="text" id="wed1">sub 1</input>
                 </td>
                 <td>
-                  <label id="wed2">sub 2</label>
+                  <input type="text" id="wed2">sub 2</input>
                 </td>
                 <td>
-                  <label id="wed3">sub 3</label>
+                  <input type="text" id="wed3">sub 3</input>
                 </td>
                 <td>
-                  <label id="wed4">sub 4</label>
+                  <input type="text" id="wed4">sub 4</input>
                 </td>
                 <td>
-                  <label id="wed5">break</label>
+                  <input type="text" id="wed5">break</input>
                 </td>
                 <td>
-                  <label id="wed6">sub 5</label>
+                  <input type="text" id="wed6">sub 5</input>
                 </td>
                 <td>
-                  <label id="wed7">sub 6</label>
+                  <input type="text" id="wed7">sub 6</input>
                 </td>
                 <td>
-                  <label id="wed8">sub 7</label>
+                  <input type="text" id="wed8">sub 7</input>
                 </td>
-                <td>
-                  <button type="submit" id="iedit">
-                    <a href="#">Edit</a>
-                  </button>
-                </td>
+                
               </tr>
               <tr>
                 <th>Thursday</th>
                 <td>
-                  <label id="thu1">sub 1</label>
+                  <input type="text" id="thu1">sub 1</input>
                 </td>
                 <td>
-                  <label id="thu2">sub 2</label>
+                  <input type="text" id="thu2">sub 2</input>
                 </td>
                 <td>
-                  <label id="thu3">sub 3</label>
+                  <input type="text" id="thu3">sub 3</input>
                 </td>
                 <td>
-                  <label id="thu4">sub 4</label>
+                  <input type="text" id="thu4">sub 4</input>
                 </td>
                 <td>
-                  <label id="thu5">break</label>
+                  <input type="text" id="thu5">break</input>
                 </td>
                 <td>
-                  <label id="thu6">sub 5</label>
+                  <input type="text" id="thu6">sub 5</input>
                 </td>
                 <td>
-                  <label id="thu7">sub 6</label>
+                  <input type="text" id="thu7">sub 6</input>
                 </td>
                 <td>
-                  <label id="thu8">sub 7</label>
+                  <input type="text" id="thu8">sub 7</input>
                 </td>
-                <td>
-                  <button type="submit" id="iedit">
-                    <a href="#">Edit</a>
-                  </button>
-                </td>
+                
               </tr>
               <tr>
                 <th>Friday</th>
                 <td>
-                  <label id="fri1">sub 1</label>
+                  <input type="text" id="fri1">sub 1</input>
                 </td>
                 <td>
-                  <label id="fri2">sub 2</label>
+                  <input type="text" id="fri2">sub 2</input>
                 </td>
                 <td>
-                  <label id="fri3">sub 3</label>
+                  <input type="text" id="fri3">sub 3</input>
                 </td>
                 <td>
-                  <label id="fri4">sub 4</label>
+                  <input type="text" id="fri4">sub 4</input>
                 </td>
                 <td>
-                  <label id="fri5">break</label>
+                  <input type="text" id="fri5">break</input>
                 </td>
                 <td>
-                  <label id="fri6">sub 5</label>
+                  <input type="text" id="fri6">sub 5</input>
                 </td>
                 <td>
-                  <label id="fri7">sub 6</label>
+                  <input type="text" id="fri7">sub 6</input>
                 </td>
                 <td>
-                  <label id="fri8">sub 7</label>
+                  <input type="text" id="fri8">sub 7</input>
                 </td>
-                <td>
-                  <button type="submit" id="iedit">
-                    <a href="#">Edit</a>
-                  </button>
-                </td>
+                
               </tr>
 
             </tbody>
           </table>
+          <button type="submit" id="iedit">
+            <a href="#">Edit</a>
+          </button>
 
 
 

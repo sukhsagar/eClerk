@@ -59,17 +59,7 @@ function load(){
         teacherDetail7.innerHTML = data.teacherDetail7;
         teacherDetail8.innerHTML = data.teacherDetail8;
         teacherDetail9.innerHTML = data.teacherDetail9;
-        teacherImage1.inneHTML.src="";
-        teacherImage2.inneHTML.src="";
-        teacherImage3.inneHTML.src="";
-        teacherImage4.inneHTML.src="";
-        teacherImage5.inneHTML.src="";
-        teacherImage6.inneHTML.src="";
-        teacherImage7.inneHTML.src="";
-        teacherImage8.inneHTML.src="";
-        teacherImage8.inneHTML.src="";
         
-
         
     })
 

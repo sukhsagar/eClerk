@@ -11,4 +11,5 @@ function loadData(){
 	    	//Ethe student d row gennerate krdo.
 
 	    });
-    });
+	});
+}

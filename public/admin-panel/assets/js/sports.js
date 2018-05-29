@@ -61,6 +61,6 @@ function validate() {
                     "dateofBirth" : dateofBirth.value,
                     "mobileNo" : mobileNo.value,
                     "emailId" : emailId.value,
-                    "games" : selectGames.value,
+                    "games" : selectGames.value
     };
 }
