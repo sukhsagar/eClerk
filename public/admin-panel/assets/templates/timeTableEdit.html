@@ -8,6 +8,7 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/app.js"></script>
     <script src="../js/timeTableEdit.js"></script>
 </head>
 
@@ -102,7 +103,7 @@
                 
                 <!-- Page enteries code -->
                 <h2>Time Table </h2>
-                <select id="class" class="form-control">
+                <select  id="class" class="form-control">
 
                     <option selected>MCA-(TYC)</option>
                     <option>MCA-(FYC)</option>
@@ -267,7 +268,7 @@
 
                     </tbody>
                 </table>
-                <button type="submit" id="update">
+                <button type="submit" id="update" onclick="updateTimeTable();">
                     Update
                 </button>
             </div>

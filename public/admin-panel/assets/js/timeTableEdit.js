@@ -89,7 +89,7 @@ function load(){
         fri8.value = data.monday.eighth;
 })}
 
-function loadTimeTable(d) {
+function updateTimeTable() {
     var stuClass= document.getElementById("class");
     var formData={
         "monday":{
