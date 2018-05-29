@@ -4,23 +4,31 @@ function load() {
     var stuName = document.getElementById("stuname");
     stuName.value = localStorage.getItem('name');
     rollNo.value = localStorage.getItem('rollNo');
-    firebase.database().ref('gndu-amritsar/student/' + rollNo.value).once('value', function (snapshot) {
+    firebase.database().ref('gndu-amritsar/student/' + localStorage.getItem('rollNo')).once('value', function (snapshot) {
         data = snapshot.val();
 
         //Populating Data.
         var regNo = document.getElementById("regno");
-
-        var fatherName = document.getElementById("fathername");
-        var motherName = document.getElementById("mothername");
-
-        //if(data.registrationNumber!=NULL || data.registrationNumber!=undefined){
-        regNo.value = data.registrationNumber;
-        //}
+        var address = document.getElementById("address");
+        var fatherName = document.getElementById("father_name");
+        var motherName = document.getElementById("mother_name");
+        var emailId = document.getElementById("email_id");
+        var mobNo = document.getElementById("mobile_no");
+        var rank = document.getElementById("rank");
+        if(data.registrationNumber!=null || data.registrationNumber!=undefined){
+            regNo.value = data.registrationNumber;
+        }
+        if(data.personalDetail.address!=null || data.personalDetail.address!=undefined){
+            address.value = data.personalDetail.address;
+        }
         //if(data.personalDetail.fatherName!=NULL || data.personalDetail.fatherName!=undefined){
         fatherName.value = data.personalDetail.fatherName;
         //}
         //if(data.personalDetail.mothername!=NULL || data.personalDetail.mothername!=undefined){
         motherName.value = data.personalDetail.motherName;
+        mobNo.value = data.personalDetail.mobNo;
+        emailId.value = data.personalDetail.emailID;
+        rank.value = data.personalDetail.uniRank;
         //}
 
     })
@@ -133,6 +141,28 @@ function validateParents() {
     if (emailID.value === "") {
         alert("Please enter your E-mail ID"); return;
     }
+
+    var formDataParents = {
+        "address": address.value,
+        "mobNo": mobNo.value,
+        "emailID": emailID.value,
+        "motherName": motherName.value,
+        "fatherName": fatherName.value,
+        "uniRank": document.getElementById("rank").value
+    };
+
+    firebase.database().ref('gndu-amritsar/student/' + localStorage.getItem('rollNo') + '/personalDetail').set(formDataParents).then(function () {
+        alert("Your Guardian details have been updated.");
+        document.getElementById("submitParents").disabled = true;
+        document.getElementById("resetParents").disabled = true;
+        document.getElementById("editParents").disabled = false;
+        fatherName.disabled=true;
+        motherName.disabled=true;
+        gender.disabled=true;
+        address.disabled=true;
+        mobNo.disabled=true;
+        emailID.disabled=true;
+    });
 }
 function validateQualification() {
     var board_10 = document.getElementById("board10");

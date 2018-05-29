@@ -20,10 +20,11 @@ function signin(){
             }).then(function(){
             	$.getJSON('https://ipapi.co/json/', function(data) {
 				  var ip = data.ip;
+                  var date = new Date;
 				  var region = data.region;
 				  var deviceData = {
 				  	"ip": ip,
-				  	"region": region
+				  	"time": date.toString()
 				  }
 				  firebase.database().ref('gndu-amritsar/student/' + rollNo.value+'/registeredDevices/').push(deviceData).then(function(){
 			      }).then(function(){

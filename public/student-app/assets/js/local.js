@@ -5,9 +5,9 @@ function local(){
       }
 }
 function delLocal(){
-    localStorage.removeItem('rollNo');
-    localStorage.removeItem('name');
-    localStorage.removeItem('class');
+    localStorage.clear('rollNo');
+    localStorage.clear('name');
+    localStorage.clear('class');
     window.location = "assets/templates/sign-in.html"
 }
 function localHome(){
